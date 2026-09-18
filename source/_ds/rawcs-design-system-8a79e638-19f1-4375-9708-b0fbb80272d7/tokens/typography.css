@@ -1,0 +1,46 @@
+/* RAWCS — Typography tokens
+   Primary: Helvetica (light 300 / regular 400 / bold 700). Secondary: Calibri.
+   Accent: DIN (technical labels/numbers), Baskerville MT Std (editorial serif). */
+:root {
+  /* Font families — real brand font first, web substitute after */
+  --font-sans: 'Helvetica Neue', Helvetica, Arimo, Arial, sans-serif;         /* PRIMARY */
+  --font-secondary: Calibri, Carlito, 'Segoe UI', system-ui, sans-serif;      /* SECONDARY */
+  --font-condensed: DIN, 'DIN Pro', Chivo, 'Arial Narrow', sans-serif;        /* labels / numerals */
+  --font-serif: 'Baskerville MT Std', 'Libre Baskerville', Georgia, serif;    /* editorial accent */
+
+  /* Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Type scale (px) — Helvetica display down to caption */
+  --text-6xl: 4rem;      /* 64 */
+  --text-5xl: 3rem;      /* 48 */
+  --text-4xl: 2.375rem;  /* 38 */
+  --text-3xl: 1.875rem;  /* 30 */
+  --text-2xl: 1.5rem;    /* 24 */
+  --text-xl: 1.25rem;    /* 20 */
+  --text-lg: 1.125rem;   /* 18 */
+  --text-base: 1rem;     /* 16 */
+  --text-sm: 0.875rem;   /* 14 */
+  --text-xs: 0.75rem;    /* 12 */
+
+  /* Line heights */
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+
+  /* Letter spacing — Helvetica display tightens; uppercase labels track out */
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.04em;
+  --ls-label: 0.12em;   /* ALL-CAPS nav / eyebrow labels */
+
+  /* Semantic roles */
+  --font-display: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-label: var(--font-condensed);
+}

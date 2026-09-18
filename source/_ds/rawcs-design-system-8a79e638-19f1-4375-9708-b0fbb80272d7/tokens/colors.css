@@ -1,0 +1,79 @@
+/* RAWCS — Colour tokens
+   Source: RAWCS Brand Guidelines Book, "COLOUR PALETTE" (Pantone/CMYK/RGB/HTML specs).
+   Primary palette: Red, Blue, Yellow, White. Secondary: Black, Grey. */
+:root {
+  /* ---- Brand base (exact brand-book HEX) ---- */
+  --rawcs-blue: #0F539E;   /* Pantone 2145 CP  — primary */
+  --rawcs-gold: #FFAF12;   /* Pantone 14-1064 TPG — "Yellow" */
+  --rawcs-red: #EE2737;    /* Pantone 1788 C */
+  --rawcs-white: #FFFFFF;
+  --rawcs-black: #231F20;  /* Process Black C */
+  --rawcs-grey: #BFBFC0;   /* Pantone P 179-4 C — secondary */
+
+  /* ---- Brand shades / tints (derived, harmonious with base) ---- */
+  --rawcs-blue-darker: #072C55;
+  --rawcs-blue-dark: #0B4482;
+  --rawcs-blue-soft: #E7EEF6;   /* pale blue wash */
+  --rawcs-gold-dark: #E09A00;
+  --rawcs-gold-soft: #FFF3D8;
+  --rawcs-red-dark: #C81E2B;
+  --rawcs-red-soft: #FDE7E9;
+
+  /* ---- Neutral ramp (anchored on brand grey + black) ---- */
+  --neutral-0: #FFFFFF;
+  --neutral-50: #F7F7F8;
+  --neutral-100: #EFEFF0;
+  --neutral-200: #E2E2E3;
+  --neutral-300: #BFBFC0;  /* brand grey */
+  --neutral-400: #9A989A;
+  --neutral-500: #7C787A;
+  --neutral-600: #5C595B;
+  --neutral-700: #423F40;
+  --neutral-800: #302D2E;
+  --neutral-900: #231F20;  /* brand black */
+
+  /* ---- Subsidiary sub-brand accents (documented, not core) ---- */
+  --medishare-navy: #2E2A5D;
+  --medishare-teal: #1CA5A0;
+  --medishare-lime: #B9CE4E;
+  --medishare-grey: #6E6E7A;
+
+  /* ---- Semantic status (built from brand hues) ---- */
+  --status-success: #2E8B57;
+  --status-warning: var(--rawcs-gold);
+  --status-error: var(--rawcs-red);
+  --status-info: var(--rawcs-blue);
+
+  /* ---- Semantic aliases ---- */
+  --color-bg: var(--rawcs-white);
+  --surface-page: var(--rawcs-white);
+  --surface-muted: var(--neutral-50);
+  --surface-subtle: var(--neutral-100);
+  --surface-card: var(--rawcs-white);
+  --surface-brand: var(--rawcs-blue);
+  --surface-brand-dark: var(--rawcs-blue-darker);
+  --surface-accent: var(--rawcs-gold);
+  --surface-inverse: var(--rawcs-black);
+
+  --text-heading: var(--rawcs-blue);
+  --text-body: var(--rawcs-black);
+  --text-muted: var(--neutral-500);
+  --text-inverse: var(--rawcs-white);
+  --text-on-gold: var(--rawcs-blue);
+  --text-link: var(--rawcs-blue);
+  --text-link-hover: var(--rawcs-blue-darker);
+
+  --border-subtle: var(--neutral-200);
+  --border-default: var(--neutral-300);
+  --border-strong: var(--neutral-500);
+
+  --focus-ring: color-mix(in srgb, var(--rawcs-blue) 45%, transparent);
+
+  /* ---- Surface roles from the product UI ---- */
+  --topbar-bg: var(--rawcs-blue);
+  --topbar-fg: var(--rawcs-white);
+  --nav-bg: var(--rawcs-gold);
+  --nav-fg: var(--rawcs-blue);
+  --footer-bg: var(--rawcs-blue);
+  --footer-fg: var(--rawcs-white);
+}

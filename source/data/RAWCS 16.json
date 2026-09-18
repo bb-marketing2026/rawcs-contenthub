@@ -1,0 +1,1287 @@
+{
+  "seed": "2026-08-main-12-captions-v2",
+  "savedAt": "2026-09-18T01:03:22.768Z",
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "data": {
+    "edits": {
+      "sep6": {
+        "frames": [
+          {
+            "kicker": "Rotary Australia Compassionate Grants",
+            "headline": "One family’s generosity,",
+            "highlight": "multiplied by a whole network of Clubs.",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “A gift that keeps going further”\nB) “One family's generosity, multiplied by a whole network of Clubs”\nC) “When one gift inspires a hundred more”\n\nThis is a program-level RACG stat from the presentation, not tied to a single project directory page, so there is no photo source to pull from. Use RACG branding or a simple stat card rather than stock imagery.",
+            "readyImage": "",
+            "photo": "ph-sep6",
+            "sqTextX": 9.5,
+            "sqTextY": 15,
+            "photoFit": "fit",
+            "photoZoom": 1,
+            "sqPlaces": {
+              "kicker": {
+                "x": 4,
+                "y": 57.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "headline": {
+                "x": 4,
+                "y": 64,
+                "ax": "l",
+                "ay": "t"
+              },
+              "highlight": {
+                "x": 4,
+                "y": 71,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "places": {
+              "kicker": {
+                "x": 4,
+                "y": 65,
+                "ax": "l",
+                "ay": "t"
+              },
+              "headline": {
+                "x": 4,
+                "y": 70.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "highlight": {
+                "x": 4,
+                "y": 76.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqScaleKicker": 0.85,
+            "sqScaleHeadline": 0.85,
+            "sqScaleHighlight": 0.85,
+            "scaleKicker": 0.86,
+            "scaleHeadline": 0.86,
+            "scaleHighlight": 0.86,
+            "photoX": 50,
+            "photoY": 50
+          }
+        ],
+        "variant": "split",
+        "dateISO": "2026-10-01",
+        "week": 1,
+        "slotLabel": "1"
+      },
+      "sep7": {
+        "topic": "Nepal Second Appeal",
+        "dateISO": "2026-09-15",
+        "frames": [
+          {
+            "kicker": "[Appeal name]",
+            "headline": "Help, right when\nit’s needed.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate now",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Help, right when it's needed”\nB) “[Appeal name]: here now”\nC) “A community needs you today”\n\nUse the official banner for whichever appeal is live on rawcs.org.au at the time of scheduling.",
+            "readyImage": "",
+            "photo": "ph-sep7",
+            "video": "",
+            "videoName": "",
+            "photoX": 50,
+            "photoY": 56,
+            "sqPhotoX": 50,
+            "sqPhotoY": 52
+          }
+        ],
+        "variant": "none",
+        "caption": "𝗡𝗲𝗽𝗮𝗹 𝗵𝗮𝘀𝗻'𝘁 𝘀𝘁𝗼𝗽𝗽𝗲𝗱 𝗮𝘀𝗸𝗶𝗻𝗴. 𝗡𝗲𝗶𝘁𝗵𝗲𝗿 𝗵𝗮𝘀 𝗥𝗼𝘁𝗮𝗿𝘆.\nWeeks on from the flooding disaster, whole communities are still without safe shelter, still short on food, still rebuilding from nothing. The emergency didn't end when the headlines moved on, and the need hasn't either.\n\nRAWCS and our Rotary partners are continuing relief efforts on the ground, delivering shelter, food and essential supplies to the families still recovering. This is what standing with Nepal looks like for the long haul, not just the first response, but the follow-through.\nNepal still needs us. Let's keep answering.\n\nDonate now\nhttps://donations.rawcs.com.au/17-2026-27\n\nAll donations are tax deductible.",
+        "tags": [
+          "#RAWCS",
+          "#RARF",
+          "#RotaryAustralia",
+          "#NepalFloods",
+          "#DisasterRelief",
+          "#PeopleOfAction",
+          "#ServiceAboveSelf"
+        ],
+        "week": 3,
+        "slotLabel": "5",
+        "statusType": "posted"
+      },
+      "sep9": {
+        "frames": [
+          {
+            "kicker": "ARAM · malaria elimination",
+            "headline": "Bednets, training, and a few\nminutes of your time.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate to ARAM",
+                "tone": "blue"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Malaria still kills a child every 68 seconds, here's how to help”\nB) “Support ARAM in a few minutes”\nC) “Bednets, training, and a few minutes of your time”\n\nNo directory-style project photos for this one, it's a donation-process page rather than a project page. Use ARAM branding, leaflet imagery (bednet distribution, health worker photos) or a simple screenshot of the ram.rawcs.com.au donation page.",
+            "readyImage": "",
+            "photo": "ph-sep9",
+            "sqPlaces": {
+              "headline": {
+                "x": 6.5,
+                "y": 56,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 6.5,
+                "y": 47.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "places": {
+              "headline": {
+                "x": 6.5,
+                "y": 71.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 6.5,
+                "y": 65,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqScaleLogo1": 1,
+            "sqScaleCta": 1,
+            "sqScaleLogo0": 1,
+            "scaleCta": 0.9,
+            "scaleLogo0": 0.9,
+            "scaleLogo1": 0.85,
+            "photoX": 52,
+            "photoY": 50
+          }
+        ],
+        "logos": [
+          "lockupWhite",
+          "aram"
+        ],
+        "week": 2,
+        "dateISO": "2026-10-09"
+      },
+      "sep10": {
+        "frames": [
+          {
+            "kicker": "Compassionate Grants",
+            "headline": "Big enough to matter, \nsmall enough to ==move fast==",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Small grants, real help”\nB) “A doctor, a shelter bag, a meal, all local”\nC) “Big enough to matter, small enough to move fast”\n\nNo individually captioned photos, these are program names rather than a single project. Use RACG branding or a generic graphic naming the programs rather than stock imagery of individuals.",
+            "readyImage": "",
+            "photo": "ph-sep10",
+            "photoX": 39,
+            "photoY": 50,
+            "washStrength": 1.45,
+            "tintEnd": 60,
+            "baseStrength": 0.95,
+            "sqPlaces": {
+              "kicker": {
+                "x": 5.5,
+                "y": 55,
+                "ax": "l",
+                "ay": "t"
+              },
+              "headline": {
+                "x": 5.5,
+                "y": 63,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 5,
+                "y": 80.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqScaleKicker": 0.9,
+            "sqScaleHeadline": 0.9,
+            "sqScaleCta": 0.9,
+            "scaleHeadline": 0.89,
+            "places": {
+              "headline": {
+                "x": 5,
+                "y": 70,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 5,
+                "y": 63.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 5,
+                "y": 84.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "tintHex": "#1a2129",
+            "baseHex": "#060C16",
+            "lineHeight": 1.05,
+            "blockGap": 0.8,
+            "washSoft": 1.2,
+            "baseStart": 75
+          }
+        ],
+        "variant": "photo",
+        "washPlace": "both",
+        "gradient": "scrim",
+        "week": 3,
+        "dateISO": "2026-10-13",
+        "slotLabel": "8"
+      },
+      "sep11": {
+        "frames": [
+          {
+            "kicker": "RAWCS x RARE",
+            "headline": "A warehouse near you,\na shipment far away.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Volunteer with us",
+                "tone": "gold"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Five places, one purpose”\nB) “A warehouse near you, a shipment far away”\nC) “From five sheds to sixty-five countries”\n\nMap or photo graphic showing RARE's 5 Australian distribution facilities.",
+            "readyImage": "",
+            "photo": "ph-sep11",
+            "photoX": 33.5,
+            "photoY": 46,
+            "sqPhotoX": 38,
+            "sqPhotoY": 46,
+            "sqPlaces": {},
+            "places": {
+              "headline": {
+                "x": 6,
+                "y": 66,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 5.5,
+                "y": 81,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 6,
+                "y": 59,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqScaleHeadline": 0.9,
+            "sqScaleCta": 0.9,
+            "sqScaleKicker": 0.9,
+            "scaleHeadline": 0.95,
+            "scaleCta": 0.95,
+            "scaleKicker": 0.95,
+            "sqScaleLogo0": 0.7,
+            "scaleLogo0": 0.75,
+            "sqScaleLogo1": 0.7,
+            "scaleLogo1": 0.75,
+            "sqScaleBlock": 1
+          }
+        ],
+        "variant": "photo",
+        "week": 3,
+        "slotLabel": "9",
+        "dateISO": "2026-10-14"
+      },
+      "sep13": {
+        "format": "single",
+        "frames": [
+          {
+            "kicker": "RAWCS × NEMA",
+            "headline": "Government and community,\n==working together==.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Partner with us",
+                "tone": "blue"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Government and community, working together”\nB) “When farmers needed help fast, this delivered”\nC) “$6.5 million, no red tape”\n\nPartnership graphic, RAWCS + NEMA branding if permitted, or a vouchers/drought recovery photo.",
+            "readyImage": "",
+            "photo": "ph-sep13",
+            "photoX": 50.5,
+            "photoY": 62,
+            "sqPhotoX": 52.5,
+            "sqPhotoY": 58,
+            "sqScaleHeadline": 0.79,
+            "scaleHeadline": 0.82,
+            "sqPlaces": {},
+            "places": {
+              "headline": {
+                "x": 6,
+                "y": 69,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 6,
+                "y": 62.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 6,
+                "y": 84,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "lineHeight": 1.15
+          }
+        ],
+        "washPlace": "both",
+        "dateISO": "2026-10-08",
+        "week": 2,
+        "slotLabel": "6"
+      },
+      "sep16": {
+        "frames": [
+          {
+            "kicker": "RATE · Rotary Australia Trust for the Environment",
+            "headline": "Environmental projects,\nnow open to Rotary Clubs.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Register a project",
+                "tone": "blue"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Environmental projects, now open to Rotary Clubs”\nB) “Trees, habitats, and a tax deduction”\nC) “A new way for Clubs to give back to the land”\n\nNo directory-style project photos, RATE is sourced from the presentation rather than a project page. Use RATE branding if available, or tree-planting/habitat imagery.",
+            "readyImage": "",
+            "photo": "ph-sep16",
+            "photoX": 46,
+            "photoY": 48,
+            "sqPhotoX": 46,
+            "sqPhotoY": 48,
+            "sqPlaces": {},
+            "places": {
+              "headline": {
+                "x": 8,
+                "y": 14,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 7.5,
+                "y": 8,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqScaleKicker": 0.95,
+            "tintHex": "#303841",
+            "baseHex": "#060C16",
+            "washStrength": 1.15,
+            "tintEnd": 62,
+            "sqTextX": 8,
+            "sqTextY": 8
+          }
+        ],
+        "washPlace": "top",
+        "gradient": "scrim",
+        "dateISO": "2026-10-06",
+        "week": 2,
+        "slotLabel": "4"
+      },
+      "sep17": {
+        "format": "single",
+        "variant": "split",
+        "frames": [
+          {
+            "kicker": "Inside RAWCS",
+            "headline": "The parts of RAWCS",
+            "highlight": "you don’t always see.",
+            "ctas": [
+              {
+                "label": "Learn more",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “The parts of RAWCS you don't always see”\nB) “Five programs, one network”\nC) “More than projects: what keeps RAWCS running”\n\nNo directory-style project photos, this is a general overview sourced from the leaflet. Use a simple graphic naming the five areas in RAWCS brand colours.",
+            "readyImage": "",
+            "photo": "ph-sep17",
+            "textX": 7,
+            "textY": 8,
+            "sqPlaces": {
+              "kicker": {
+                "x": 5,
+                "y": 51,
+                "ax": "l",
+                "ay": "t"
+              },
+              "headline": {
+                "x": 5,
+                "y": 59,
+                "ax": "l",
+                "ay": "t"
+              },
+              "highlight": {
+                "x": 5,
+                "y": 68.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "places": {
+              "kicker": {
+                "x": 5,
+                "y": 59.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "headline": {
+                "x": 5,
+                "y": 66,
+                "ax": "l",
+                "ay": "t"
+              },
+              "highlight": {
+                "x": 5,
+                "y": 73.5,
+                "ax": "l",
+                "ay": "t"
+              }
+            }
+          }
+        ],
+        "gradient": "scrim",
+        "dateISO": "2026-10-07",
+        "week": 2,
+        "slotLabel": "5"
+      },
+      "sep5": {
+        "dateISO": "2026-10-05",
+        "week": 1,
+        "slotLabel": "3"
+      },
+      "sep8": {
+        "dateISO": "2026-09-21",
+        "topic": "Nepal Appeal 3",
+        "frames": [
+          {
+            "kicker": "[Appeal name]",
+            "headline": "A community needs\nyou today.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate now",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Help, right when it's needed”\nB) “[Appeal name]: here now”\nC) “A community needs you today”\n\nUse the official banner for whichever second appeal is live on rawcs.org.au at the time of scheduling.",
+            "readyImage": "",
+            "photo": "ph-sep8",
+            "photoX": 52,
+            "photoY": 46,
+            "sqPhotoX": 52,
+            "sqPhotoY": 46
+          }
+        ],
+        "format": "single",
+        "variant": "none",
+        "tags": [
+          "#RAWCS",
+          "#RARF",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#DisasterRelief"
+        ],
+        "caption": "𝗡𝗲𝗽𝗮𝗹 𝗶𝘀 𝘄𝗮𝗹𝗸𝗶𝗻𝗴 𝘁𝗵𝗿𝗼𝘂𝗴𝗵 𝗶𝘁𝘀 𝗼𝘄𝗻 𝗿𝘂𝗯𝗯𝗹𝗲.\n\nA rolled up mattress. A quilt. A red bucket, a bag with whatever could be saved. This street was someone's home. Now it's collapsed walls and debris, and the people who lived here are carrying out what's left of their lives, a volunteer in a vest walking beside them.\n\nNepal has asked for help. Rotary Australia World Community Service (RAWCS) is one of the ways Australia can answer, working through trusted partners on the ground so your donation reaches families directly, not just quickly announced.\n\nIf you're in a position to help today, even a small amount matters. Clean water. A tarpaulin. A first aid kit. Or simply cash, so a family can decide for themselves what they need most.\nThank you for standing with them.\n\nhttps://directory.rawcs.com.au/ProjectDisplay.aspx?17-2026-27\n\nDonations are tax deductible in Australia.",
+        "link": "https://donations.rawcs.com.au/17-2026-27",
+        "week": 4,
+        "slotLabel": "8"
+      },
+      "sep1": {
+        "format": "single",
+        "variant": "photo",
+        "frames": [
+          {
+            "kicker": "Sabah, Malaysia",
+            "headline": "Seven hostels, one goal:\nkeep them in school.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “A safe place to stay, so school stays possible”\nB) “Small gifts, big smiles”\nC) “Seven hostels, one goal: keep them in school”\n\nUse the project's own photos directly from the directory: 'Group of sponsored children - St Therese hostel' as the lead image, genuinely captioned on the page, or 'Opening some gifts in kind!' as a warmer secondary shot. Skip 'Typical Family House', it's context, not the emotional centre.",
+            "readyImage": "",
+            "photo": "ph-sep1",
+            "washStrength": 1.6,
+            "sqScaleHeadline": 0.8,
+            "scaleHeadline": 0.97,
+            "sqTextX": 5.5,
+            "sqTextY": 53,
+            "washSoft": 1.5,
+            "photoX": 30,
+            "photoY": 50,
+            "sqPhotoX": 25.5,
+            "sqPhotoY": 16,
+            "sqPhotoZoom": 1
+          }
+        ],
+        "week": 2,
+        "statusType": "posted",
+        "caption": "Seven hostels in remote Sabah, Malaysia, give around 200 students somewhere to stay during term time, since many live too far away to travel to school and back each day. The Franciscan Sisters of the Immaculate Conception run the hostels day to day, with support from the Rotary Club of Gungahlin.\n\nKeeping all seven running costs about $14,887 a year, food, bedding and the basics, and most of that still needs to be raised. Every donation is tax deductible.\n\nYou can donate to this project here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?53-2022-23",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?53-2022-23"
+      },
+      "sep12": {
+        "frames": [
+          {
+            "kicker": "For Rotary Clubs",
+            "headline": "Not every idea qualifies.\nHere’s what does.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Check the criteria",
+                "tone": "blue"
+              }
+            ],
+            "brief": "Headline options (pick one):\nA) “Check the criteria before you apply”\nB) “Not every idea qualifies, here's what does”\nC) “Know the rules, then ask”\n\nRACG branding, simple graphic listing the criteria headings only, not the full text.",
+            "readyImage": "",
+            "photo": "ph-sep12",
+            "video": "",
+            "videoName": "",
+            "photoX": 50,
+            "photoY": 44,
+            "sqPhotoX": 50,
+            "sqPhotoY": 44,
+            "sqPlaces": {
+              "headline": {
+                "x": 7.5,
+                "y": 62.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 7.5,
+                "y": 54,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "places": {
+              "headline": {
+                "x": 8,
+                "y": 69,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 8,
+                "y": 62,
+                "ax": "l",
+                "ay": "t"
+              }
+            }
+          }
+        ],
+        "dateISO": "2026-10-15",
+        "week": 3,
+        "slotLabel": "10"
+      },
+      "sep15": {
+        "dateISO": "2026-09-16",
+        "week": 3,
+        "statusType": "posted",
+        "caption": "Only about 1 in 100 rural girls in the part of Tanzania where Orkeeswa Secondary School operates make it as far as Year 11 or 12, in a region where most families live on less than $1.25 a day. Students at Orkeeswa are beating those odds, topping national exams, and a good number return afterwards to teach in their own community.\n\nThe newest classroom needs an outdoor learning space, some AV equipment and two whiteboards. $12.50 covers a whiteboard, $50 covers a piece of AV equipment, and $125 covers a section of the outdoor space.\n\nThere's a short video of the school and its students on the project page if you'd like to see it.\n\nYou can support this project here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?5-2011-12\nWatch the video here: https://player.vimeo.com/video/256892640",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?5-2011-12"
+      },
+      "adhoc-mtwoko2z": {
+        "dateISO": "2026-09-04",
+        "format": "video",
+        "variant": "none",
+        "frames": [
+          {
+            "kicker": "Kicker",
+            "headline": "Your headline goes here.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Describe the photo this post needs.",
+            "readyImage": "",
+            "photo": "ph-adhoc-mtwoko2z",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1sCpzhYoWVFWzcSgrA-qqchztDBfPUdpm/view?usp=sharing"
+          }
+        ],
+        "caption": "Nepal and Australia are 8,000 kilometres apart, but the Rotary community closed that distance in a day. \n\nWhen the Trishuli corridor was buried on 26 August 2026, taking hundreds of lives and leaving more than 10,000 households without shelter, Nepali Rotarians turned to their neighbours and Australian Rotarians turned to their phones. Same handshake, same promise, two hemispheres. \n\nIn this radio snippet, Prue Bentley of Radio Australia speaks with Rajendra Gautam, Past President of the Rotary Club of Kathmandu, and Rotary District 9780 Governor Tonie Thiel.\nThey cover what Rotarians on the ground are seeing and how clubs in Nepal and Australia are working together. \n\nRotary District 3292 is mobilising volunteers for relief distribution, while RAWCS has opened the Nepal Flooding Disaster Relief Fund, channelling donations through Rotary contacts in Nepal for shelter, cash grants and clean water.\n\nEvery club can play a part. \nPut it to your board this week.\n\nGive what you can today and help a family through the night. \nhttps://directory.rawcs.com.au/17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf"
+        ],
+        "link": "https://directory.rawcs.com.au/17-2026-27",
+        "topic": "[Video] Nepal Flood Disaster Current Situation"
+      },
+      "adhoc-mtwosatu": {
+        "dateISO": "2026-09-14",
+        "variant": "none",
+        "frames": [
+          {
+            "kicker": "Kicker",
+            "headline": "Your headline goes here.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Describe the photo this post needs.",
+            "readyImage": "",
+            "photo": "ph-adhoc-mtwosatu",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1qDZqF8un3WqycC7HVSnpoUuIha65yDVJ/view?usp=sharing"
+          }
+        ],
+        "link": "https://directory.rawcs.com.au/17-2026-27",
+        "topic": "[Video] #RotariansInAction",
+        "caption": "#RotariansInAction\nMore than two weeks after Nepal's Trishuli corridor was buried, the need has not eased. It has simply moved out of the headlines.\n\nOver 10,000 households remain without shelter following the flooding on 26 August 2026. Rotarians in Nepal are still working through the same channels that make disaster response effective: local contacts, quick decisions and funds that reach families directly, without delay or red tape.\n\nIf you hold a position on a board or committee, you already know how far a modest allocation can go when a club chooses to act. This is one of those moments where a decision made this week changes what a family has tonight.\n\nRAWCS's Nepal Flooding Disaster Relief Fund puts your donation straight into the hands of Rotary contacts on the ground, for shelter, cash grants and clean water.\n\nPut it to your club this week. A steady contribution now still buys a family a dry night and a hot meal.\nhttps://directory.rawcs.com.au/17-2026-27\n\nDonations of $2 or more are tax deductible in Australia. ",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ],
+        "format": "video"
+      },
+      "sep14": {
+        "dateISO": "2026-10-02",
+        "week": 1,
+        "slotLabel": "2"
+      },
+      "t1": {},
+      "t2": {},
+      "t3": {},
+      "s13": {},
+      "s13b": {},
+      "s2": {},
+      "s3": {},
+      "s4": {},
+      "s9": {},
+      "s1": {},
+      "s10": {},
+      "s6": {},
+      "s11": {},
+      "s12": {},
+      "bonus": {},
+      "sep2": {
+        "week": 2,
+        "slotLabel": "2",
+        "statusType": "posted",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?1-2003-04",
+        "caption": "For more than twenty years, the Tender Foot Self Help School has been part of daily life in Nairobi's Kangemi slum, offering food, clothing and a nursery-to-Grade-8 education to children who would otherwise go without. It has run continuously since 2003.\n\nThat kind of consistency depends on the Rotary Club of Emerald & District, and on the people who give to this project year after year.\n\nYou can support this project here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?1-2003-04"
+      },
+      "sep3": {
+        "week": 2,
+        "slotLabel": "3",
+        "statusType": "posted",
+        "caption": "The Lighthart Project looks after forty children and young people with cognitive or multiple disabilities in Stung Mean Chey, on the outskirts of Phnom Penh, many of whom would otherwise be left out of school altogether.\n\nSome sensory equipment donated from Australia has recently reached the classroom. Beyond that, what the project needs is fairly ordinary: books, desks, teacher salaries, and rent to keep the classroom itself open.\n\nYou can find out more and support this project here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?140-2010-11",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?140-2010-11"
+      },
+      "sep4": {
+        "week": 2,
+        "slotLabel": "4",
+        "statusType": "posted",
+        "caption": "In Goma, in the Democratic Republic of Congo, a group of mothers called Mama Wimbi sew backpacks, uniforms and school supplies for children who have fled violence and arrived with nothing.\n\nA SchoolKit means one less thing for a family to worry about when they're already stretched between food, housing and school fees. A spare uniform matters too, since clean water is scarce and one uniform can't always be washed often enough to avoid scabies outbreaks in crowded classrooms.\n\nBecause the kits are made locally rather than shipped in, a donation also supports the women doing the sewing, and helps them provide for their own children.\n\nThere's a short video on the project page showing how the kits are made. You can read more and support the project here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?23-2023-24",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?23-2023-24"
+      },
+      "nepal-vid-1": {
+        "slotLabel": "6"
+      },
+      "nepal-vid-2": {
+        "slotLabel": "7"
+      },
+      "nepal-vid-4": {
+        "slotLabel": "10"
+      },
+      "nepal-vid-5": {
+        "slotLabel": "11"
+      },
+      "nepal-vid-3": {
+        "slotLabel": "9"
+      },
+      "nepal-vid-6": {
+        "slotLabel": "12"
+      }
+    },
+    "extra": [
+      {
+        "id": "adhoc-mt2c2l96",
+        "dateISO": "2026-08-23",
+        "week": 2,
+        "slotLabel": "Ad hoc",
+        "category": "Ad hoc post",
+        "pillar": "To be set",
+        "ask": "To be set",
+        "source": "Added in the hub",
+        "projectId": "",
+        "link": "",
+        "topic": "Ukraine Crisis Appeal",
+        "format": "single",
+        "variant": "photo",
+        "gradient": "brand",
+        "tint": "navy",
+        "align": "bottom",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "Standing with Ukraine",
+            "headline": "Support that reaches people when they need it most",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Describe the photo this post needs.",
+            "readyImage": "",
+            "photo": "ph-adhoc-mt2c2l96",
+            "photoX": 65.5,
+            "photoY": 50,
+            "sqScaleHeadline": 0.77,
+            "sqScaleKicker": 0.77,
+            "sqScaleCta": 0.77,
+            "scaleHeadline": 0.88,
+            "scaleKicker": 0.88,
+            "scaleCta": 0.88,
+            "sqPlaces": {
+              "headline": {
+                "x": 4.5,
+                "y": 68,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 4.5,
+                "y": 60.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 4.5,
+                "y": 83,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "places": {
+              "headline": {
+                "x": 3.5,
+                "y": 70.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "kicker": {
+                "x": 3.5,
+                "y": 64.5,
+                "ax": "l",
+                "ay": "t"
+              },
+              "ctas": {
+                "x": 3.5,
+                "y": 84,
+                "ax": "l",
+                "ay": "t"
+              }
+            },
+            "sqPhotoX": 64,
+            "sqPhotoY": 50
+          }
+        ],
+        "status": "Added in the hub — set the status and add a note for the team.",
+        "statusType": "notstarted",
+        "caption": "Millions of people in Ukraine continue to face the devastating impacts of the ongoing crisis, with urgent needs including food, medical aid, safe shelter, mental health support and essential supplies.\n\nThrough the Ukraine Crisis Appeal, more than 1.2 million people have received food and clothing, 77,000+ people have received mental health care and $29 million in medical aid** has been delivered, including 11 ambulances. More than 140,000 safe shelter placements and 742,000+ hygiene and first-aid kits have also been provided.\n\nEvery number represents a person, a family or a community given hope.\n\nDonating through RAWCS supports the Ukraine Crisis Appeal and its work alongside Caritas Ukraine, UNBROKEN, Tabletochki and other humanitarian partners. The appeal is volunteer-led, meaning almost every dollar donated goes directly towards supporting people affected by the crisis. All donations over $2 are tax deductible.\n\nDonate today: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?83-2014-15\n\nThank you for considering your support.\n\n#RAWCS #RotaryAustralia #UkraineCrisis #UkraineAppeal #HumanitarianAid #RotaryInAction",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia"
+        ]
+      },
+      {
+        "id": "adhoc-mtwoko2z",
+        "dateISO": "2026-09-15",
+        "week": 1,
+        "slotLabel": "Ad hoc",
+        "category": "Ad hoc post",
+        "pillar": "To be set",
+        "ask": "To be set",
+        "source": "Added in the hub",
+        "projectId": "",
+        "link": "",
+        "topic": "New post",
+        "format": "video",
+        "variant": "photo",
+        "gradient": "brand",
+        "tint": "navy",
+        "align": "bottom",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "Kicker",
+            "headline": "Your headline goes here.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Describe the photo this post needs.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1sCpzhYoWVFWzcSgrA-qqchztDBfPUdpm/view?usp=sharing"
+          }
+        ],
+        "status": "Added in the hub — set the status and add a note for the team.",
+        "statusType": "notstarted",
+        "caption": "Write the caption here.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia"
+        ]
+      },
+      {
+        "id": "adhoc-mtwosatu",
+        "dateISO": "2026-09-15",
+        "week": 3,
+        "slotLabel": "Ad hoc",
+        "category": "Ad hoc post",
+        "pillar": "To be set",
+        "ask": "To be set",
+        "source": "Added in the hub",
+        "projectId": "",
+        "link": "",
+        "topic": "New post",
+        "format": "video",
+        "variant": "photo",
+        "gradient": "brand",
+        "tint": "navy",
+        "align": "bottom",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "Kicker",
+            "headline": "Your headline goes here.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Describe the photo this post needs.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1qDZqF8un3WqycC7HVSnpoUuIha65yDVJ/view?usp=sharing"
+          }
+        ],
+        "status": "Added in the hub — set the status and add a note for the team.",
+        "statusType": "notstarted",
+        "caption": "Write the caption here.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia"
+        ]
+      },
+      {
+        "id": "nepal-vid-1",
+        "dateISO": "2026-09-17",
+        "week": 3,
+        "slotLabel": "91",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Appeal Video Captions - v2",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 1 — A valley under mud",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "This is the devastating reality of the flooding in Nepal.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — flood footage of the Trishuli corridor. The opening frame is the thumbnail.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/15KWhPl4nhjN4Xze97r-lOFYP5Fo4nGFD/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 1 of 6 — BOOST this post. Caption approved in the v2 captions document; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "What you're watching is the devastating reality of the flooding in Nepal.\n\nRooftops disappearing under mud, a bridge folding into the river, neighbours pulling each other back before the water reached them. By the time it settled on 26 August 2026, hundreds of lives were gone and thousands of families had nowhere left to sleep.\n\nRotarians didn't wait to be asked twice. They're already on the ground and RAWCS is now the bridge for Australians who want to help.\n\nEvery dollar through the Nepal Flooding Disaster Relief Fund goes to shelter, cash grants and clean water, delivered through people who know these villages by name.\n\nNepal needs our help. If you're able to give, even a small amount gets there directly, and it gets there fast.\n\nDonate here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ]
+      },
+      {
+        "id": "nepal-vid-2",
+        "dateISO": "2026-09-18",
+        "week": 3,
+        "slotLabel": "92",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Appeal Video Captions - v2",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 2 — Rotary Club of Dhading steps forward",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "When flooding takes a home, it takes the small comforts too.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — Rotary Club of Dhading relief distribution in Bidur Municipality, Nuwakot.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/11Ya45wFdbI4UnlhsElBGg8YUSPumE3nj/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 2 of 6. Caption approved in the captions document; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "When flooding takes a family's home, it takes more than shelter. It takes clean water, warm bedding and the small comforts that make a day feel livable.\n\nThat is what moved the Rotary Club of Dhading to act. With funding support from RAWCS, the club stepped forward for households in Bidur Municipality, Nuwakot, who had lost or left behind their essential belongings when the Bhotekoshi flood forced them into temporary community centres.\n\nThe relief initiative asked one simple question: What do these families need most right now? It answered with the essentials: bedding, cooking utensils and a way to start again.\n\nThat is Rotary's service ethos in action, showing up with the basics before anyone has to ask twice.\n\nThe need has not stopped since. Whatever you can give goes directly into the same support, reaching a family who is rebuilding from almost nothing.\n\nDonate here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ]
+      },
+      {
+        "id": "nepal-vid-3",
+        "dateISO": "2026-09-22",
+        "week": 4,
+        "slotLabel": "93",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Appeal Video Captions - v2",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 3 — A gas stove, a blanket, a set of pots",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "For 350 survivors, a stove and a blanket aren’t small things.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — relief items being sorted and handed out across the Nuwakot holding centres.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1qGv9bjdUJ9rtj-ffanDUL_ShLtfdMoYv/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 3 of 6. Caption approved in the captions document; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "A gas stove, a blanket, a set of pots.\n\nFor the 350 flood survivors now sheltering across three community centres in Nuwakot, these aren't small things. They're the difference between getting through another night and starting to feel like a household again.\n\nRotary volunteers on the ground provided items required by the government in Nepal to families in need such as kitchen utensils, gas stove sets, blankets and bedsheets. These enabled families to cook a meal, stay warm and hold on to a bit of normal while everything else is rebuilt.\n\nMore families are still waiting for the same relief. Every donation through the Nepal Flooding Disaster Relief Fund helps reach the next one.\n\nIf you're able to give, even a small amount goes straight to a family who needs it.\n\nDonate here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ]
+      },
+      {
+        "id": "nepal-vid-4",
+        "dateISO": "2026-09-23",
+        "week": 4,
+        "slotLabel": "94",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Appeal Video Captions - v2",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 4 — Supplies restore normality",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "Supplies alone don’t rebuild a life. What they restore is normality.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — the coordinated distribution run, volunteers checking lists and handing over goods.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/19tkBLU-C-knSHcOzvHSalM2xGnIWL4b0/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 4 of 6. Caption approved in the captions document; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "Supplies alone don't rebuild a life. What they restore is normality, a meal cooked, a warmer night's sleep, a routine returning.\n\nThat's the distinction at the centre of this delivery. Working closely with local communities and volunteers, the Rotary team at Dhadang coordinated distribution to make sure assistance reached the families who were directly affected and in immediate need.\n\nFor households that had lost access to basic necessities, what arrived was more than material aid. It was a way to cook again, stay warm, rest properly and begin rebuilding a sense of normal life.\n\nThat's what the coordination behind the scenes is really for: making sure help lands with the people who need it most, in a form that helps them recover.\n\nDonate today: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ]
+      },
+      {
+        "id": "nepal-vid-5",
+        "dateISO": "2026-09-24",
+        "week": 4,
+        "slotLabel": "95",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Appeal Video Captions - v2",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 5 — Restoring dignity",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "Dignity should never be another casualty of disaster.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — Rotarians with affected families; close on faces rather than goods.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/1lKG91zC5ZdWmpv_O2hWdjNxU3UCMofNS/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 5 of 6. Caption approved in the captions document; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "The floods in Nepal took homes, belongings and security in a matter of minutes. But dignity should never be another casualty of disaster and that is the part Rotary is determined to protect.\n\nWhen disaster hit, Rotarians on the ground moved straight to the families who'd lost the most, carrying relief and something harder to measure: proof that someone still sees them.\n\nThe Rotary Australia World Community Service response isn't just about delivering aid, it's about restoring hope and helping people move forward.\n\nThis is what service above self looks like on the ground. Not grand gestures. Just people showing up for people.\n\nNo one should face a crisis alone. Communities that come together get through it stronger.\n\nIf you can help a family in Nepal get through this, please do.\n\nDonate here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloods",
+          "#ServiceAboveSelf",
+          "#DisasterRelief"
+        ]
+      },
+      {
+        "id": "nepal-vid-6",
+        "dateISO": "2026-09-25",
+        "week": 4,
+        "slotLabel": "12",
+        "category": "Nepal appeal video",
+        "pillar": "Emergency appeal",
+        "ask": "Donate",
+        "source": "Nepal Captions (Sept update)",
+        "projectId": "17-2026-27",
+        "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+        "topic": "[Video] Nepal Appeal 6 — Someone still cares enough to show up",
+        "format": "video",
+        "variant": "reel",
+        "gradient": "none",
+        "tint": "navy",
+        "align": "top",
+        "panelColour": "blue",
+        "logos": [
+          "lockupWhite"
+        ],
+        "siteLabel": "rawcs.org.au",
+        "frames": [
+          {
+            "kicker": "#NepalFloods",
+            "headline": "Warmth, comfort and the reassurance that no family faces this alone.",
+            "highlight": "",
+            "ctas": [
+              {
+                "label": "Donate today!",
+                "tone": "red"
+              }
+            ],
+            "brief": "Supplied video — families receiving relief; hold on moments of care rather than goods.",
+            "readyImage": "",
+            "photo": "",
+            "video": "",
+            "videoName": "",
+            "videoLink": "https://drive.google.com/file/d/12Nsow1rHYVCfQSNfuAESjg11q0vkHpWy/view?usp=sharing"
+          }
+        ],
+        "status": "For review.\n\nNepal appeal video 6 of 6. Caption supplied in the September captions update; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
+        "statusType": "review",
+        "caption": "There's a kind of relief that has nothing to do with rebuilding a roof. It's the relief of knowing someone still cares enough to show up.\n\nThat's what Rotary is bringing to communities across Nepal right now: warmth, comfort and the reassurance that no family has to face this alone. It's steady support, not a one-off gesture, and it keeps going because people choose to back it.\n\nEvery bit of care makes a real difference to a family getting through this.\n\nThe need is now. So is the response, and you can be part of it.\n\nHelp a family feel a little more cared for today.\n\nDonate here: https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27\n\nDonations of $2 or more are tax deductible in Australia.",
+        "tags": [
+          "#RAWCS",
+          "#RotaryAustralia",
+          "#PeopleOfAction",
+          "#NepalFloodingDisasterRelief",
+          "#ServiceAboveSelf"
+        ]
+      }
+    ],
+    "deleted": [
+      "s7",
+      "s14"
+    ],
+    "checks": {
+      "adhoc-mtwoko2z:copy": true,
+      "sep1:d-organic": true,
+      "sep2:d-organic": true,
+      "sep3:d-organic": true,
+      "sep4:d-paid": false,
+      "sep4:d-organic": true,
+      "sep7:d-organic": true,
+      "sep7:d-paid": true,
+      "sep15:d-organic": true
+    },
+    "notes": {},
+    "times": {},
+    "logoLib": {},
+    "docs": {}
+  }
+}

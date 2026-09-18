@@ -1,0 +1,16 @@
+/* RAWCS — Webfonts
+   Brand fonts are Helvetica (primary) and Calibri (secondary), with DIN and
+   Baskerville MT Std as accent families (per the TYPOGRAPHY section).
+   These are licensed/system fonts, so the design system loads metric-close
+   web substitutes and prefers the real font first in each stack:
+     Helvetica          -> Arimo         (metric-compatible w/ Helvetica/Arial)
+     Calibri            -> Carlito        (metric-compatible w/ Calibri)
+     DIN                -> Chivo          (grotesque, close width/character)
+     Baskerville MT Std -> Libre Baskerville (transitional serif)
+   SUBSTITUTION — see readme.md "Fonts". Replace with licensed files if available. */
+
+/* Arimo (Helvetica sub) + Chivo (DIN sub) + Libre Baskerville (Baskerville sub) */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Chivo:wght@400;500;700&family=Libre+Baskerville:ital@0;1&display=swap');
+
+/* Carlito (Calibri sub) — via Fontsource CDN */
+@import url('https://cdn.jsdelivr.net/fontsource/css/carlito@latest/index.css');
