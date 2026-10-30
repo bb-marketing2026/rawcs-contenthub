@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/rawcs-design-system-8a79e638-19f1-4375-9708-b0fbb80272d7/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/rawcs-design-system-8a79e638-19f1-4375-9708-b0fbb80272d7/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/rawcs-design-system-8a79e638-19f1-4375-9708-b0fbb80272d7/tokens/typography.css">
+  <script src="_ds/rawcs-design-system-8a79e638-19f1-4375-9708-b0fbb80272d7/_ds_bundle.js"></script>
+  <script src="logos.js"></script>
+  <style>
+    html, body { margin: 0; background: #D9D9DB; }
+    a { color: var(--rawcs-blue); } a:hover { color: var(--rawcs-blue-darker); }
+  </style>
+</helmet>
+<div style="padding:60px;display:flex;flex-direction:column;gap:14px;font-family:Arimo, Helvetica, Arial, sans-serif">
+  <div style="font-family:Chivo, sans-serif;font-size:15px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--rawcs-red)">15 October 2026 · Governor-General's XI · 1080 × 1350 · v5 — "The Oval" green</div>
+  <div id="oct15-v5" data-screen-label="15 Oct Patron's XI v5" style="position:relative;width:1080px;height:1350px;overflow:hidden;background:linear-gradient(180deg, #145238 0%, #0E3A29 46%, #072419 100%);flex:none">
+
+    <div style="position:absolute;left:-260px;top:-300px;width:900px;height:900px;border-radius:999px;background:radial-gradient(circle, rgba(255,244,214,0.30) 0%, rgba(255,240,205,0.12) 28%, rgba(255,240,205,0.04) 50%, rgba(255,240,205,0) 70%)"></div>
+
+    <div style="position:absolute;left:90px;top:92px;display:grid;grid-template-columns:repeat(4, 16px);grid-auto-rows:16px;gap:10px;padding:14px;border:2px solid rgba(255,255,255,0.22);border-radius:6px">
+      <sc-for list="{{ lamps }}" as="l" hint-placeholder-count="12">
+        <div style="width:16px;height:16px;border-radius:999px;background:#FFF8E6;box-shadow:0 0 12px 4px rgba(255,236,190,0.65)"></div>
+      </sc-for>
+    </div>
+    <div style="position:absolute;left:151px;top:184px;width:2px;height:88px;background:rgba(255,255,255,0.22)"></div>
+
+    <div style="position:absolute;left:482px;top:70px;width:540px;height:740px;border-radius:50%;overflow:hidden;background:#3a2410">
+      <img src="assets/photos/oct15-patron.png" alt="Her Excellency the Honourable Ms Sam Mostyn AC, Governor-General of Australia" style="position:absolute;left:-470px;top:0;width:1109px;height:740px;display:block;filter:saturate(1.04) contrast(1.03)">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(14,58,41,0) 55%, rgba(14,58,41,0.55) 82%, rgba(14,58,41,0.85) 100%)"></div>
+    </div>
+    <div style="position:absolute;left:452px;top:46px;width:560px;height:760px;border-radius:50%;border:3px solid var(--rawcs-gold);box-sizing:border-box"></div>
+
+    <div style="position:absolute;left:90px;top:332px;width:330px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="font-family:Chivo, sans-serif;font-weight:700;font-size:17px;letter-spacing:0.24em;color:var(--rawcs-gold);flex:none">OUR PATRON</div>
+      </div>
+      <div style="font-family:Carlito, Calibri, sans-serif;font-size:27px;line-height:1.24;color:#fff;text-wrap:pretty">Her Excellency the Honourable Ms Sam Mostyn AC</div>
+    </div>
+    <div style="position:absolute;left:90px;top:478px;width:500px;height:2px;background:linear-gradient(90deg, var(--rawcs-gold) 0%, var(--rawcs-gold) 60%, rgba(255,175,18,0) 100%)"></div>
+    <div style="position:absolute;left:578px;top:472px;width:14px;height:14px;border-radius:999px;background:var(--rawcs-gold)"></div>
+
+    <div style="position:absolute;left:90px;right:70px;top:664px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:Chivo, sans-serif;font-weight:700;font-size:26px;letter-spacing:0.24em;color:var(--rawcs-gold)">SYDNEY ROTARIANS</div>
+      <div style="font-size:82px;line-height:0.98;color:#fff;font-weight:700;letter-spacing:-0.035em;text-shadow:0 4px 30px rgba(7,36,25,0.55)">Let’s fill<br><span style="color:var(--rawcs-gold)">North Sydney Oval</span><br>for our Patron’s team</div>
+      <div style="margin-top:6px;font-family:Carlito, Calibri, sans-serif;font-size:32px;line-height:1.25;color:#fff;white-space:nowrap">Governor-General’s XI v New Zealand, women’s T20 under lights</div>
+    </div>
+
+    <div style="position:absolute;left:60px;right:60px;top:1076px;height:200px;background:#F7F5F3;border-radius:10px;display:flex;align-items:stretch">
+      <div style="position:absolute;left:-17px;top:81px;width:34px;height:34px;border-radius:999px;background:#09291D"></div>
+      <div style="position:absolute;right:-17px;top:81px;width:34px;height:34px;border-radius:999px;background:#09291D"></div>
+      <div style="position:absolute;left:574px;top:-17px;width:34px;height:34px;border-radius:999px;background:#0A2C1F"></div>
+      <div style="position:absolute;left:574px;bottom:-17px;width:34px;height:34px;border-radius:999px;background:#08261A"></div>
+      <div style="flex:none;width:591px;box-sizing:border-box;padding:30px 30px 26px 44px;display:flex;flex-direction:column;justify-content:center;gap:10px;border-right:3px dashed #C9CDD3">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;width:150px;height:12px">
+          <div style="background:var(--rawcs-blue)"></div><div style="background:var(--rawcs-gold)"></div><div style="background:var(--rawcs-red)"></div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;font-family:Carlito, Calibri, sans-serif;color:var(--rawcs-blue-darker)">
+          <div style="font-size:34px;font-weight:700">Thursday 15 October 2026</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;font-family:Carlito, Calibri, sans-serif;font-size:30px;font-weight:700;color:var(--rawcs-blue)">
+          <div>7:05pm</div>
+          <div style="width:2px;height:24px;background:var(--rawcs-red)"></div>
+          <div style="color:var(--rawcs-red)">Free entry</div>
+        </div>
+        <div style="font-family:Carlito, Calibri, sans-serif;font-size:21px;color:var(--neutral-700, #4A4A4C)">More about our Patron at rawcs.org.au/our-patron</div>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:0 20px;background:#F1EEEB;border-radius:0 10px 10px 0">
+        <img src="{{ logoColour }}" alt="Australian Rotary Districts and RAWCS" style="width:330px;height:auto;display:block">
+      </div>
+    </div>
+
+    <div style="position:absolute;left:0;right:0;bottom:0;height:24px;display:grid;grid-template-columns:1fr 1fr 1fr">
+      <div style="background:var(--rawcs-blue)"></div><div style="background:var(--rawcs-gold)"></div><div style="background:var(--rawcs-red)"></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:1500}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const tick = () => { if (window.RAWCS_LOGOS) this.forceUpdate(); else this._t = setTimeout(tick, 120); };
+    tick();
+  }
+  componentWillUnmount() { clearTimeout(this._t); }
+  renderVals() {
+    const L = window.RAWCS_LOGOS || {};
+    return { logoColour: L.lockupColour || '', lamps: Array.from({ length: 12 }, (_, i) => i) };
+  }
+}
+</script>
+</body>
+</html>

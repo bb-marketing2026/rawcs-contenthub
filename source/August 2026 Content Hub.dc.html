@@ -14,6 +14,7 @@
 <script src="_ds/rawcs-design-system-8a79e638-19f1-4375-9708-b0fbb80272d7/_ds_bundle.js"></script>
 <script src="./logos.js"></script>
 <script src="./pubmat-art.js"></script>
+  <script src="./nov-art.js"></script>
 <script src="./image-slot.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
 <style>
@@ -141,7 +142,7 @@
                 <div onClick="{{ p.open }}" style="width:252px;background:#fff;border:1px solid var(--neutral-200);border-top:3px solid {{ p.accent }};cursor:pointer;display:flex;flex-direction:column;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 14px 30px rgba(7,44,85,.18);transform:translateY(-3px)">
                   <div style="position:relative;background:var(--neutral-100)">
                     <sc-if value="{{ p.showsPubmat }}" hint-placeholder-val="{{ true }}">
-                      <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="100%,315px"></dc-import>
+                      <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" season="{{ p.season }}" gift-line="{{ p.f.giftLine }}" note="{{ p.f.note }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" tint2-hex="{{ p.f.tint2Hex }}" tint2-strength="{{ p.f.tint2Strength }}" tint2-end="{{ p.f.tint2End }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" text-widths="{{ p.f.textWidths }}" highlight-plain="{{ p.f.highlightPlain }}" text-style="{{ p.f.textStyle }}" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="100%,315px"></dc-import>
                     </sc-if>
                     <sc-if value="{{ p.showsDocCard }}" hint-placeholder-val="{{ false }}">
                       <div style="aspect-ratio:4 / 5;background:var(--rawcs-blue-darker);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center">
@@ -216,7 +217,7 @@
                 <div style="width:5px;background:{{ p.accent }};flex:none"></div>
                 <div style="width:88px;flex:none;align-self:center">
                   <sc-if value="{{ p.showsPubmat }}" hint-placeholder-val="{{ true }}">
-                    <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="88px,110px"></dc-import>
+                    <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" season="{{ p.season }}" gift-line="{{ p.f.giftLine }}" note="{{ p.f.note }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" tint2-hex="{{ p.f.tint2Hex }}" tint2-strength="{{ p.f.tint2Strength }}" tint2-end="{{ p.f.tint2End }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" text-widths="{{ p.f.textWidths }}" highlight-plain="{{ p.f.highlightPlain }}" text-style="{{ p.f.textStyle }}" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="88px,110px"></dc-import>
                   </sc-if>
                   <sc-if value="{{ p.hidesPubmat }}" hint-placeholder-val="{{ false }}">
                     <div style="aspect-ratio:4 / 5;background:var(--rawcs-blue-soft);display:flex;align-items:center;justify-content:center">
@@ -266,7 +267,7 @@
               <div onClick="{{ p.open }}" style="display:flex;gap:11px;padding:10px;background:var(--neutral-50);border-left:3px solid {{ p.accent }};cursor:pointer" style-hover="background:var(--rawcs-blue-soft)">
                 <div style="width:52px;flex:none">
                   <sc-if value="{{ p.showsPubmat }}" hint-placeholder-val="{{ true }}">
-                    <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="52px,65px"></dc-import>
+                    <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" season="{{ p.season }}" gift-line="{{ p.f.giftLine }}" note="{{ p.f.note }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" tint2-hex="{{ p.f.tint2Hex }}" tint2-strength="{{ p.f.tint2Strength }}" tint2-end="{{ p.f.tint2End }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" text-widths="{{ p.f.textWidths }}" highlight-plain="{{ p.f.highlightPlain }}" text-style="{{ p.f.textStyle }}" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="52px,65px"></dc-import>
                   </sc-if>
                   <sc-if value="{{ p.hidesPubmat }}" hint-placeholder-val="{{ false }}">
                     <div style="aspect-ratio:4 / 5;background:var(--rawcs-blue-soft);display:flex;align-items:center;justify-content:center">
@@ -323,7 +324,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:22px">
             <sc-for list="{{ templateCards }}" as="t" hint-placeholder-count="4">
               <div style="display:flex;flex-direction:column;gap:10px">
-                <dc-import name="Pubmat" variant="{{ t.variant }}" gradient="{{ t.gradient }}" tint="{{ t.tint }}" align="{{ t.align }}" panel-colour="{{ t.panelColour }}" logos="{{ t.logos }}" ratio="4 / 5" kicker="{{ t.kicker }}" headline="{{ t.headline }}" highlight="{{ t.highlight }}" ctas="{{ t.ctas }}" photo="{{ t.photo }}" slot-id="{{ t.slotId }}" hint-size="100%,290px"></dc-import>
+                <dc-import name="Pubmat" variant="{{ t.variant }}" gradient="{{ t.gradient }}" tint="{{ t.tint }}" align="{{ t.align }}" panel-colour="{{ t.panelColour }}" logos="{{ t.logos }}" ratio="4 / 5" text-widths="{{ t.textWidths }}" highlight-plain="{{ t.highlightPlain }}" text-style="{{ t.textStyle }}" kicker="{{ t.kicker }}" headline="{{ t.headline }}" highlight="{{ t.highlight }}" ctas="{{ t.ctas }}" photo="{{ t.photo }}" slot-id="{{ t.slotId }}" hint-size="100%,290px"></dc-import>
                 <span style="font-size:13px;font-weight:700;letter-spacing:-0.01em">{{ t.name }}</span>
                 <span style="font-size:12px;line-height:1.5;color:var(--text-muted)">{{ t.note }}</span>
               </div>
@@ -507,13 +508,14 @@
             <div style="{{ previewCol }}">
             <sc-if value="{{ sel.showsPubmat }}" hint-placeholder-val="{{ true }}">
               <div style="display:flex;gap:16px;align-items:flex-start">
+                <sc-if value="{{ sel.showsSquare }}" hint-placeholder-val="{{ true }}">
                 <div style="flex:1 1 46%;display:flex;flex-direction:column;gap:8px">
                   <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
                     <span style="font-family:var(--font-condensed);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--neutral-700)">1:1 Square</span>
                     <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.04em;color:var(--text-muted)">1080 × 1080</span>
                   </div>
                   <div ref="{{ squareRef }}" onPointerDown="{{ dragSquare }}" style="width:100%;position:relative">
-                    <dc-import name="Pubmat" variant="{{ sel.variant }}" gradient="{{ sel.gradient }}" tint="{{ sel.tint }}" align="{{ sel.align }}" panel-colour="{{ sel.panelColour }}" base-colour="{{ sel.baseColour }}" wash-place="{{ sel.washPlace }}" wash-strength="{{ sel.f.washStrength }}" base-strength="{{ sel.f.baseStrength }}" tint-end="{{ sel.f.tintEnd }}" base-start="{{ sel.f.baseStart }}" tint-hex="{{ sel.f.tintHex }}" base-hex="{{ sel.f.baseHex }}" wash-soft="{{ sel.f.washSoft }}" logos="{{ sel.logos }}" custom-logos="{{ logoLib }}" site-label="{{ sel.siteLabel }}" ratio="1 / 1" kicker="{{ sel.f.kicker }}" headline="{{ sel.f.headline }}" highlight="{{ sel.f.highlight }}" ctas="{{ sel.f.ctas }}" order="{{ sel.f.order }}" scale-headline="{{ sel.f.sqScaleHeadline }}" scale-kicker="{{ sel.f.sqScaleKicker }}" scale-cta="{{ sel.f.sqScaleCta }}" scale-block="{{ sel.f.sqScaleBlock }}" scale-logo="{{ sel.f.sqScaleLogo }}" scale-highlight="{{ sel.f.sqScaleHighlight }}" scale-site="{{ sel.f.sqScaleSite }}" scale-bar="{{ sel.f.sqScaleBar }}" logo-scales="{{ sel.f.sqLogoScales }}" places="{{ sel.f.sqPlaces }}" adopt-photo="{{ adoptPhoto }}" crop-cursor="1" line-height="{{ sel.f.lineHeight }}" block-gap="{{ sel.f.blockGap }}" photo-fit="{{ sel.f.sqPhotoFit }}" photo-zoom="{{ sel.f.sqPhotoZoom }}" photo-x="{{ sel.f.sqPhotoX }}" photo-y="{{ sel.f.sqPhotoY }}" text-x="{{ sel.f.sqTextX }}" text-y="{{ sel.f.sqTextY }}" text-align="{{ sel.f.sqTextAlign }}" ready-image="{{ sel.f.readyKey }}" ready-fit="contain" photo="{{ sel.f.photo }}" video="{{ sel.f.video }}" video-link="{{ sel.f.videoLink }}" slot-id="{{ sel.f.slotId }}" hint-size="100%,270px"></dc-import>
+                    <dc-import name="Pubmat" variant="{{ sel.variant }}" gradient="{{ sel.gradient }}" tint="{{ sel.tint }}" align="{{ sel.align }}" panel-colour="{{ sel.panelColour }}" season="{{ sel.season }}" gift-line="{{ sel.f.giftLine }}" note="{{ sel.f.note }}" base-colour="{{ sel.baseColour }}" wash-place="{{ sel.washPlace }}" wash-strength="{{ sel.f.washStrength }}" base-strength="{{ sel.f.baseStrength }}" tint-end="{{ sel.f.tintEnd }}" base-start="{{ sel.f.baseStart }}" tint-hex="{{ sel.f.tintHex }}" tint2-hex="{{ sel.f.tint2Hex }}" tint2-strength="{{ sel.f.tint2Strength }}" tint2-end="{{ sel.f.tint2End }}" base-hex="{{ sel.f.baseHex }}" wash-soft="{{ sel.f.washSoft }}" logos="{{ sel.logos }}" custom-logos="{{ logoLib }}" site-label="{{ sel.siteLabel }}" ratio="1 / 1" text-widths="{{ sel.sqTextWidths }}" highlight-plain="{{ sel.f.highlightPlain }}" text-style="{{ sel.f.textStyle }}" kicker="{{ sel.f.kicker }}" headline="{{ sel.f.headline }}" highlight="{{ sel.f.highlight }}" ctas="{{ sel.f.ctas }}" order="{{ sel.f.order }}" scale-headline="{{ sel.f.sqScaleHeadline }}" scale-kicker="{{ sel.f.sqScaleKicker }}" scale-cta="{{ sel.f.sqScaleCta }}" scale-block="{{ sel.f.sqScaleBlock }}" scale-logo="{{ sel.f.sqScaleLogo }}" scale-highlight="{{ sel.f.sqScaleHighlight }}" scale-site="{{ sel.f.sqScaleSite }}" scale-bar="{{ sel.f.sqScaleBar }}" logo-scales="{{ sel.f.sqLogoScales }}" places="{{ sel.f.sqPlaces }}" adopt-photo="{{ adoptPhoto }}" crop-cursor="1" line-height="{{ sel.f.lineHeight }}" block-gap="{{ sel.f.blockGap }}" photo-fit="{{ sel.f.sqPhotoFit }}" photo-zoom="{{ sel.f.sqPhotoZoom }}" photo-x="{{ sel.f.sqPhotoX }}" photo-y="{{ sel.f.sqPhotoY }}" text-x="{{ sel.f.sqTextX }}" text-y="{{ sel.f.sqTextY }}" text-align="{{ sel.f.sqTextAlign }}" ready-image="{{ sel.f.readyKey }}" ready-fit="contain" photo="{{ sel.f.photo }}" video="{{ sel.f.video }}" video-link="{{ sel.f.videoLink }}" slot-id="{{ sel.f.slotId }}" hint-size="100%,270px"></dc-import>
                     <sc-for list="{{ selBoxSq.boxes }}" as="bx" hint-placeholder-count="0">
                       <div style="{{ bx.style }}">
                         <sc-if value="{{ bx.labelled }}" hint-placeholder-val="{{ true }}">
@@ -523,19 +525,24 @@
                     </sc-for>
                     <sc-if value="{{ selBoxSq.on }}" hint-placeholder-val="{{ false }}">
                       <div style="{{ selBoxSq.groupStyle }}">
+                        
+                        <sc-if value="{{ selBoxSq.canWidth }}" hint-placeholder-val="{{ false }}">
+                          <div onPointerDown="{{ widthSquare }}" title="Drag to make the text box wider or narrower" style="position:absolute;right:-6px;top:-6px;width:10px;height:22px;background:var(--rawcs-gold);border:2px solid #fff;box-shadow:0 1px 4px rgba(7,44,85,.5);cursor:ew-resize;pointer-events:auto;touch-action:none"></div>
+                        </sc-if>
                         <div onPointerDown="{{ resizeSquare }}" style="position:absolute;right:-7px;bottom:-7px;width:14px;height:14px;background:var(--rawcs-gold);border:2px solid #fff;box-shadow:0 1px 4px rgba(7,44,85,.5);cursor:nwse-resize;pointer-events:auto;touch-action:none"></div>
                       </div>
                     </sc-if>
                   </div>
                   <button onClick="{{ downloadSquare }}" style="{{ squareBtnStyle }}">{{ dlSquareLabel }}</button>
                 </div>
+                </sc-if>
                 <div style="flex:1 1 54%;display:flex;flex-direction:column;gap:8px">
                   <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
                     <span style="font-family:var(--font-condensed);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--neutral-700)">4:5 Portrait</span>
                     <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.04em;color:var(--text-muted)">1080 × 1350</span>
                   </div>
                   <div ref="{{ portraitRef }}" onPointerDown="{{ dragPortrait }}" style="width:100%;position:relative">
-                    <dc-import name="Pubmat" variant="{{ sel.variant }}" gradient="{{ sel.gradient }}" tint="{{ sel.tint }}" align="{{ sel.align }}" panel-colour="{{ sel.panelColour }}" base-colour="{{ sel.baseColour }}" wash-place="{{ sel.washPlace }}" wash-strength="{{ sel.f.washStrength }}" base-strength="{{ sel.f.baseStrength }}" tint-end="{{ sel.f.tintEnd }}" base-start="{{ sel.f.baseStart }}" tint-hex="{{ sel.f.tintHex }}" base-hex="{{ sel.f.baseHex }}" wash-soft="{{ sel.f.washSoft }}" logos="{{ sel.logos }}" custom-logos="{{ logoLib }}" site-label="{{ sel.siteLabel }}" ratio="4 / 5" kicker="{{ sel.f.kicker }}" headline="{{ sel.f.headline }}" highlight="{{ sel.f.highlight }}" ctas="{{ sel.f.ctas }}" order="{{ sel.f.order }}" scale-headline="{{ sel.f.scaleHeadline }}" scale-kicker="{{ sel.f.scaleKicker }}" scale-cta="{{ sel.f.scaleCta }}" scale-block="{{ sel.f.scaleBlock }}" scale-logo="{{ sel.f.scaleLogo }}" scale-highlight="{{ sel.f.scaleHighlight }}" scale-site="{{ sel.f.scaleSite }}" scale-bar="{{ sel.f.scaleBar }}" logo-scales="{{ sel.f.logoScales }}" places="{{ sel.f.places }}" adopt-photo="{{ adoptPhoto }}" crop-cursor="1" line-height="{{ sel.f.lineHeight }}" block-gap="{{ sel.f.blockGap }}" photo-fit="{{ sel.f.photoFit }}" photo-zoom="{{ sel.f.photoZoom }}" photo-x="{{ sel.f.photoX }}" photo-y="{{ sel.f.photoY }}" text-x="{{ sel.f.textX }}" text-y="{{ sel.f.textY }}" text-align="{{ sel.f.textAlign }}" ready-image="{{ sel.f.readyKey }}" photo="{{ sel.f.photo }}" video="{{ sel.f.video }}" video-link="{{ sel.f.videoLink }}" slot-id="{{ sel.f.slotId }}" hint-size="100%,330px"></dc-import>
+                    <dc-import name="Pubmat" variant="{{ sel.variant }}" gradient="{{ sel.gradient }}" tint="{{ sel.tint }}" align="{{ sel.align }}" panel-colour="{{ sel.panelColour }}" season="{{ sel.season }}" gift-line="{{ sel.f.giftLine }}" note="{{ sel.f.note }}" base-colour="{{ sel.baseColour }}" wash-place="{{ sel.washPlace }}" wash-strength="{{ sel.f.washStrength }}" base-strength="{{ sel.f.baseStrength }}" tint-end="{{ sel.f.tintEnd }}" base-start="{{ sel.f.baseStart }}" tint-hex="{{ sel.f.tintHex }}" tint2-hex="{{ sel.f.tint2Hex }}" tint2-strength="{{ sel.f.tint2Strength }}" tint2-end="{{ sel.f.tint2End }}" base-hex="{{ sel.f.baseHex }}" wash-soft="{{ sel.f.washSoft }}" logos="{{ sel.logos }}" custom-logos="{{ logoLib }}" site-label="{{ sel.siteLabel }}" ratio="4 / 5" text-widths="{{ sel.f.textWidths }}" highlight-plain="{{ sel.f.highlightPlain }}" text-style="{{ sel.f.textStyle }}" kicker="{{ sel.f.kicker }}" headline="{{ sel.f.headline }}" highlight="{{ sel.f.highlight }}" ctas="{{ sel.f.ctas }}" order="{{ sel.f.order }}" scale-headline="{{ sel.f.scaleHeadline }}" scale-kicker="{{ sel.f.scaleKicker }}" scale-cta="{{ sel.f.scaleCta }}" scale-block="{{ sel.f.scaleBlock }}" scale-logo="{{ sel.f.scaleLogo }}" scale-highlight="{{ sel.f.scaleHighlight }}" scale-site="{{ sel.f.scaleSite }}" scale-bar="{{ sel.f.scaleBar }}" logo-scales="{{ sel.f.logoScales }}" places="{{ sel.f.places }}" adopt-photo="{{ adoptPhoto }}" crop-cursor="1" line-height="{{ sel.f.lineHeight }}" block-gap="{{ sel.f.blockGap }}" photo-fit="{{ sel.f.photoFit }}" photo-zoom="{{ sel.f.photoZoom }}" photo-x="{{ sel.f.photoX }}" photo-y="{{ sel.f.photoY }}" text-x="{{ sel.f.textX }}" text-y="{{ sel.f.textY }}" text-align="{{ sel.f.textAlign }}" ready-image="{{ sel.f.readyKey }}" photo="{{ sel.f.photo }}" video="{{ sel.f.video }}" video-link="{{ sel.f.videoLink }}" slot-id="{{ sel.f.slotId }}" hint-size="100%,330px"></dc-import>
                     <sc-for list="{{ selBoxPt.boxes }}" as="bx" hint-placeholder-count="0">
                       <div style="{{ bx.style }}">
                         <sc-if value="{{ bx.labelled }}" hint-placeholder-val="{{ true }}">
@@ -545,6 +552,10 @@
                     </sc-for>
                     <sc-if value="{{ selBoxPt.on }}" hint-placeholder-val="{{ false }}">
                       <div style="{{ selBoxPt.groupStyle }}">
+                        
+                        <sc-if value="{{ selBoxPt.canWidth }}" hint-placeholder-val="{{ false }}">
+                          <div onPointerDown="{{ widthPortrait }}" title="Drag to make the text box wider or narrower" style="position:absolute;right:-6px;top:-6px;width:10px;height:22px;background:var(--rawcs-gold);border:2px solid #fff;box-shadow:0 1px 4px rgba(7,44,85,.5);cursor:ew-resize;pointer-events:auto;touch-action:none"></div>
+                        </sc-if>
                         <div onPointerDown="{{ resizePortrait }}" style="position:absolute;right:-7px;bottom:-7px;width:14px;height:14px;background:var(--rawcs-gold);border:2px solid #fff;box-shadow:0 1px 4px rgba(7,44,85,.5);cursor:nwse-resize;pointer-events:auto;touch-action:none"></div>
                       </div>
                     </sc-if>
@@ -560,6 +571,13 @@
                   <span style="font-family:var(--font-condensed);font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--rawcs-blue-darker)">{{ sel.frameLabel }}</span>
                   <button onClick="{{ framePrev }}" style="background:#fff;border:1px solid var(--rawcs-blue);color:var(--rawcs-blue);font-size:11px;padding:5px 9px;cursor:pointer">←</button>
                   <button onClick="{{ frameNext }}" style="background:#fff;border:1px solid var(--rawcs-blue);color:var(--rawcs-blue);font-size:11px;padding:5px 9px;cursor:pointer">→</button>
+                  <sc-if value="{{ sel.editable }}" hint-placeholder-val="{{ true }}">
+                    <div style="display:flex;align-items:center;gap:4px;margin-left:4px;padding-left:8px;border-left:1px solid var(--rawcs-blue)">
+                      <span style="font-family:var(--font-condensed);font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--rawcs-blue-darker)">Order</span>
+                      <button onClick="{{ frameMoveBack }}" title="Move this frame one place earlier" style="background:#fff;border:1px solid var(--rawcs-blue);color:var(--rawcs-blue);font-size:11px;font-weight:700;padding:5px 8px;cursor:pointer" style-hover="background:var(--rawcs-blue);color:#fff">◀ Move</button>
+                      <button onClick="{{ frameMoveOn }}" title="Move this frame one place later" style="background:#fff;border:1px solid var(--rawcs-blue);color:var(--rawcs-blue);font-size:11px;font-weight:700;padding:5px 8px;cursor:pointer" style-hover="background:var(--rawcs-blue);color:#fff">Move ▶</button>
+                    </div>
+                  </sc-if>
                   <div style="display:flex;flex-wrap:wrap;gap:5px;margin-left:6px">
                     <sc-for list="{{ sel.frameChips }}" as="fc" hint-placeholder-count="3">
                       <button onClick="{{ fc.pick }}" style="{{ fc.style }}">{{ fc.label }}</button>
@@ -683,6 +701,7 @@
                     <option value="photo">Full-bleed photo</option>
                     <option value="split">Photo + solid panel</option>
                     <option value="statement">Statement card (text only)</option>
+                    <option value="giving">Season of giving (photo into navy)</option>
                     <option value="banner">Gold footer banner</option>
                     <option value="reel">Video / reel frame</option>
                     <option value="none">None (no design)</option>
@@ -818,6 +837,7 @@
                     <option value="left">Left edge</option>
                     <option value="right">Right edge</option>
                     <option value="both">Both top and bottom</option>
+                    <option value="duo">Two-tone — top colour + bottom colour</option>
                   </select>
                 </label>
                   <label style="display:flex;flex-direction:column;gap:5px">
@@ -846,6 +866,21 @@
                         <button onClick="{{ clearTintHex }}" style="{{ swatchClearStyle }}">Preset</button>
                       </div>
                     </div>
+                    <sc-if value="{{ sel.isDuo }}" hint-placeholder-val="{{ false }}">
+                      <div style="display:flex;flex-direction:column;gap:6px">
+                        <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">Bottom colour (two-tone) — any colour</span>
+                        <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center">
+                          <sc-for list="{{ sel.tint2Swatches }}" as="sw" hint-placeholder-count="10">
+                            <button onClick="{{ sw.pick }}" title="{{ sw.label }}" style="{{ sw.style }}"></button>
+                          </sc-for>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:7px">
+                          <input type="color" value="{{ sel.tint2HexValue }}" onChange="{{ setTint2Hex }}" style="width:38px;height:26px;flex:none;padding:0;border:1px solid var(--neutral-300);background:#fff;cursor:pointer">
+                          <span style="font-size:11px;color:var(--text-muted);flex:1 1 auto;min-width:0">{{ sel.tint2HexNote }}</span>
+                          <button onClick="{{ clearTint2Hex }}" style="{{ swatchClearStyle }}">Preset</button>
+                        </div>
+                      </div>
+                    </sc-if>
                     <div style="display:flex;flex-direction:column;gap:6px">
                       <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">Base shade — any colour</span>
                       <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center">
@@ -999,13 +1034,23 @@
                 
                 <div style="{{ paneText }};flex-direction:column;gap:12px">
                 <label style="display:flex;flex-direction:column;gap:5px">
-                  <div style="display:flex;align-items:center;gap:7px">
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px">
                     <span style="font-size:11px;color:var(--text-muted);flex:1 1 auto;min-width:0">Kicker</span>
                     <button onClick="{{ kickerSmaller }}" style="{{ fontStepStyle }}">A−</button>
                     <button onClick="{{ kickerBigger }}" style="{{ fontStepStyle }}">A+</button>
-                    <span style="font-family:var(--font-condensed);font-size:10px;color:var(--text-muted);flex:0 0 34px;text-align:right">{{ sel.kickerPct }}</span>
+                    <div title="Font size in px on the 1080px export — type a number or pick one" style="flex:none;display:flex;align-items:stretch;height:26px;border:1px solid var(--rawcs-blue);background:#fff">
+                      <input type="text" inputmode="numeric" value="{{ sel.kickerPxDraft }}" onChange="{{ typeKickerPx }}" onKeyDown="{{ keyKickerPx }}" onBlur="{{ commitKickerPx }}" style="width:38px;border:0;outline:0;padding:0 4px;font-family:var(--font-condensed);font-size:12px;font-weight:700;color:var(--rawcs-blue-darker);background:transparent;text-align:right">
+                      <select value="{{ sel.kickerPx }}" onChange="{{ setKickerPx }}" style="width:20px;border:0;border-left:1px solid var(--neutral-200);background:#fff;color:transparent;padding:0;cursor:pointer;font-size:12px">
+                        <sc-for list="{{ sel.kickerPxOptions }}" as="o" hint-placeholder-count="1"><option value="{{ o }}" style="color:#1a1a1a">{{ o }}</option></sc-for>
+                      </select>
+                    </div>
+                    <div style="flex:none;display:flex;gap:2px">
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ kickerToggleB }}" title="Bold" style="{{ sel.kickerBStyle }}"><b>B</b></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ kickerToggleI }}" title="Italic" style="{{ sel.kickerIStyle }}"><i style="font-family:Georgia,serif">I</i></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ kickerToggleU }}" title="Underline" style="{{ sel.kickerUStyle }}"><u>U</u></button>
+                    </div>
                   </div>
-                  <textarea value="{{ sel.f.kicker }}" onChange="{{ setKicker }}" onKeyDown="{{ keepKeys }}" rows="2" placeholder="Short label above the headline" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
+                  <textarea ref="{{ kickerFieldRef }}" value="{{ sel.f.kicker }}" onChange="{{ setKicker }}" onKeyDown="{{ keepKeys }}" rows="2" placeholder="Short label above the headline" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
                 </label>
                 <label style="display:flex;flex-direction:column;gap:5px">
                   <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
@@ -1013,23 +1058,53 @@
                     <button onClick="{{ markHeadlineSel }}" style="{{ markBtnStyle }}">Highlight selection</button>
                     <button onClick="{{ headlineSmaller }}" style="{{ fontStepStyle }}">A−</button>
                     <button onClick="{{ headlineBigger }}" style="{{ fontStepStyle }}">A+</button>
-                    <span style="font-family:var(--font-condensed);font-size:10px;color:var(--text-muted);flex:0 0 34px;text-align:right">{{ sel.headlinePct }}</span>
+                    <div title="Font size in px on the 1080px export — type a number or pick one" style="flex:none;display:flex;align-items:stretch;height:26px;border:1px solid var(--rawcs-blue);background:#fff">
+                      <input type="text" inputmode="numeric" value="{{ sel.headlinePxDraft }}" onChange="{{ typeHeadlinePx }}" onKeyDown="{{ keyHeadlinePx }}" onBlur="{{ commitHeadlinePx }}" style="width:38px;border:0;outline:0;padding:0 4px;font-family:var(--font-condensed);font-size:12px;font-weight:700;color:var(--rawcs-blue-darker);background:transparent;text-align:right">
+                      <select value="{{ sel.headlinePx }}" onChange="{{ setHeadlinePx }}" style="width:20px;border:0;border-left:1px solid var(--neutral-200);background:#fff;color:transparent;padding:0;cursor:pointer;font-size:12px">
+                        <sc-for list="{{ sel.headlinePxOptions }}" as="o" hint-placeholder-count="1"><option value="{{ o }}" style="color:#1a1a1a">{{ o }}</option></sc-for>
+                      </select>
+                    </div>
+                    <div style="flex:none;display:flex;gap:2px">
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ headlineToggleB }}" title="Bold" style="{{ sel.headlineBStyle }}"><b>B</b></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ headlineToggleI }}" title="Italic" style="{{ sel.headlineIStyle }}"><i style="font-family:Georgia,serif">I</i></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ headlineToggleU }}" title="Underline" style="{{ sel.headlineUStyle }}"><u>U</u></button>
+                    </div>
                   </div>
                   <textarea ref="{{ headlineFieldRef }}" value="{{ sel.f.headline }}" onChange="{{ setHeadline }}" onKeyDown="{{ keepKeys }}" rows="4" placeholder="The main message — press Enter for a new line, twice for a gap" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
-                  <span style="font-size:11px;line-height:1.5;color:var(--text-muted);text-wrap:pretty">Enter starts a new line, a blank line leaves a gap. Select any words and press <strong>Highlight selection</strong> to put them on gold where they sit — it writes <strong>==like this==</strong>, and pressing it again on the same words clears it.</span>
+                  <span style="font-size:11px;line-height:1.5;color:var(--text-muted);text-wrap:pretty">Enter starts a new line, a blank line leaves a gap. Select any words and press <strong>B</strong>, <strong>I</strong> or <strong>U</strong> to style just those words (with nothing selected they style the whole line), or <strong>Highlight selection</strong> to put them on gold where they sit — it writes <strong>==like this==</strong>, and pressing it again on the same words clears it.</span>
                   <sc-if value="{{ markHint }}" hint-placeholder-val="{{ false }}">
                     <span style="font-size:11px;color:var(--rawcs-red)">{{ markHint }}</span>
                   </sc-if>
                 </label>
                 <label style="display:flex;flex-direction:column;gap:5px">
-                  <div style="display:flex;align-items:center;gap:7px">
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px">
                     <span style="font-size:11px;color:var(--text-muted);flex:1 1 auto;min-width:0">Highlight block — a whole line on gold</span>
                     <button onClick="{{ highlightSmaller }}" style="{{ fontStepStyle }}">A−</button>
                     <button onClick="{{ highlightBigger }}" style="{{ fontStepStyle }}">A+</button>
-                    <span style="font-family:var(--font-condensed);font-size:10px;color:var(--text-muted);flex:0 0 34px;text-align:right">{{ sel.highlightPct }}</span>
+                    <div title="Font size in px on the 1080px export — type a number or pick one" style="flex:none;display:flex;align-items:stretch;height:26px;border:1px solid var(--rawcs-blue);background:#fff">
+                      <input type="text" inputmode="numeric" value="{{ sel.highlightPxDraft }}" onChange="{{ typeHighlightPx }}" onKeyDown="{{ keyHighlightPx }}" onBlur="{{ commitHighlightPx }}" style="width:38px;border:0;outline:0;padding:0 4px;font-family:var(--font-condensed);font-size:12px;font-weight:700;color:var(--rawcs-blue-darker);background:transparent;text-align:right">
+                      <select value="{{ sel.highlightPx }}" onChange="{{ setHighlightPx }}" style="width:20px;border:0;border-left:1px solid var(--neutral-200);background:#fff;color:transparent;padding:0;cursor:pointer;font-size:12px">
+                        <sc-for list="{{ sel.highlightPxOptions }}" as="o" hint-placeholder-count="1"><option value="{{ o }}" style="color:#1a1a1a">{{ o }}</option></sc-for>
+                      </select>
+                    </div>
+                    <div style="flex:none;display:flex;gap:2px">
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ highlightToggleB }}" title="Bold" style="{{ sel.highlightBStyle }}"><b>B</b></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ highlightToggleI }}" title="Italic" style="{{ sel.highlightIStyle }}"><i style="font-family:Georgia,serif">I</i></button>
+                      <button onMouseDown="{{ keepSelection }}" onClick="{{ highlightToggleU }}" title="Underline" style="{{ sel.highlightUStyle }}"><u>U</u></button>
+                    </div>
                   </div>
-                  <textarea value="{{ sel.f.highlight }}" onChange="{{ setHighlight }}" onKeyDown="{{ keepKeys }}" rows="2" placeholder="A closing line that sits on its own gold block" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
+                  <textarea ref="{{ highlightFieldRef }}" value="{{ sel.f.highlight }}" onChange="{{ setHighlight }}" onKeyDown="{{ keepKeys }}" rows="2" placeholder="A closing line that sits on its own gold block" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
                 </label>
+                <sc-if value="{{ sel.isGivingLayout }}" hint-placeholder-val="{{ false }}">
+                  <label style="display:flex;flex-direction:column;gap:6px">
+                    <span style="font-family:var(--font-condensed);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--rawcs-blue-darker)">Serif line</span>
+                    <textarea value="{{ sel.f.giftLine }}" onChange="{{ setGiftLine }}" onKeyDown="{{ keepKeys }}" rows="2" placeholder="The italic line under the gold headline" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
+                  </label>
+                  <label style="display:flex;flex-direction:column;gap:6px">
+                    <span style="font-family:var(--font-condensed);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--rawcs-blue-darker)">Small note</span>
+                    <textarea value="{{ sel.f.note }}" onChange="{{ setNote }}" onKeyDown="{{ keepKeys }}" rows="3" placeholder="One or two short lines of detail or a source" style="{{ areaInput }}" style-focus="border-color:var(--rawcs-blue)"></textarea>
+                  </label>
+                </sc-if>
                 <div style="display:flex;flex-direction:column;gap:7px;background:var(--rawcs-blue-soft);padding:10px 12px">
                   <sc-for list="{{ textSpacing }}" as="t" hint-placeholder-count="2">
                     <div style="display:flex;flex-direction:column;gap:5px">
@@ -1891,7 +1966,7 @@ const BASELINE = {
         "highlight": "",
         "ctas": [
           {
-            "label": "Register — free",
+            "label": "Register for free",
             "tone": "blue"
           }
         ],
@@ -2458,7 +2533,7 @@ const LOGO_OPTIONS = [
   { key: 'emblem', label: 'Rotary emblem' }
 ];
 
-const TEMPLATE_LABEL = { photo: 'Full-bleed photo', split: 'Photo + solid panel', statement: 'Statement card', banner: 'Footer banner', reel: 'Video / reel frame', none: 'No design' };
+const TEMPLATE_LABEL = { giving: 'Season of giving', photo: 'Full-bleed photo', split: 'Photo + solid panel', statement: 'Statement card', banner: 'Footer banner', reel: 'Video / reel frame', none: 'No design' };
 const PANEL_LABEL = { gold: 'gold', blue: 'blue', navy: 'navy', red: 'red', cream: 'cream', white: 'white' };
 const MONTH = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const DAY = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -2469,13 +2544,25 @@ const STORE = 'rawcs-aug26-hub-v5';
 const EL_META = {
   headline:  { label: 'Headline',   size: 'scaleHeadline',  min: 0.5, max: 1.8, place: true },
   kicker:    { label: 'Kicker',     size: 'scaleKicker',    min: 0.5, max: 1.8, place: true },
-  highlight: { label: 'Highlight',  size: 'scaleHighlight', min: 0.5, max: 1.8, place: true },
+  highlight: { label: 'Highlight',  size: 'scaleHighlight', min: 0.15, max: 1.8, place: true },
   ctas:      { label: 'CTA chips',  size: 'scaleCta',       min: 0.5, max: 1.8, place: true },
   logo:      { label: 'Logos',      size: 'scaleLogo',      min: 0.4, max: 1.8, place: true },
   site:      { label: 'Address',    size: 'scaleSite',      min: 0.5, max: 2.4, place: true },
   bar:       { label: 'Colour bar', size: 'scaleBar',       min: 0.3, max: 3,   edge: true },
   photo:     { label: 'Photo',      size: null,             min: 1,   max: 3,   zoom: true }
 };
+// A highlight shrunk to half size or less reads as a plain detail line. The flag
+// makes that sticky, so resizing it afterwards never flips it back to a gold block.
+function hlPlain(f) {
+  if (f.highlightPlain === true) return true;
+  if (f.highlightPlain === false) return false;
+  return (f.scaleHighlight === undefined ? 1 : +f.scaleHighlight) <= 0.5;
+}
+function plainLock(f, key) {
+  return key === 'highlight' && f.highlightPlain === undefined && hlPlain(f) ? { highlightPlain: true } : {};
+}
+const FONT_BASE = { photo: { kick: 2.5, hl: 8 }, split: { kick: 2.4, hl: 6.4 }, statement: { kick: 2.4, hl: 8.6 }, banner: { kick: 2.4, hl: 6 } };
+const FONT_PX_LIST = [12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 44, 48, 54, 60, 66, 72, 80, 88, 96, 108, 120, 132, 144];
 const EL_ORDER = ['headline', 'kicker', 'highlight', 'ctas', 'logo', 'site', 'bar', 'photo'];
 // Sizes are held per ratio: 'scaleHeadline' for the portrait, 'sqScaleHeadline'
 // for the square, which falls back to the portrait value until it is touched.
@@ -2535,18 +2622,69 @@ const ANCHORS = [
 const MONTHS = [
   { key: '2026-08', name: 'August 2026', short: 'August' },
   { key: '2026-09', name: 'September 2026', short: 'September' },
-  { key: '2026-10', name: 'October 2026', short: 'October' }
+  { key: '2026-10', name: 'October 2026', short: 'October' },
+  { key: '2026-11', name: 'November 2026', short: 'November' }
 ];
 const MONTH_STORE = 'rawcs-hub-month';
 // Bump SEED whenever the calendar data changes. Stored payloads carrying an older
 // seed have their edit layer and log dropped on every load, so a stale mounted
 // instance writing its in-memory state back cannot resurrect them.
-const SEED = '2026-08-main-12-captions-v2';
+const SEED = '2026-10-30-november-draft3';
 // Keys retired during build. Read once for genuine edits, then discarded so a
 // stale mounted instance can never write its in-memory state back over them.
 const RETIRED_STORES = ['rawcs-aug26-hub-v4', 'rawcs-aug26-hub-v3', 'rawcs-aug26-hub-v2', 'rawcs-aug26-hub'];
 // Posts added inside the hub itself; they ship with the calendar.
 const ADDED_POSTS = [
+  {
+    "id": "oct-erk-cyclone-v2",
+    "dateISO": "2026-10-20",
+    "slotLabel": "12",
+    "category": "Appeals and fundraising",
+    "pillar": "Urgent need",
+    "ask": "Donate",
+    "source": "RNZWCS Emergency Response Kits flyer; RAWCS project 86-2019-20 (RAOAF)",
+    "projectId": "86-2019-20",
+    "link": "https://donations.rawcs.com.au/86-2019-20",
+    "topic": "Emergency Response Kits — Pacific cyclone season 2026–27",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "donations.rawcs.com.au/86-2019-20",
+    "status": "Not started.\n\nCaption supplied and client-approved (16 October). Takes the 20 October slot from the volunteer call, which moved to 24 November. Posts before cyclone season opens on 1 November. Artwork done (October 20 Emergency Kits.dc.html, 6a); photos supplied 16 October. Swap in RNZWCS originals when supplied.",
+    "statusType": "notstarted",
+    "caption": "After a few seasons without severe cyclones, our Rotary network in New Zealand is on high alert, with cyclone warnings in the South West Pacific.\n\nCyclone season is expected to run from 1 November 2026 to 30 April 2027, and a strengthening El Niño is expected to push cyclones further east than usual, from Tonga toward the Cook Islands and French Polynesia.\n\nSince 1985 Rotary containers, funded by clubs and individuals, have been packed for such disasters. They hold more than 60 items for emergency shelter and the 78-litre container itself can be used to treat drinking water.\n\nRight now, we have packed containers across seven locations in the Pacific. With the expected impacts of the cyclone in mind, the Rotary team in Auckland is planning a replenishment, with a budget of NZ$600,000.\n\nHelp our neighbours prepare for this cyclone season. Make a tax-deductible donation today through the link below and help to restock these kits and cover the cost of freight and storage.\n\nhttps://donations.rawcs.com.au/86-2019-20",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#EmergencyResponseKits",
+      "#PacificCyclones",
+      "#RotaryNewZealand"
+    ],
+    "frames": [
+      {
+        "kicker": "Emergency Response Kits",
+        "headline": "Help us to restock emergency kits for Cyclone Season in the Pacific",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Help restock the kits",
+            "tone": "red"
+          }
+        ],
+        "brief": "Artwork: October 20 Emergency Kits.dc.html (7a, navy redesign). 1080 × 1350 LinkedIn pubmat on the checklist template. Chips: Emergency Response Kits · Cyclone season 2026–27. Headline: The help is already waiting. Subhead: Rotary's Emergency Response Kits are packed and ready across the Pacific. Help restock them this cyclone season. Checklist: 60+ items in every kit · 7 locations across the Pacific · Supported by Rotary since 1985. CTA: Help restock the kits, with donations.rawcs.com.au/86-2019-20 under it. Footnote: Tax deductible in Australia through the Rotary Australia Overseas Aid Fund. In support of Rotary New Zealand World Community Service. Hero: Lautoka handover photo (flyer p1, right); inset: blue kit container (flyer p1, left). Flyer images are low resolution; use RNZWCS originals when supplied. Exclude: storm/damage stock, NZ bank/Swift details, CC26860, CID badge, NZ$600,000, RNZWCS logo (unless approved). Alt text: Members of the Rotary Club of Lautoka stand with a banner in front of a truck loaded with blue Rotary Emergency Response Kit containers.",
+        "readyImage": "assets/art2/oct20-erk-v12.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ]
+  },
   {
     "id": "adhoc-mt2c2l96",
     "dateISO": "2026-08-23",
@@ -2898,10 +3036,112 @@ const ADDED_POSTS = [
     ]
   },
   {
-    "id": "nepal-vid-4",
+    "id": "nepal-rasuwa-carousel",
     "dateISO": "2026-09-23",
     "week": 4,
-    "slotLabel": "94",
+    "slotLabel": "10",
+    "category": "Nepal appeal carousel",
+    "pillar": "Emergency appeal",
+    "ask": "Donate",
+    "source": "Supplied — RAWCS Rasuwa Nepal photos",
+    "projectId": "17-2026-27",
+    "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
+    "topic": "Rasuwa, Nepal — your donations are already moving",
+    "format": "carousel",
+    "variant": "photo",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "blue",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "frames": [
+      {
+        "kicker": "Rotarians in action | Nepal",
+        "headline": "Your donations are already moving.",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Supplied final artwork — frame 1, Rotarians with families in the Trishuli valley under a navy wash, gold emphasis on “moving”.",
+        "readyImage": "rn1",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Your help can shape Nepal's recovery.",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Support Nepal Today",
+            "tone": "red"
+          }
+        ],
+        "brief": "Supplied final artwork — frame 2, donation card with the donations.rawcs.com.au/17-2026-27 link and QR code over the flood-damage photo.",
+        "readyImage": "rn2",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Families queueing for relief kits",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Supplied final artwork — frame 3, two-photo stack: the queue at the community centre and kits laid out on the field.",
+        "readyImage": "rn3",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Kits handed out, family by family",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Supplied final artwork — frame 4, two-photo stack: distribution under way and a kit passed hand to hand.",
+        "readyImage": "rn4",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How we are progressing",
+        "headline": "$455K raised · 23% of the $2M goal · 513 donors",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Supplied final artwork — frame 5, progress card. Figures are as at 18 September 2026; refresh before posting if the appeal total has moved.",
+        "readyImage": "rn5",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "status": "For review.\n\nSupplied carousel, five frames, scheduled 23 September. Caption is client-approved — reproduce verbatim, including the bold opening line. Frame 5 quotes $455K / 23% / 513 donors as at 18 September 2026; check the total is still current on the day.",
+    "statusType": "review",
+    "caption": "𝗬𝗼𝘂𝗿 𝗱𝗼𝗻𝗮𝘁𝗶𝗼𝗻𝘀 𝗮𝗿𝗲 𝗮𝗹𝗿𝗲𝗮𝗱𝘆 𝗺𝗼𝘃𝗶𝗻𝗴.\n\nAustralians gave, and the donations are reaching Nepal. Rotarians in the Trishuli valley are putting it to work with families who walked out of the flood path carrying what they could lift.\n\nThey know these communities. They were there before the glacial dam burst near the Tibet border, and they'll be there long after the story moves on.\n\nRAWCS keeps the bridge open. \n\nDonations from Australia, work on the ground in Nepal. \nThe need hasn't finished, so neither have we.\n\nGive what you can. It goes where it's needed.\nhttps://donations.rawcs.com.au/17-2026-27\n\nAll donations are tax deductible.\n\n#RAWCS #RARF #RotaryAustralia #NepalFloods #DisasterRelief #PeopleOfAction #ServiceAboveSelf",
+    "tags": [
+      "#RAWCS",
+      "#RARF",
+      "#RotaryAustralia",
+      "#NepalFloods",
+      "#DisasterRelief",
+      "#PeopleOfAction",
+      "#ServiceAboveSelf"
+    ]
+  },
+  {
+    "id": "nepal-vid-4",
+    "dateISO": "2026-09-24",
+    "week": 4,
+    "slotLabel": "11",
     "category": "Nepal appeal video",
     "pillar": "Emergency appeal",
     "ask": "Donate",
@@ -2952,9 +3192,9 @@ const ADDED_POSTS = [
   },
   {
     "id": "nepal-vid-5",
-    "dateISO": "2026-09-24",
-    "week": 4,
-    "slotLabel": "95",
+    "dateISO": "2026-09-28",
+    "week": 5,
+    "slotLabel": "12",
     "category": "Nepal appeal video",
     "pillar": "Emergency appeal",
     "ask": "Donate",
@@ -3005,9 +3245,8 @@ const ADDED_POSTS = [
   },
   {
     "id": "nepal-vid-6",
-    "dateISO": "2026-09-25",
-    "week": 4,
-    "slotLabel": "12",
+    "dateISO": "2026-10-06",
+    "slotLabel": "13",
     "category": "Nepal appeal video",
     "pillar": "Emergency appeal",
     "ask": "Donate",
@@ -3016,7 +3255,7 @@ const ADDED_POSTS = [
     "link": "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?17-2026-27",
     "topic": "[Video] Nepal Appeal 6 — Someone still cares enough to show up",
     "format": "video",
-    "variant": "reel",
+    "variant": "clip",
     "gradient": "none",
     "tint": "navy",
     "align": "top",
@@ -3039,9 +3278,9 @@ const ADDED_POSTS = [
         "brief": "Supplied video — families receiving relief; hold on moments of care rather than goods.",
         "readyImage": "",
         "photo": "",
-        "video": "",
-        "videoName": "",
-        "videoLink": "https://drive.google.com/file/d/12Nsow1rHYVCfQSNfuAESjg11q0vkHpWy/view?usp=sharing"
+        "video": "assets/videos/nepal-appeal-6.mp4",
+        "videoName": "Rawcs [Ig] - Nepal Appeal Video 6.mp4",
+        "videoLink": ""
       }
     ],
     "status": "For review.\n\nNepal appeal video 6 of 6. Caption supplied in the September captions update; the Drive link plays in the reel frame. Confirm the link is shared with “anyone with the link” before scheduling.",
@@ -3054,9 +3293,1139 @@ const ADDED_POSTS = [
       "#NepalFloodingDisasterRelief",
       "#ServiceAboveSelf"
     ]
+  },
+  {
+    "id": "adhoc-mu6bejit",
+    "dateISO": "2026-09-15",
+    "week": 2,
+    "slotLabel": "Ad hoc",
+    "category": "Ad hoc post",
+    "pillar": "To be set",
+    "ask": "To be set",
+    "source": "Added in the hub",
+    "projectId": "",
+    "link": "",
+    "topic": "New post",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "frames": [
+      {
+        "kicker": "Kicker",
+        "headline": "Your headline goes here.",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate today!",
+            "tone": "red"
+          }
+        ],
+        "brief": "Describe the photo this post needs.",
+        "readyImage": "",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "status": "Added in the hub — set the status and add a note for the team.",
+    "statusType": "notstarted",
+    "caption": "Write the caption here.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia"
+    ]
+  },
+  {
+    "id": "oct-airbnb-webinar",
+    "dateISO": "2026-10-02",
+    "slotLabel": "1",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Email for webinar login",
+    "source": "[UPDATED] RAWCS AIRBNB October Contents — Nish Update, post 1",
+    "projectId": "",
+    "link": "mailto:info@rawcs.org.au",
+    "topic": "RAWCS x Airbnb.org webinar invitation",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "logos": [
+      "abnbWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "frames": [
+      {
+        "kicker": "RAWCS x Airbnb.org Webinar",
+        "headline": "Emergency Accommodation Program",
+        "highlight": "Tuesday 6 October 2026, 2:00pm AEDT (Sydney time) | Email info@rawcs.org.au for login details",
+        "ctas": [],
+        "brief": "Single-image template matched to the 18 Aug RAWCS x Airbnb.org post: Rotarians in hi-vis on a relief response under the navy brand wash, co-branded reversed lockup (Australian Rotary Districts | RAWCS | airbnb.org), blue kicker chip, white date/time headline at the same scale as 18 Aug, no pill CTA — closing line in the footer, tricolour stripe.",
+        "readyImage": "",
+        "photo": "oa1",
+        "video": "",
+        "videoName": "",
+        "videoLink": "",
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "photoX": 50,
+        "photoY": 50,
+        "scaleHighlight": 0.4,
+        "sqScaleHighlight": 0.4,
+        "tintHex": "#0F3F8C",
+        "washStrength": 1.2,
+        "tintEnd": 38,
+        "tint2Hex": "#D66218",
+        "tint2Strength": 1.15,
+        "tint2End": 64,
+        "baseStrength": 1.1,
+        "highlightPlain": true
+      }
+    ],
+    "status": "For review.\n\nLead post for the October Airbnb.org series. Photo: bushfire at Fingal, Tasmania, 2020 — Matt Palmer, Unsplash (free licence). Caption as supplied in the Nish update; registration is by email, so no link CTA.",
+    "statusType": "review",
+    "caption": "Rotarians and Rotary Clubs are invited to an exclusive live information session on the RAWCS and Airbnb.org Emergency Accommodation Program.\n\nWhen: Tuesday 6 October 2026, 2:00pm AEDT (Sydney time)\nPresenters: RAWCS CEO, Mahir Momand and Airbnb.org representative, Hannah Bellamy\nOpen to: Rotarians and Rotary clubs ONLY\n\nWhen a bushfire, flood or major disaster occurs, people often lose their homes or are unable to return for periods at a time. Our Rotarians have stepped in time and time again and assisted their communities going through such difficult circumstances.\n\nThe RAWCS partnership with Airbnb.org, will enable responders and eligible individuals and families affected by bushfires, floods and other crises to receive up to 28 nights of free temporary accommodation.\n\nRotary Clubs and Districts will step in to identify those in their communities that need this support and facilitate this process.\n\nJoin us during this webinar to learn how the program runs, who is eligible, and how Rotary Clubs and Districts can use it when disaster strikes.\n\nAny Rotarian or Rotary club who is interested should send an email to info@rawcs.org.au to get the webinar login details.\n\nPlease share this with fellow Rotarians in your club.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#RotaryInAction",
+      "#AirbnbOrg",
+      "#DisasterRecovery"
+    ],
+    "washPlace": "duo",
+    "baseColour": "warm"
+  },
+  {
+    "id": "oct-airbnb-how-it-works",
+    "dateISO": "2026-10-03",
+    "slotLabel": "2",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "See the full process",
+    "source": "[UPDATED] RAWCS AIRBNB October Contents — Nish Update, post 2",
+    "projectId": "",
+    "link": "https://rawcs.org.au/rotarian-centre/",
+    "topic": "RAWCS x Airbnb.org — How it works (6 steps)",
+    "format": "carousel",
+    "variant": "photo",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "logos": [
+      "abnbColour"
+    ],
+    "siteLabel": "rawcs.org.au/rotarian-centre/",
+    "frames": [
+      {
+        "kicker": "How It Works",
+        "headline": "If a declared disaster affects your community here’s how to access temporary housing",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — cover. Clean template: warm neutral ground (August series), colour co-branded lockup, blue \"How It Works\" chip, blue headline, webinar line under a short red rule, tricolour footer.",
+        "readyImage": "assets/art2/obc1.jpg",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 1–2",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 1–2 on white cards: red \"Step 01\" label, bold blue lead phrase, Calibri body, tricolour header stripe.",
+        "readyImage": "obc2",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 3–4",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 3–4, same card layout.",
+        "readyImage": "obc3",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 5–6",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 5–6, same card layout.",
+        "readyImage": "obc4",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "See the full process",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "See the full process",
+            "tone": "red"
+          }
+        ],
+        "brief": "Final artwork — CTA only (as the August end frame): colour lockup, red \"See the full process\" pill, rawcs.org.au/rotarian-centre/, tricolour footer.",
+        "readyImage": "obc5",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "status": "For review.\n\nOctober Airbnb.org series, post 2. Clean 5-frame template (cover → steps 1–2 → 3–4 → 5–6 → CTA only), styled after the August carousel. Earlier versions kept in \"October 8 Carousel.dc.html\" (3a, 2a, 1a). Check before scheduling: the webinar is 6 Oct but this posts 8 Oct, so the \"Join us for the Webinar\" line and the caption invitation will be after the event.",
+    "statusType": "review",
+    "caption": "Here's exactly how the RAWCS x Airbnb.org partnership works to provide temporary accommodation for those affected by a declared disaster.\n\nRotarians and Rotary Clubs are invited to an exclusive live information session on the RAWCS and Airbnb.org Emergency Accommodation Program.\n\nWhen: Tuesday 6 October 2026, 2:00pm AEDT (Sydney time)\nPresenters: RAWCS CEO, Mahir Momand and Airbnb.org representative, Hannah Bellamy\nOpen to: Rotarians and Rotary clubs ONLY",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#RotaryInAction",
+      "#AirbnbOrg",
+      "#DisasterRecovery",
+      "#EmergencyHousing"
+    ]
+  },
+  {
+    "id": "oct-airbnb-eligible",
+    "dateISO": "2026-10-04",
+    "slotLabel": "3",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Learn more",
+    "source": "[UPDATED] RAWCS AIRBNB October Contents — Nish Update, post 3",
+    "projectId": "",
+    "link": "https://rawcs.org.au/rotarian-centre/",
+    "topic": "RAWCS x Airbnb.org — What “eligible” and “covered” mean",
+    "format": "carousel",
+    "variant": "photo",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "logos": [
+      "abnbWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "frames": [
+      {
+        "kicker": "",
+        "headline": "Up to 28 nights of free accommodation for declared disasters.",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — cover. Checklist template (different from 8 Oct): simple white house with picket fence (Unsplash) under a navy wash, \"Airbnb.org Partnership\" chip top left, white co-branded lockup top right, gold \"28 nights\", outlined webinar line, tricolour footer.",
+        "readyImage": "oec1",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "Who qualifies",
+        "headline": "Eligible for a stay",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — white frame, connecting vertical rule carried through frames 2–5, navy icon circle (house + red check badge), red label, bold blue lead phrase, frame count 02 / 06.",
+        "readyImage": "oec2",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "Who qualifies",
+        "headline": "Also eligible",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — same layout, people icon + check badge.",
+        "readyImage": "oec3",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "What’s covered",
+        "headline": "What’s covered",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — calendar icon with gold \"28 nights\" pill callout.",
+        "readyImage": "oec4",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "What’s not covered",
+        "headline": "What’s not covered",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — red outlined circle with a cross, link line rawcs.org.au/rotarian-centre/.",
+        "readyImage": "oec5",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Learn more",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Learn more",
+            "tone": "red"
+          }
+        ],
+        "brief": "Final artwork — CTA only: navy ground, white lockup, red \"Learn more\" pill, rawcs.org.au/rotarian-centre/, tricolour footer.",
+        "readyImage": "oec6",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "status": "For review.\n\nOctober Airbnb.org series, post 3. Checklist template, 6 frames (cover → 4 checklist frames → CTA only). Doc's slide 5 split into \"not covered\" + a CTA-only end frame. Source file: \"October 12 Carousel.dc.html\" (5a). Icons: the doc asks for hard hat, key and crossed-car glyphs — those aren't in the icon set, so people, calendar and a plain cross are used; swap if supplied. Webinar line refers to 6 Oct, which is before this posts.",
+    "statusType": "review",
+    "caption": "If a declared disaster displaces someone in your community, they might be eligible for up to 28 nights of free, non-luxury accommodation. This is through the latest RAWCS and Airbnb.org partnership, where individuals, families and critical workers responding to a declared disaster are identified by Rotary Clubs to access temporary accommodation. Here's exactly who qualifies, and what's included.\n \nRotarians and Rotary Clubs are invited to an exclusive live information session on the RAWCS and Airbnb.org Emergency Accommodation Program.\n \nWhen: Tuesday 6 October 2026, 2:00pm AEDT (Sydney time)\nPresenters: RAWCS CEO, Mahir Momand and Airbnb.org representative, Hannah Bellamy\nOpen to: Rotarians and Rotary clubs ONLY",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#RotaryInAction",
+      "#AirbnbOrg",
+      "#DisasterRecovery",
+      "#EmergencyHousing"
+    ]
+  },
+  {
+    "id": "adhoc-mup1zlie",
+    "dateISO": "2026-10-15",
+    "week": 2,
+    "slotLabel": "Ad hoc",
+    "category": "Ad hoc post",
+    "pillar": "To be set",
+    "ask": "To be set",
+    "source": "Added in the hub",
+    "projectId": "",
+    "link": "",
+    "topic": "New post",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "frames": [
+      {
+        "kicker": "Kicker",
+        "headline": "Your headline goes here.",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate today!",
+            "tone": "red"
+          }
+        ],
+        "brief": "Describe the photo this post needs.",
+        "readyImage": "",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "status": "Added in the hub — set the status and add a note for the team.",
+    "statusType": "notstarted",
+    "caption": "Write the caption here.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia"
+    ]
+  },
+  {
+    "id": "oct-aram-seminar",
+    "dateISO": "2026-10-23",
+    "slotLabel": "13",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Register",
+    "source": "ID 44, ARAM “Now We Can” malaria elimination seminar, 30 October",
+    "projectId": "",
+    "link": "https://events.humanitix.com/now-we-can-2026",
+    "format": "single",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "siteLabel": "events.humanitix.com/now-we-can-2026",
+    "status": "Not started.\n\nReady, with three checks against the Humanitix event page. (1) Time: the page says 10:30am to 2:30pm AEDT; the Content Inventory (ID 44) and the earlier captions said 10am to 2pm, now corrected. (2) Partners: the page names ARAM, ACREME and the Malaria Synergy Program; the earlier captions also named the Burnet Institute (from the flyer), dropped here to match the page. (3) The page shows the Melbourne venue only and doesn't state price or an online option, so “free” comes from the flyer and the hub card, and “online” is left out of the caption; confirm both. Written from the program, no speaker names, because the page still says “program to be confirmed”. A different post from the 31 August save-the-date: it is about what is on the day. Posts on 14 October, not the event day (30 October), and is the only post that day; the ARAM donation post runs on 11 October.",
+    "statusType": "notstarted",
+    "caption": "What will it take to create a malaria-free future? 🦟\n\nJoin us next week on Friday 30 October as researchers, clinicians, advocates and community partners for ‘Now We Can: The Path to Malaria Elimination’, a free event exploring the progress being made towards eliminating malaria and the challenges that still lie ahead.\n\nPresented in collaboration with ARAM, the Australian Centre of Research Excellence in Malaria Elimination and the Malaria Synergy Program, the event will explore the latest research and innovations, including vaccines, treatments and emerging technologies.\n\nThe program will also feature an inspiring ARAM success story, *Malaria-Free Timor-Leste*, Rotary's work supporting communities beyond bed nets and a panel discussion tackling some of the biggest barriers to elimination: funding, mutation and mobility.\n\nWhether you're passionate about global health, research or community-led change, this is an opportunity to learn, connect and be part of the conversation.\n\nPlease register using the link below to join us in person or online:\nhttps://events.humanitix.com/now-we-can-2026\n\nDate: Friday 30 October 2026\nTime: 10:30am–2:30pm AEDT\nLocation: Alfred Innovation and Education Hub Lecture Theatre, 75 Commercial Road, Melbourne (online attendance also available)\nCost: Free",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#MalariaElimination",
+      "#GlobalHealth",
+      "#PublicHealth",
+      "#ResearchForGood",
+      "#RotaryInAction"
+    ],
+    "topic": "Now We Can — ARAM malaria elimination seminar",
+    "variant": "split",
+    "logos": [
+      "lockupWhite",
+      "aram"
+    ],
+    "frames": [
+      {
+        "kicker": "Friday 30 October · Melbourne & online",
+        "headline": "Now We Can:\nThe Path to Malaria Elimination",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Register for free",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Driven to end malaria. Now we can.” B) “From vaccines to Timor-Leste: the path to elimination” C) “Now We Can: 30 October, Melbourne”\n\nThe hub's artwork for this post is already built: a photo card reading “Friday 30 October · Melbourne & online” with a “Register — free” button. The event page shows the venue only, so check “online” on the card. The official flyer (QR code, partner logos) remains the reference for channel-sized crops.",
+        "readyImage": "",
+        "photo": "ph-bonus",
+        "video": "",
+        "videoName": "",
+        "textX": 4,
+        "textY": 64.5,
+        "sqTextX": 7,
+        "sqTextY": 54.5,
+        "scaleLogo": 0.8,
+        "washStrength": 1.4,
+        "baseStart": 77,
+        "baseStrength": 1.15,
+        "lineHeight": 1.2
+      }
+    ]
+  },
+  {
+    "id": "oct-nepal-dadang",
+    "dateISO": "2026-10-15",
+    "slotLabel": "11",
+    "category": "Appeals and fundraising",
+    "pillar": "Urgent need",
+    "ask": "Donate",
+    "source": "Delivery-day photos supplied 28 September 2026 (Dhading District)",
+    "projectId": "17-2026-27",
+    "link": "https://donations.rawcs.com.au/17-2026-27",
+    "format": "single",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "siteLabel": "rawcs.org.au",
+    "status": "Not started.\n\nAwaiting the 28 September delivery-day photos (The_Delivery 26, 33, 10, 36, 15, 16, 5); swap them in when supplied.\n\nReady. Merged on 6 October: the 28 September delivery post and the Dhading children's post used the same photos and aimed at one story, so they are now one post, led by the children. Consent is confirmed (Shan, 6 October). No dollar totals, since the Nepal appeal totals are unconfirmed.",
+    "statusType": "notstarted",
+    "caption": "For the children of Dhading District, the delivery on 28 September wasn't only about stoves and blankets.\n\nAlongside the cooking pots, bedding and metal trunks, Rotary volunteers handed out school bags, exercise books and soft toys, one child at a time. More than four weeks after the floods, a backpack and a teddy bear count for a lot.\n\nThe delivery was run by Rotary clubs in Nepal and Australia, together with the Didi Foundation. If you'd like to support more deliveries like this one: https://donations.rawcs.com.au/17-2026-27",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#NepalFloods",
+      "#DisasterRelief"
+    ],
+    "topic": "For the children of Dhading District",
+    "variant": "statement",
+    "logos": [
+      "lockupColour"
+    ],
+    "frames": [
+      {
+        "kicker": "Dhading District, Nepal",
+        "headline": "For the children of",
+        "highlight": "Dhading District.",
+        "ctas": [
+          {
+            "label": "Donate now",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “For the children of Dhading District” B) “Dhading District: Rotary in Action, delivered” C) “A backpack, a teddy, a bit of normal”\n\nLead image: the “Rotary in Action for Nepal's Flash Flood Relief” banner (202609028_The_Delivery__26_.jpg, shows the DIDI Foundation and Toukley Wyong Rotary partnership). Carousel: the girl with a teddy (__33_), school bags being handed out (__10_, __36_), children with toys (__15_, __16_) and the woman carrying her trunk (__5_). Consent is confirmed.",
+        "readyImage": "",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ]
+  },
+  {
+    "id": "oct-butterfly-buddies",
+    "dateISO": "2026-10-28",
+    "slotLabel": "14",
+    "category": "Awareness days and community",
+    "pillar": "Proof of impact",
+    "ask": "Donate",
+    "source": "ID 15 of 2024-25, Butterfly Buddies - South Pacific (RAOAF), directory.rawcs.com.au/15-2024-25",
+    "projectId": "15 of 2024-25",
+    "link": "https://directory.rawcs.com.au/15-2024-25",
+    "format": "single",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "siteLabel": "rawcs.org.au",
+    "status": "Not started.\n\nConfirmed via RAWCS's own directory page (ID 15 of 2024-25); every fact is from there. One post now: the earlier supply post (28 October) and training post (16 October) were merged on 6 October to avoid duplicates, and it moved to 27 October. Wording corrected earlier: the page says “repurposed”, so “most of them donated” was dropped. No project photo confirmed in the bank yet.",
+    "statusType": "notstarted",
+    "caption": "As Breast Cancer Awareness Month draws to a close, let’s keep the conversation going.\n\nA simple chat with a friend or loved one can be the nudge they need to book a screening.\n\nAt this year’s Rotary Pioneer Adventure Day, BreastScreen SA’s mobile clinic screened 47 women on site. 44 received the all-clear, and three are now having follow-up tests. It’s a powerful reminder of why accessible screening and early detection matter.\n\nBeyond Australia, Butterfly Buddies, supported by the Rotary Club of North Lake Macquarie, helps women in Fiji and across the South Pacific after a mastectomy. The project provides repurposed breast forms and mastectomy bras, and trains local nurses and community workers to fit them so women can regain comfort and confidence.\n\nMake a donation today to help Butterfly Buddies reach more women.\n\n👉 Donate: directory.rawcs.com.au/15-2024-25",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#RotaryInAction",
+      "#BreastCancerAwareness",
+      "#ButterflyBuddies",
+      "#WomensHealth",
+      "#BreastCancerSupport",
+      "#SouthPacific"
+    ],
+    "topic": "Breast Cancer Awareness Month — Butterfly Buddies",
+    "variant": "statement",
+    "logos": [
+      "lockupColour"
+    ],
+    "frames": [
+      {
+        "kicker": "Breast Cancer Awareness Month",
+        "headline": "Give women life-changing support after a mastectomy",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Fitted, trained, ready to help” B) “Get involved with Butterfly Buddies” C) “Training the people who do the fitting”\n\nNo photo asset confirmed in the bank yet; use RAWCS brand colours with a restrained October/pink accent, and swap in a real project photo once RAWCS or the project's Facebook page (facebook.com/p/Butterfly-Buddies-61566811404205) supplies one.",
+        "readyImage": "",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ]
+  },
+  {
+    "id": "oct-govhouse-openday",
+    "dateISO": "2026-10-09",
+    "slotLabel": "8",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Come and say hello",
+    "source": "Heather's Newsletter (Vol 1, Issue 3, 2026), Upcoming Events and National Chairman's statement: Government House Open Day, ACFID National Conference, Rotary South Pacific Zone Conference; IDs 40 and 50",
+    "projectId": "",
+    "link": "https://acfid.asn.au/members/conference-2026/",
+    "format": "carousel",
+    "variant": "split",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Not started.\n\nReady, with one check. Merged on 6 October from three separate posts (Government House Open Day, ACFID, Zone Conference) so October stays at fourteen posts in total. Wording checked on 6 October against the newsletter text Shan re-sent: Government House (Venue: Government House, Canberra; RAWCS represented, showcasing its programs and engaging with visitors; more than 3,000 attendees) and ACFID (12 to 14 October, National Convention Centre, Canberra; the newsletter's own description of the conference), with both event links from the newsletter. Saturday post, on Open Day itself (“today”). The Zone Conference booth comes from the National Chairman's statement in the same newsletter; booth details (location, times) are still unconfirmed, and the conference's own page says 30 October to 1 November while Content Inventory ID 40 says 29 October to 2 November, so confirm. RAWCS attendance at ACFID confirmed by Shan, 6 October.",
+    "statusType": "notstarted",
+    "caption": "Where to find RAWCS this October.\n\nToday: the Government House Open Day in Canberra. RAWCS is there showcasing our humanitarian programs and talking with visitors from across Australia, among more than 3,000 attendees. Details: https://www.gg.gov.au/about-governor-general/governor-generals-official-residences/visiting-government-house\n\n12 to 14 October: the ACFID National Conference at the National Convention Centre in Canberra, Australia's leading international development and humanitarian conference, bringing together sector leaders, NGOs, practitioners and changemakers from across the country. RAWCS is attending as an ACFID member. Details: https://acfid.asn.au/members/conference-2026/\n\n29 October to 1 November: the Rotary South Pacific Zone Conference at the Melbourne Convention and Exhibition Centre, where you can find us at the RAWCS booth.\n\nCome and say hello at any of them.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#GovernmentHouseOpenDay",
+      "#ACFID",
+      "#RotarySouthPacific"
+    ],
+    "topic": "Upcoming events — where to find RAWCS (carousel)",
+    "frames": [
+      {
+        "kicker": "Canberra · Melbourne · October",
+        "headline": "Find RAWCS",
+        "highlight": "this October.",
+        "ctas": [
+          {
+            "label": "Come and say hello",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Find RAWCS this October” B) “Three places to meet RAWCS” C) “Come and say hello”\n\nNo photo asset. Use a simple card in RAWCS brand colours listing the three events with their dates; don't use ACFID's or the conference's branding unless it's supplied.",
+        "readyImage": "",
+        "photo": "assets/photos/oct10-government-house-v2.jpg",
+        "video": "",
+        "videoName": "",
+        "sqTextX": 9.5,
+        "sqTextY": 15,
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "sqPlaces": {
+          "kicker": {
+            "x": 4,
+            "y": 57.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 4,
+            "y": 64,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 4,
+            "y": 71,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "places": {
+          "kicker": {
+            "x": 4,
+            "y": 65,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 4,
+            "y": 70.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 4,
+            "y": 76.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "sqScaleKicker": 0.85,
+        "sqScaleHeadline": 0.85,
+        "sqScaleHighlight": 0.85,
+        "scaleKicker": 0.86,
+        "scaleHeadline": 0.86,
+        "scaleHighlight": 0.86
+      }
+    ]
+  },
+  {
+    "id": "oct-nepal-galchi",
+    "dateISO": "2026-10-12",
+    "slotLabel": "10",
+    "category": "Appeals and fundraising",
+    "pillar": "Urgent need",
+    "ask": "Donate",
+    "source": "Nepal relief team email and photos, forwarded 6 October 2026 (Dhading District, Galchi Rural Municipality)",
+    "projectId": "17-2026-27",
+    "link": "https://donations.rawcs.com.au/17-2026-27",
+    "format": "single",
+    "variant": "statement",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupColour"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Not started.\n\nAwaiting the relief team photos (5f7b8779… hygiene kit handover, plus 831117795, 831402575, 831958459); swap them in when supplied.\n\nReady. The photos show identifiable families, including children; consent is confirmed (Shan, 6 October: supplied photos always carry consent). Written from the relief team's email in new wording. Left out on purpose: the families' caste (the email names it; a public caption shouldn't) and the private women's health talk. The email's Clipchamp link wasn't in what was forwarded, so any video isn't covered here. No dollar totals, since the Nepal appeal totals are unconfirmed. Both October Nepal posts are in Dhading District (this one is Galchi Rural Municipality; the 13 October post is the 28 September delivery), so these are the two additional Nepal posts for October. Added 6 October at the relief team's request.",
+    "statusType": "notstarted",
+    "caption": "Since the Bhotekosi flood, 26 families in Galchi Rural Municipality, Dhading District, have been living in one-room rentals. Rotary volunteers have now brought them the basics for daily life: rice, cooking utensils, a pressure cooker and stove, bedding, a trunk, clothing and a hygiene kit.\n\nLocal authorities picked a private spot for the handout, so only the families entitled to relief came, and arranged transport so everyone could get there.\n\nMore deliveries are going out as the relief effort continues. If you'd like to help keep them coming: https://donations.rawcs.com.au/17-2026-27",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#NepalFloods",
+      "#DisasterRelief"
+    ],
+    "topic": "Galchi, Dhading — relief delivered",
+    "frames": [
+      {
+        "kicker": "Galchi, Dhading District · Nepal",
+        "headline": "Still delivering aid in Nepal",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate now",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Galchi, Dhading: relief delivered” B) “26 families, a private handout, the basics to start again” C) “Still delivering in Dhading”\n\nLead image: the hygiene kit handover under the “Rotary in Action” banner (5f7b8779-14d3-4ad7-b038-6802f59f76ed.jpg). Carousel: bedding and a trunk being carried home by motorbike (831117795_2336907937081092_1748468541606562703_n.jpg), the group with the supplies (831402575_...jpg) and the families lined up with their items (831958459_...jpg).",
+        "readyImage": "",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ]
+  },
+  {
+    "id": "oct-volunteer-call",
+    "dateISO": "2026-11-24",
+    "slotLabel": "10",
+    "category": "Volunteers and people",
+    "pillar": "Rotarian enablement",
+    "ask": "Explore volunteer opportunities",
+    "source": "Heather's Newsletter (Vol 1, Issue 3, 2026), Volunteer Opportunities",
+    "projectId": "",
+    "link": "https://rawcs.org.au/volunteer/",
+    "format": "single",
+    "variant": "split",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Not started.\n\nReady. Written in new wording from the newsletter's Volunteer Opportunities box; the link is the one printed there. Replaces the Zone Conference day-of post (30 October), which duplicated the 26 October post and was time-bound, so it was dropped rather than moved. Added in the 6 October round to keep October at fourteen.",
+    "statusType": "notstarted",
+    "caption": "Rotary members can take their service beyond their own communities with RAWCS, joining humanitarian and sustainable development projects across Australia and around the world.\n\nIt's hands-on work: you bring your skills and experience, and you work alongside fellow Rotarians to help people in need.\n\nInterested in being part of the next project team? See the current opportunities here: https://rawcs.org.au/volunteer/",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#VolunteerWithUs"
+    ],
+    "topic": "Volunteer with RAWCS",
+    "frames": [
+      {
+        "kicker": "Volunteer with RAWCS",
+        "headline": "Take your service",
+        "highlight": "further.",
+        "ctas": [
+          {
+            "label": "Explore opportunities",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Take your service further” B) “Join the next RAWCS project team” C) “Volunteer with RAWCS”\n\nNo photo asset yet. Use an existing RAWCS volunteer photo from the bank if one suits, or a simple card in RAWCS brand colours.",
+        "readyImage": "",
+        "photo": "assets/photos/oct20-volunteers-v2.jpg",
+        "video": "",
+        "videoName": "",
+        "sqTextX": 9.5,
+        "sqTextY": 15,
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "sqPlaces": {
+          "kicker": {
+            "x": 4,
+            "y": 57.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 4,
+            "y": 64,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 4,
+            "y": 71,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "places": {
+          "kicker": {
+            "x": 4,
+            "y": 65,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 4,
+            "y": 70.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 4,
+            "y": 76.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "sqScaleKicker": 0.85,
+        "sqScaleHeadline": 0.85,
+        "sqScaleHighlight": 0.85,
+        "scaleKicker": 0.86,
+        "scaleHeadline": 0.86,
+        "scaleHighlight": 0.86
+      }
+    ]
+  },
+  {
+    "id": "oct-gg-xi",
+    "dateISO": "2026-10-13",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Attend the match (free entry)",
+    "source": "Governor-General’s XI v White Ferns, North Sydney Oval; rawcs.org.au/our-patron",
+    "projectId": "",
+    "link": "https://rawcs.org.au/our-patron/",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupColour"
+    ],
+    "siteLabel": "rawcs.org.au/our-patron",
+    "status": "Not started.\n\nFinal artwork ready (assets/art2/oct15-gg-xi-green.png).",
+    "statusType": "notstarted",
+    "caption": "Sydney Rotarians, let’s fill North Sydney Oval for our Patron’s team this Thursday night.\n\nOur Patron, Her Excellency the Honourable Ms Sam Mostyn AC, Governor-General of Australia, has helped select a Governor-General’s XI to take on New Zealand’s White Ferns, former ICC Women’s T20 World Cup champions, under lights.\n\nNicole Faltum leads the side for a second time, with Charli Knott as vice-captain. Lucy Hamilton and Tayla Vlaeminck bring international experience, four players earn their first Governor-General’s XI selection, and Lieutenant Meera Hyderabad, an Artillery Officer in the Royal Regiment of Australian Artillery, represents the Australian Defence Force.\n\nAs the Governor-General put it, “This is a special game.”\n\nEntry is free and open to everyone. Bring the family, a few club mates, or make it a club night out.\n\n📍 North Sydney Oval\n🗓 Thursday 15 October 2026, 7:05pm start\n📺 Live on Foxtel and Kayo Sports\n\nMore about our Patron at https://rawcs.org.au/our-patron/",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#GovernorGeneralsXI",
+      "#WomensCricket",
+      "#NorthSydney"
+    ],
+    "topic": "Governor-General’s XI v White Ferns — fill North Sydney Oval",
+    "frames": [
+      {
+        "kicker": "SYDNEY ROTARIANS",
+        "headline": "Let’s fill North Sydney Oval",
+        "highlight": "for our Patron’s team",
+        "ctas": [
+          {
+            "label": "Thursday 15 October 2026 | 7:05pm | Free entry",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Final artwork — \"The Oval\" concept, green. Deep cricket-green night ground with a floodlight bank top-left casting a soft glow. The Governor-General's portrait sits in an oval frame (a nod to North Sydney Oval) with an offset gold boundary-rope ring. Patron label at left with a gold leader line to her shoulder. Gold small-caps kicker, three-line headline with \"North Sydney Oval\" in gold, subhead beneath. Details on a match-ticket stub (thick tricolour bar, perforation, punched notches) with the Australian Rotary Districts and RAWCS lockup on the tear-off. Thick tricolour strip on the bottom edge.\n\nPhoto: supplied by RAWCS (per email).\n\nArtwork source: October 15 Patron Post v5.dc.html.",
+        "readyImage": "assets/art2/oct15-gg-xi-green.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ],
+    "slotLabel": "Ad hoc"
+  },
+  {
+    "id": "nov-ukraine-kits",
+    "dateISO": "2026-11-02",
+    "slotLabel": "1",
+    "category": "Appeals and fundraising",
+    "pillar": "Urgent need",
+    "ask": "Donate",
+    "source": "Ukraine Crisis Appeal \"Send Warmth\" flyer (supplied 29/10/2026) and RAWCS donation page, project 83-2014-15",
+    "projectId": "83-2014-15",
+    "link": "https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4",
+    "format": "single",
+    "variant": "giving",
+    "gradient": "brand",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "blue",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Kept in the hub as requested. Facts come from the supplied flyer (winter kits, Caritas Ukraine, the $2 tax-deductible line) and the RAWCS donation page, which opens as project 83-2014-15, Ukraine Crisis Appeal. The AI idea guideline RAWCS mentioned was not attached, so the copy follows the flyer. No funding figures or beneficiary counts are used. Written in new wording, not copied from the 23 August post. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "caption": "Imagine a winter night with the power cut and the heating off. For families in Ukraine, that is a daily reality.\n\nA gift to the Ukraine Crisis Appeal at https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4 helps put a winter kit in someone's hands. Each kit holds a power bank, a USB heated blanket, a sleeping bag, a thermos, a headlamp, reflective items and a drawstring backpack, there to keep people warm, charged and safe at home. They are bought and handed out through Caritas Ukraine, and donations of $2 or more are tax deductible.\n\nThis season of giving, you can help someone stay warm.",
+    "tags": [
+      "#RAWCS",
+      "#UkraineCrisisAppeal",
+      "#SeasonOfGiving"
+    ],
+    "topic": "Ukraine winter kits",
+    "frames": [
+      {
+        "kicker": "Ukraine Crisis Appeal",
+        "headline": "Send warmth to Ukraine",
+        "highlight": "this winter.",
+        "ctas": [
+          {
+            "label": "Give a winter kit",
+            "tone": "gold"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Send warmth to Ukraine this winter” B) “A winter kit, a gift that keeps someone warm” C) “Power cuts and freezing homes. Here's what helps.”\nUse the supplied Send Warmth flyer artwork, cropped in tight on the blanket, thermos and sleeping bag so it reads like a gift pile. Keep the hub's link strip and crop out the flyer's QR code and web address.",
+        "readyImage": "nv01",
+        "photo": "ph-adhoc-mt2c2l96",
+        "video": "",
+        "videoName": "",
+        "giftLine": "A winter kit is a gift that keeps someone warm.",
+        "note": "Power banks, heated blankets and sleeping bags, handed out through Caritas Ukraine. Gifts of $2 or more are tax deductible."
+      }
+    ]
+  },
+  {
+    "id": "nov-farmer-health",
+    "dateISO": "2026-11-06",
+    "slotLabel": "4",
+    "category": "Impact and project stories",
+    "pillar": "Faces and field stories",
+    "ask": "See the day in photos",
+    "source": "Rotary Pioneer Adventure Day photo gallery, Farmer Health Check Hub (rotarypioneeradventureday.au)",
+    "projectId": "",
+    "link": "https://rotarypioneeradventureday.au/photo-gallery/farmer-heath-check-hub",
+    "format": "single",
+    "variant": "giving",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rotarypioneeradventureday.au",
+    "status": "On hold.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nHOLD, two checks before this goes out. (1) The page does not show a RAWCS link; it is a Rotary Pioneer Adventure Day story from Tailem Bend, SA. Confirm with RAWCS that it belongs on the RAWCS page. (2) The page header gives Sunday 02 May 2027, while the photo file names say 2026, so the event year needs confirming. The caption carries no date for that reason. Figures (63 adults, 32 mammograms, six serious findings) are as the page states them. The Rotary clubs named in the photo captions are left out because their roles are not stated. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "hold",
+    "caption": "Farmers don't often stop for a check-up, so at the Rotary Pioneer Adventure Day in Tailem Bend, South Australia, the check-up came to them. You can see the day in photos at https://rotarypioneeradventureday.au/photo-gallery/farmer-heath-check-hub.\n\nA health hub on site offered free skin checks, blood pressure and blood sugar tests and heart health checks, with a BreastScreen SA van parked across from it for rural women. In all, 63 adults used the hub and 32 women had mammograms. Six farmers were found to have serious issues, and others were given early warnings to follow up.\n\nGiving can be as simple as turning up where people already are. In the season of giving, it's a good moment to remember the people who keep the country fed.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#SeasonOfGiving"
+    ],
+    "topic": "Farmer Health Check Hub",
+    "frames": [
+      {
+        "kicker": "Rural health · Tailem Bend, SA",
+        "headline": "The health check came to",
+        "highlight": "the farm gate.",
+        "ctas": [
+          {
+            "label": "See the day in photos",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “The health check came to the farm gate” B) “A gift for the people who feed us” C) “Rural health, where people already are”\nUse photos from the Farmer Health Check Hub gallery page (the health hub truck, the skin cancer clinic team, the BreastScreen SA van). Review the gallery images directly and favour a warm, people-first shot over a vehicle shot. Tag chip: 'Rural health'.",
+        "readyImage": "nv04",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "giftLine": "A gift for the people who feed us.",
+        "note": "Free skin, heart, blood pressure and sugar checks. 63 adults checked and 32 women screened on the day."
+      }
+    ]
+  },
+  {
+    "id": "nov-perth-concert",
+    "dateISO": "2026-11-09",
+    "slotLabel": "5",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "ask": "Book tickets",
+    "source": "Rotary Perth story, Benefit Concert for Ukraine (rotaryperth.org.au); RAWCS Ukraine Crisis Appeal email",
+    "projectId": "",
+    "link": "https://www.trybooking.com/DQFUW",
+    "format": "single",
+    "variant": "giving",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "trybooking.com/DQFUW",
+    "status": "Check before posting.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nCheck before posting. Kept in the hub as requested. The Rotary Perth page gives the date, venue, performers and TryBooking link, but no start time, street address or ticket price, so none is stated. That page also asks donors to quote '17Nov26 PERTH' when giving at ukrainecrisisappeal.org so the concert's funds can be tracked; the RAWCS donation link supplied does not carry that code, so the caption's 'can't make it' line uses the RAWCS link as supplied. This is a Perth event. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "caption": "Looking for a night out that gives back this season of giving? On Tuesday 17 November 2026 the Rotary Club of Perth is hosting Because I Love You So at St George's Anglican Cathedral, and you can book at https://www.trybooking.com/DQFUW.\n\nThe Fremantle Chamber Orchestra, conducted by John Keene, will perform with tenor Paul O'Neill, mezzo-soprano Ruth Burke and an ensemble of opera voices. The concert supports the music therapy programs funded through the Ukraine Crisis Appeal, so a night of music doubles as a gift.\n\nClubs can also buy a block of fellowship tickets and come along together.\n\nCan't make it on the night? A gift to the appeal at https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4 still helps.",
+    "tags": [
+      "#RAWCS",
+      "#UkraineCrisisAppeal",
+      "#RotaryPerth"
+    ],
+    "topic": "Perth benefit concert for Ukraine",
+    "frames": [
+      {
+        "kicker": "17 November · St George’s Cathedral",
+        "headline": "A night of music,",
+        "highlight": "a gift for Ukraine.",
+        "ctas": [
+          {
+            "label": "Book your seat",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “A night of music, a gift for Ukraine” B) “Perth, 17 November” C) “Because I Love You So”\nNo concert photo was supplied. Use a type-led card in the Ukraine appeal blue and gold with the title, date and venue, or an image from the Rotary Perth story page if it suits. Keep it warm and welcoming, with no seasonal icons. Do not show a ticket price or start time.",
+        "readyImage": "nv05",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "giftLine": "Because I Love You So",
+        "note": "The Fremantle Chamber Orchestra with tenor Paul O’Neill and mezzo-soprano Ruth Burke, supporting music therapy through the Ukraine Crisis Appeal."
+      }
+    ]
+  },
+  {
+    "id": "nov-medishare",
+    "dateISO": "2026-11-16",
+    "slotLabel": "9",
+    "category": "Appeals and fundraising",
+    "pillar": "Proof of impact",
+    "ask": "Donate",
+    "source": "RAWCS donation page, MediShare Project (RAOAF), project 6 of 2020-21; images and videos from the partner organisation (not yet received)",
+    "projectId": "6-2020-21",
+    "link": "https://donations.rawcs.com.au/6-2020-21",
+    "format": "single",
+    "variant": "photo",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "navy",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "donations.rawcs.com.au/6-2020-21",
+    "status": "On hold.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nHOLD for assets. The email said images and videos were attached, but none arrived with the message, so the post cannot be finished until they are sent. Facts are from the donation page; no figures are used because it lists none. The partner organisation is not named in the message, so the caption does not name or tag it; add the credit once RAWCS confirms the wording. This is a partner post, so confirm the partner has approved the caption before it is scheduled, and tell the CEO once it is live. It is an overseas post that is not specifically about children. It takes the slot of the 16 November concert reminder. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "hold",
+    "caption": "Some of the most useful gifts are ones that already exist. Medical equipment that is still usable can go on to serve patients in a clinic or hospital overseas. Here is how to be part of that: https://donations.rawcs.com.au/6-2020-21.\n\nMediShare works with government and not-for-profit partners to strengthen health care in developing nations. It ships recovered, usable medical equipment and resources, and its volunteers run training programs that build the skills of local medical practitioners, with the aim of a sustainable health system and better health outcomes.\n\nThis season of giving, a gift to MediShare helps equipment and know-how reach the people who need them. Donations are tax deductible.",
+    "tags": [
+      "#RAWCS",
+      "#MediShare",
+      "#SeasonOfGiving"
+    ],
+    "topic": "MediShare",
+    "frames": [
+      {
+        "kicker": "MediShare",
+        "headline": "Medical equipment,",
+        "highlight": "given a second life.",
+        "ctas": [
+          {
+            "label": "Give to MediShare",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Medical equipment, given a second life” B) “A gift that reaches a clinic far from here” C) “Equipment and training for health care that lasts”\nUse the images and videos supplied by the partner organisation (not yet received). If there are several photos, make a carousel with the headline card first. If there is a video, post it as a reel with the same headline on the cover. Tag chip: 'MediShare'. Keep the 'VIA THE LINK IN THE CAPTION' strip.",
+        "readyImage": "nv09",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "giftLine": "",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "nov-clean4shore",
+    "dateISO": "2026-11-26",
+    "slotLabel": "13",
+    "category": "Cause spotlight",
+    "pillar": "Proof of impact",
+    "ask": "Learn more",
+    "source": "RAWCS directory, project 34 of 2026-27, Clean4Shore Waterways Protection (RATE); RAWCS cause page, Protecting the Environment and Wildlife",
+    "projectId": "34-2026-27",
+    "link": "https://directory.rawcs.com.au/34-2026-27",
+    "format": "single",
+    "variant": "giving",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (34 of 2026-27, sponsored by the Rotary Club of Kincumber, District 9685). The manager contact details on that page are not used. Different from the hub's 14 October RATE launch post, which is about RATE opening to clubs; this one features a single running project. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "caption": "What can you give a waterway in the season of giving? A clean shoreline, and a group of high school students to help get there. See how it works at https://directory.rawcs.com.au/34-2026-27.\n\nWaste that ends up on the foreshores of Central Coast waterways, especially in the mangroves, doesn't clear itself. Clean4Shore Waterways Protection sends school groups out on day trips to remove it, backed by Central Coast Rotary clubs and the Clean4Shore association. Donations, including from local businesses, pay for the students' protective gear, lunch on site, waste disposal and barge fuel.\n\nIt sits under RATE, RAWCS's Trust for the Environment, which offers tax deductibility to donors. If your business is looking for a local cause for the season of giving, this is one.",
+    "tags": [
+      "#RAWCS",
+      "#RATE",
+      "#SeasonOfGiving"
+    ],
+    "topic": "Clean4Shore Waterways Protection",
+    "frames": [
+      {
+        "kicker": "RATE · Environment",
+        "headline": "A gift for",
+        "highlight": "our waterways.",
+        "ctas": [
+          {
+            "label": "See how it works",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “A gift for our waterways” B) “Students on the water, waste off the shore” C) “Clean4Shore on the Central Coast”\nCheck the images on the directory project page and use a shoreline or school group shot if one is there. If not, use a simple RATE graphic with a gold accent. Tag chip: 'RATE · Environment'.",
+        "readyImage": "nv13",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "giftLine": "Students on the water, waste off the shore.",
+        "note": "School groups clearing Central Coast foreshores and mangroves. Tax deductible through RATE."
+      }
+    ]
+  },
+  {
+    "id": "nov-joondalup-lunch",
+    "dateISO": "2026-11-30",
+    "slotLabel": "14",
+    "category": "Appeals and fundraising",
+    "pillar": "Faces and field stories",
+    "ask": "Donate",
+    "source": "RAWCS directory, project 25 of 2026-27, Joondalup Christmas Lunch for Isolated Community Members (RACG)",
+    "projectId": "25-2026-27",
+    "link": "https://directory.rawcs.com.au/25-2026-27",
+    "format": "single",
+    "variant": "giving",
+    "gradient": "none",
+    "tint": "navy",
+    "align": "bottom",
+    "panelColour": "gold",
+    "logos": [
+      "lockupWhite"
+    ],
+    "siteLabel": "rawcs.org.au",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (25 of 2026-27, RACG, sponsored by the Rotary Club of Osborne Park, District 9423). The manager contact details on that page are not used. Replaces the overseas volunteer steps post that sat on 26 November in the first draft; that post is held for December. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "caption": "For some people in Joondalup, Christmas Day is a long one with nobody to share it. You can help change that at https://directory.rawcs.com.au/25-2026-27.\n\nThe Joondalup Christmas Lunch offers a hot roast meal, fellowship and emotional support to people in the community who would otherwise be isolated. The Rotary Club of Osborne Park is backing it as a Compassionate Grants project with RAWCS.\n\nA seat at the table is one of the simplest gifts there is.",
+    "tags": [
+      "#RAWCS",
+      "#SeasonOfGiving",
+      "#RotaryAustralia"
+    ],
+    "topic": "Joondalup Christmas Lunch",
+    "frames": [
+      {
+        "kicker": "Compassionate Grants · Joondalup, WA",
+        "headline": "A seat at",
+        "highlight": "the table.",
+        "ctas": [
+          {
+            "label": "Give a seat at the table",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “A seat at the table” B) “No one should spend the holidays alone” C) “A hot roast and good company on Christmas Day”\nCheck the images on the directory project page and use a lunch or community shot if one is there. If not, use a simple Compassionate Grants graphic in RAWCS brand blue and gold with a warm table or plate illustration. Tag chip: 'Compassionate Grants'.",
+        "readyImage": "nv14",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "giftLine": "A hot roast and good company on Christmas Day.",
+        "note": "Backed by the Rotary Club of Osborne Park for people who would otherwise spend the day alone."
+      }
+    ]
   }
 ];
-const RETIRED_POSTS = ["s7","s14"];
+const RETIRED_POSTS = ["s7","s14","adhoc-mu6bejit","adhoc-mtwosatu","adhoc-mup1zlie","oct-erk-cyclone"];
+// Superseded build-added posts: dropped from any saved copy so a stale local version never shadows the build.
+const SUPERSEDED_POSTS = ["oct-erk-cyclone","nov-concert-tomorrow"];
 // Published photo + layout layer. 17-24 September carries the five Nepal appeal
 // videos plus the Nepal Appeal 3 pubmat on the 21st.
 const BAKED_EDITS = {
@@ -3074,10 +4443,10 @@ const BAKED_EDITS = {
         ],
         "brief": "Headline options (pick one):\nA) “A gift that keeps going further”\nB) “One family's generosity, multiplied by a whole network of Clubs”\nC) “When one gift inspires a hundred more”\n\nThis is a program-level RACG stat from the presentation, not tied to a single project directory page, so there is no photo source to pull from. Use RACG branding or a simple stat card rather than stock imagery.",
         "readyImage": "",
-        "photo": "ph-sep6",
+        "photo": "assets/photos/oct7-racg.jpg",
         "sqTextX": 9.5,
         "sqTextY": 15,
-        "photoFit": "fit",
+        "photoFit": "fill",
         "photoZoom": 1,
         "sqPlaces": {
           "kicker": {
@@ -3125,14 +4494,19 @@ const BAKED_EDITS = {
         "scaleKicker": 0.86,
         "scaleHeadline": 0.86,
         "scaleHighlight": 0.86,
-        "photoX": 50,
-        "photoY": 50
+        "photoX": 53,
+        "photoY": 45
       }
     ],
-    "variant": "split",
-    "dateISO": "2026-10-01",
-    "week": 1,
-    "slotLabel": "1"
+    "variant": "banner",
+    "dateISO": "2026-10-07",
+    "slotLabel": "5",
+    "caption": "Looking for a practical way to support someone in your community? By registering an RACG project, your Rotary Club can help deliver financial assistance to individuals and families experiencing hardship.\n\nThe RACG program began through the generosity of Dick and Pip Smith, whose initial donation was then matched by Rotary Clubs across Australia. Together, these contributions have helped countless Aussies in immeasurable ways.\n\nDick and Pip have since added to their contribution, inspired by the impact that collective community giving can achieve. Register an RACG project now with your local Rotary Club to receive matched funding of up to $15,000.\n\nRegister your project today: https://rawcs.org.au/register-a-new-project/",
+    "tags": [
+      "#RAWCS",
+      "#RACG",
+      "#HelpingAussies"
+    ]
   },
   "sep7": {
     "topic": "Nepal Second Appeal",
@@ -3177,17 +4551,17 @@ const BAKED_EDITS = {
   "sep9": {
     "frames": [
       {
-        "kicker": "ARAM · malaria elimination",
-        "headline": "Bednets, training, and a few\nminutes of your time.",
-        "highlight": "",
+        "kicker": "ARAM · Malaria elimination",
+        "headline": "Malaria still kills a child every",
+        "highlight": "68 seconds.",
         "ctas": [
           {
-            "label": "Donate to ARAM",
+            "label": "Give to ARAM",
             "tone": "blue"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Malaria still kills a child every 68 seconds, here's how to help”\nB) “Support ARAM in a few minutes”\nC) “Bednets, training, and a few minutes of your time”\n\nNo directory-style project photos for this one, it's a donation-process page rather than a project page. Use ARAM branding, leaflet imagery (bednet distribution, health worker photos) or a simple screenshot of the ram.rawcs.com.au donation page.",
-        "readyImage": "",
+        "brief": "Headline options (pick one):\nA) “Bednets, training, and a few minutes of your time” (current)\nB) “A gift that protects a child”\nC) “Malaria still kills a child every 68 seconds. Give a gift that helps.”\nKeep the current pubmat photo and red ARAM footer. Add the WHO stat overlay if option C is chosen.",
+        "readyImage": "nv03",
         "photo": "ph-sep9",
         "sqPlaces": {
           "headline": {
@@ -3224,30 +4598,43 @@ const BAKED_EDITS = {
         "scaleLogo0": 0.9,
         "scaleLogo1": 0.85,
         "photoX": 52,
-        "photoY": 50
+        "photoY": 50,
+        "giftLine": "This season, give a gift that protects one.",
+        "note": "Bednets, training and elimination programs across the Pacific and South-East Asia. Source: World Health Organization, 2023."
       }
     ],
     "logos": [
-      "lockupWhite",
-      "aram"
+      "aram",
+      "lockupWhite"
     ],
-    "week": 2,
-    "dateISO": "2026-10-09"
+    "dateISO": "2026-11-05",
+    "caption": "Malaria still kills a child every 68 seconds, a WHO 2023 figure that hasn't moved nearly enough. This season of giving, you can give a gift that helps change it.\n\nIt takes a few minutes at ram.rawcs.com.au. Give by card or direct debit and a receipt lands in your inbox.\n\nARAM, Australian Rotarians Against Malaria, funds the prevention work that brings that number down across the Pacific and South-East Asia, our own region. That means bednets, training and elimination programs on the ground.",
+    "tags": [
+      "#RAWCS",
+      "#ARAM",
+      "#MalariaElimination"
+    ],
+    "slotLabel": "3",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held (5 November). Overseas post, kept because the stat is about children (a child every 68 seconds). Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. The October tab in this workbook still carries an earlier version of this post on 11 October; the hub's October list no longer has it.",
+    "statusType": "notstarted",
+    "category": "Cause spotlight",
+    "pillar": "Proof of impact",
+    "variant": "giving"
   },
   "sep10": {
     "frames": [
       {
         "kicker": "Compassionate Grants",
-        "headline": "Big enough to matter, \nsmall enough to ==move fast==",
-        "highlight": "",
+        "headline": "A small gift,",
+        "highlight": "close to home.",
         "ctas": [
           {
-            "label": "Donate today!",
+            "label": "Donate today",
             "tone": "red"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Small grants, real help”\nB) “A doctor, a shelter bag, a meal, all local”\nC) “Big enough to matter, small enough to move fast”\n\nNo individually captioned photos, these are program names rather than a single project. Use RACG branding or a generic graphic naming the programs rather than stock imagery of individuals.",
-        "readyImage": "",
+        "brief": "Headline options (pick one):\nA) “A doctor, a shelter bag, a meal” (hub title)\nB) “A small gift, close to home”\nC) “Big enough to matter, small enough to move fast” (current pubmat)\nThe current pubmat artwork can stay. These are program names rather than a single project, so no project photos are needed. If it is reworked, keep to RACG branding with a gold accent.",
+        "readyImage": "nv07",
         "photo": "ph-sep10",
         "photoX": 39,
         "photoY": 50,
@@ -3274,10 +4661,7 @@ const BAKED_EDITS = {
             "ay": "t"
           }
         },
-        "sqScaleKicker": 0.9,
-        "sqScaleHeadline": 0.9,
         "sqScaleCta": 0.9,
-        "scaleHeadline": 0.89,
         "places": {
           "headline": {
             "x": 5,
@@ -3303,30 +4687,45 @@ const BAKED_EDITS = {
         "lineHeight": 1.05,
         "blockGap": 0.8,
         "washSoft": 1.2,
-        "baseStart": 75
+        "baseStart": 75,
+        "giftLine": "Big enough to matter, small enough to move fast.",
+        "note": "Past grants: a Street Doctor Service, shelter bags for people sleeping rough, and Feed the Need. Every donation is tax deductible."
       }
     ],
-    "variant": "photo",
+    "variant": "giving",
     "washPlace": "both",
     "gradient": "scrim",
-    "week": 3,
-    "dateISO": "2026-10-13",
-    "slotLabel": "8"
+    "dateISO": "2026-11-12",
+    "slotLabel": "7",
+    "caption": "The season of giving is when a lot of us notice who in our own community is doing it tough, and a small gift can reach them fast. You can give at https://rawcs.org.au/donation/.\n\nA Compassionate Grant doesn't need to be big to matter. Past grants have covered a Street Doctor Service, shelter bags for people sleeping rough, and Feed the Need, small, local and reaching someone right when they need it.\n\nEvery donation is tax deductible, and matched dollar-for-dollar if a Club or District is fundraising alongside you.",
+    "tags": [
+      "#RAWCS",
+      "#RACG",
+      "#HelpingAussies"
+    ],
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. The hub's link text read 'rawcs.org/donation', which looks like a typo, so it is written here as https://rawcs.org.au/donation/. The pillar was changed from the superseded 'Where your money goes' to 'Proof of impact'.",
+    "statusType": "notstarted",
+    "category": "Appeals and fundraising",
+    "pillar": "Proof of impact",
+    "link": "https://rawcs.org.au/donation/",
+    "logos": [
+      "lockupWhite"
+    ]
   },
   "sep11": {
     "frames": [
       {
-        "kicker": "RAWCS x RARE",
-        "headline": "A warehouse near you,\na shipment far away.",
-        "highlight": "",
+        "kicker": "RAWCS × RARE",
+        "headline": "Give a",
+        "highlight": "Saturday.",
         "ctas": [
           {
             "label": "Volunteer with us",
             "tone": "gold"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Five places, one purpose”\nB) “A warehouse near you, a shipment far away”\nC) “From five sheds to sixty-five countries”\n\nMap or photo graphic showing RARE's 5 Australian distribution facilities.",
-        "readyImage": "",
+        "brief": "Headline options (pick one):\nA) “A warehouse near you, a shipment far away” (current pubmat)\nB) “Give a Saturday”\nC) “From five sheds to sixty-five countries”\nKeep the current pubmat photo of the RARE volunteers. A map graphic of the 5 Australian distribution facilities would work as a second frame if the post becomes a carousel.",
+        "readyImage": "nv08",
         "photo": "ph-sep11",
         "photoX": 33.5,
         "photoY": 46,
@@ -3353,46 +4752,56 @@ const BAKED_EDITS = {
             "ay": "t"
           }
         },
-        "sqScaleHeadline": 0.9,
         "sqScaleCta": 0.9,
-        "sqScaleKicker": 0.9,
-        "scaleHeadline": 0.95,
         "scaleCta": 0.95,
-        "scaleKicker": 0.95,
         "sqScaleLogo0": 0.7,
         "scaleLogo0": 0.75,
         "sqScaleLogo1": 0.7,
         "scaleLogo1": 0.75,
-        "sqScaleBlock": 1
+        "sqScaleBlock": 1,
+        "giftLine": "A warehouse near you, a shipment far away.",
+        "note": "Five RARE facilities around Australia. Equipment sent to more than 65 countries over 40 years."
       }
     ],
-    "variant": "photo",
-    "week": 3,
-    "slotLabel": "9",
-    "dateISO": "2026-10-14"
+    "variant": "giving",
+    "slotLabel": "8",
+    "dateISO": "2026-11-13",
+    "caption": "Here's a gift that costs nothing but a Saturday. See how to get involved at https://rawcs.org.au/volunteer/.\n\nRARE runs five distribution facilities around Australia, so there's a fair chance one is close to you. Volunteers there sort and prepare medical and educational equipment that has gone out to more than 65 countries over the past 40 years.\n\nIf you don't mind getting your hands a little dusty, we'd like to hear from you.",
+    "tags": [
+      "#RAWCS",
+      "#RARE",
+      "#VolunteerWithUs"
+    ],
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook, with the Australian warehouses first.",
+    "statusType": "notstarted",
+    "category": "Volunteers and people",
+    "pillar": "Faces and field stories",
+    "link": "https://rawcs.org.au/volunteer/",
+    "logos": [
+      "rare",
+      "lockupWhite"
+    ]
   },
   "sep13": {
     "format": "single",
     "frames": [
       {
         "kicker": "RAWCS × NEMA",
-        "headline": "Government and community,\n==working together==.",
-        "highlight": "",
+        "headline": "Some gifts take",
+        "highlight": "a whole community.",
         "ctas": [
           {
             "label": "Partner with us",
             "tone": "blue"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Government and community, working together”\nB) “When farmers needed help fast, this delivered”\nC) “$6.5 million, no red tape”\n\nPartnership graphic, RAWCS + NEMA branding if permitted, or a vouchers/drought recovery photo.",
-        "readyImage": "",
+        "brief": "Headline options (pick one):\nA) “Government and community, working together” (current pubmat)\nB) “Some gifts take a whole community”\nC) “$6.5 million, no red tape”\nKeep the current pubmat (the road train in drought country). RAWCS and NEMA branding only if permitted.",
+        "readyImage": "nv11",
         "photo": "ph-sep13",
         "photoX": 50.5,
         "photoY": 62,
         "sqPhotoX": 52.5,
         "sqPhotoY": 58,
-        "sqScaleHeadline": 0.79,
-        "scaleHeadline": 0.82,
         "sqPlaces": {},
         "places": {
           "headline": {
@@ -3414,19 +4823,35 @@ const BAKED_EDITS = {
             "ay": "t"
           }
         },
-        "lineHeight": 1.15
+        "lineHeight": 1.15,
+        "giftLine": "$6.5 million, no red tape.",
+        "note": "Support vouchers delivered to farming communities with 108 Rotary Clubs during the last drought."
       }
     ],
     "washPlace": "both",
-    "dateISO": "2026-10-08",
-    "week": 2,
-    "slotLabel": "6"
+    "dateISO": "2026-11-21",
+    "slotLabel": "11",
+    "caption": "$6.5 million in support vouchers reached Australian farming communities during the last drought, with no long delays and no red tape. That is what working together looks like.\n\nRAWCS worked alongside the National Emergency Management Agency and 108 Rotary Clubs to make it happen, and that kind of speed only happens when a government agency trusts a grassroots network to deliver.\n\nThinking about a partnership this season of giving? Talk to us at https://rawcs.org.au/contact-us/.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#CorporatePartnerships"
+    ],
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "category": "Awareness days and community",
+    "pillar": "Partnership and authority",
+    "link": "https://rawcs.org.au/contact-us/",
+    "variant": "giving",
+    "logos": [
+      "lockupWhite"
+    ]
   },
   "sep16": {
     "frames": [
       {
         "kicker": "RATE · Rotary Australia Trust for the Environment",
-        "headline": "Environmental projects,\nnow open to Rotary Clubs.",
+        "headline": "Register your environmental project with RAWCS now",
         "highlight": "",
         "ctas": [
           {
@@ -3434,7 +4859,7 @@ const BAKED_EDITS = {
             "tone": "blue"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Environmental projects, now open to Rotary Clubs”\nB) “Trees, habitats, and a tax deduction”\nC) “A new way for Clubs to give back to the land”\n\nNo directory-style project photos, RATE is sourced from the presentation rather than a project page. Use RATE branding if available, or tree-planting/habitat imagery.",
+        "brief": "Headline options (pick one): A) “Environmental projects, now open to Rotary Clubs” B) “Trees, habitats, and a tax deduction” C) “A new way for Clubs to give back to the land”\n\nNo directory-style project photos, RATE is sourced from the presentation rather than a project page. Use RATE branding if available.",
         "readyImage": "",
         "photo": "ph-sep16",
         "photoX": 46,
@@ -3467,33 +4892,59 @@ const BAKED_EDITS = {
     ],
     "washPlace": "top",
     "gradient": "scrim",
-    "dateISO": "2026-10-06",
-    "week": 2,
-    "slotLabel": "4"
+    "dateISO": "2026-10-14",
+    "slotLabel": "7",
+    "caption": "Did you know your Rotary Club can register an environmental project with RAWCS?\n\nFrom tree planting and habitat restoration to projects protecting our environment and wildlife, Rotary Clubs are helping create healthier and more sustainable communities through the Rotary Australia Trust for the Environment (RATE).\n\nAnd there are already environmental projects available that you can support through the link here: https://rawcs.org.au/our-causes/protecting-the-environment-and-wildlife/\n\nIf your Club is looking for a way to make a difference through environmental action, you can also register a project with us for tax-deductible donations\n\nRegister a RATE project here:\nhttps://rawcs.org.au/register-a-new-project/\n\n#RAWCS #RATE #RotaryAustralia #RotaryInAction #EnvironmentalProjects #ProtectOurEnvironment #HabitatRestoration #TreePlanting #Sustainability",
+    "tags": [
+      "#RAWCS",
+      "#RATE",
+      "#RotaryAustralia",
+      "#Environment"
+    ],
+    "status": "Not started.\n\nReady. Headline options refreshed to match the hub's current wording; caption unchanged.",
+    "statusType": "notstarted"
   },
   "sep17": {
     "format": "single",
-    "variant": "split",
+    "variant": "giving",
     "frames": [
       {
         "kicker": "Inside RAWCS",
-        "headline": "The parts of RAWCS",
-        "highlight": "you don’t always see.",
+        "headline": "Where your gift goes,",
+        "highlight": "near and far.",
         "ctas": [
           {
             "label": "Learn more",
             "tone": "red"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “The parts of RAWCS you don't always see”\nB) “Five programs, one network”\nC) “More than projects: what keeps RAWCS running”\n\nNo directory-style project photos, this is a general overview sourced from the leaflet. Use a simple graphic naming the five areas in RAWCS brand colours.",
-        "readyImage": "",
+        "brief": "Headline options (pick one):\nA) “The parts of RAWCS you don't always see” (current pubmat)\nB) “Where your gift goes, near and far”\nC) “More than projects: what keeps RAWCS running”\nKeep the current pubmat photo (the warehouse sorting team). If the card is reworked, put Compassionate Grants first in the list of areas so the domestic side leads.",
+        "readyImage": "nv06",
         "photo": "ph-sep17",
-        "textX": 7,
-        "textY": 8,
         "sqPlaces": {
           "kicker": {
             "x": 5,
-            "y": 51,
+            "y": 43.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 5,
+            "y": 50.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 5,
+            "y": 64.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "places": {
+          "kicker": {
+            "x": 5,
+            "y": 52.5,
             "ax": "l",
             "ay": "t"
           },
@@ -3505,42 +4956,75 @@ const BAKED_EDITS = {
           },
           "highlight": {
             "x": 5,
-            "y": 68.5,
+            "y": 70.5,
             "ax": "l",
             "ay": "t"
           }
         },
-        "places": {
-          "kicker": {
-            "x": 5,
-            "y": 59.5,
-            "ax": "l",
-            "ay": "t"
-          },
-          "headline": {
-            "x": 5,
-            "y": 66,
-            "ax": "l",
-            "ay": "t"
-          },
-          "highlight": {
-            "x": 5,
-            "y": 73.5,
-            "ax": "l",
-            "ay": "t"
-          }
-        }
+        "giftLine": "Compassionate Grants, RARE, Medishare and ARAM.",
+        "note": "From Australians doing it tough to malaria elimination in our own region."
       }
     ],
     "gradient": "scrim",
-    "dateISO": "2026-10-07",
-    "week": 2,
-    "slotLabel": "5"
+    "dateISO": "2026-11-10",
+    "slotLabel": "6",
+    "caption": "Think you know what RAWCS does? There's more going on than most people realise, and a lot of it is closer to home than you'd guess. Have a look around at https://rawcs.org.au.\n\nCompassionate Grants help Australians doing it tough. RARE ships donated medical and educational equipment. Medishare handles surplus medical consumables. ARAM works on malaria elimination in our own region. And a small communications team keeps the training, reporting and public materials running for everyone else.\n\nIt all runs on people choosing to give, and this is the time of year a lot of us do.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#EnablingGlobalGood"
+    ],
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook, and it now names Compassionate Grants (Australians doing it tough, per the RAWCS leaflet) so the domestic side is visible.",
+    "statusType": "notstarted",
+    "category": "Impact and project stories",
+    "pillar": "Proof of impact",
+    "panelColour": "red",
+    "logos": [
+      "lockupWhite"
+    ]
   },
   "sep5": {
-    "dateISO": "2026-10-05",
-    "week": 1,
-    "slotLabel": "3"
+    "dateISO": "2026-11-03",
+    "slotLabel": "2",
+    "caption": "Most gifts for kids come in wrapping paper. For the children in this project, one of the most important gifts is an ID card.\n\nTheir story is at https://directory.rawcs.com.au/26-2014-15, and it starts with a long walk. Many of them travelled for days into Thailand, alone or with their siblings, to escape the war in Myanmar. Without Thai identification they can't go to school, see a doctor properly or travel freely, so getting that sorted is often the first real step toward a normal life.\n\nBorderless Friendship, run through the Rotary Club of Melville, helps with that, along with hostel accommodation and schooling. $3,000 covers a weekend workshop for 50 teenagers on health and relationships education.\n\nThere's a short video on the project page if you'd like to meet the community. This season of giving, you can help a child feel safe, schooled and at home.",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#Thailand",
+      "#EducationForAll"
+    ],
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Moved from 19 November to 3 November on 29/10/2026 so it sits at the start of the month. The hub date needs the same change. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook; the facts are unchanged. Overseas post that helps children, in line with the season of giving, domestic and children rule for November onwards.",
+    "statusType": "notstarted",
+    "category": "Impact and project stories",
+    "pillar": "Faces and field stories",
+    "frames": [
+      {
+        "kicker": "Borderless Friendship · Thailand",
+        "headline": "The gift of",
+        "highlight": "belonging.",
+        "ctas": [
+          {
+            "label": "Read the project story",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one):\nA) “Safe, schooled, and still connected to home” (current)\nB) “The gift of belonging”\nC) “An ID card, a classroom, a place to call home”\nReview the 7 directory images and choose the warmest hostel, classroom or community shot, not a border crossing. The project video (youtube.com/embed/L43s2Rl4b2Q) may suit better than a still.",
+        "readyImage": "nv02",
+        "photo": "ph-sep5",
+        "sqPhotoX": 10,
+        "sqPhotoY": 50,
+        "photoX": 22.5,
+        "photoY": 50,
+        "giftLine": "An ID card, a classroom, a place to call home.",
+        "note": "Hostel accommodation, schooling and Thai identification for children who fled the war in Myanmar."
+      }
+    ],
+    "link": "https://directory.rawcs.com.au/26-2014-15",
+    "panelColour": "red",
+    "variant": "giving",
+    "logos": [
+      "lockupWhite"
+    ]
   },
   "sep8": {
     "dateISO": "2026-09-21",
@@ -3619,56 +5103,80 @@ const BAKED_EDITS = {
     "frames": [
       {
         "kicker": "For Rotary Clubs",
-        "headline": "Not every idea qualifies.\nHere’s what does.",
+        "headline": "What does a RACG project look like?",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork, title card: “What does a RACG project look like?” (5 frames, numbered-criteria template: photo top, navy panel, vertical tricolour edge on every frame). The artwork is final in the hub. If the title card is reworked for the season, use “Got a local idea to back this year?” as the headline and keep the 5-frame template.",
+        "readyImage": "rcg1",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "RACG projects",
+        "headline": "1. Applications come through Rotary · 2. Help goes to people",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — points 1–2, bold point title + body, white outlined numerals on blue.",
+        "readyImage": "rcg2",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "RACG projects",
+        "headline": "3. It meets a specific need · 4. It supports those who need it most",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — points 3–4.",
+        "readyImage": "rcg3",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "RACG projects",
+        "headline": "5. It moves people · 6. It names who and what",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — points 5–6.",
+        "readyImage": "rcg4",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Ready to register a project?",
         "highlight": "",
         "ctas": [
           {
-            "label": "Check the criteria",
+            "label": "directory.rawcs.com.au/RegistrationRACG.aspx",
             "tone": "blue"
           }
         ],
-        "brief": "Headline options (pick one):\nA) “Check the criteria before you apply”\nB) “Not every idea qualifies, here's what does”\nC) “Know the rules, then ask”\n\nRACG branding, simple graphic listing the criteria headings only, not the full text.",
-        "readyImage": "",
-        "photo": "ph-sep12",
+        "brief": "Final artwork — CTA: navy, white lockup, headline, line, and the registration URL in a white box.",
+        "readyImage": "rcg5",
+        "photo": "",
         "video": "",
-        "videoName": "",
-        "photoX": 50,
-        "photoY": 44,
-        "sqPhotoX": 50,
-        "sqPhotoY": 44,
-        "sqPlaces": {
-          "headline": {
-            "x": 7.5,
-            "y": 62.5,
-            "ax": "l",
-            "ay": "t"
-          },
-          "kicker": {
-            "x": 7.5,
-            "y": 54,
-            "ax": "l",
-            "ay": "t"
-          }
-        },
-        "places": {
-          "headline": {
-            "x": 8,
-            "y": 69,
-            "ax": "l",
-            "ay": "t"
-          },
-          "kicker": {
-            "x": 8,
-            "y": 62,
-            "ax": "l",
-            "ay": "t"
-          }
-        }
+        "videoName": ""
       }
     ],
-    "dateISO": "2026-10-15",
-    "week": 3,
-    "slotLabel": "10"
+    "dateISO": "2026-11-17",
+    "slotLabel": "10",
+    "format": "carousel",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "topic": "What does a RACG project look like?",
+    "link": "https://directory.rawcs.com.au/RegistrationRACG.aspx",
+    "caption": "Has your Rotary club got a local idea it would love to back before the year is out? The criteria for a Compassionate Grant are at https://rawcs.org.au, and a quick check before you apply is worth it.\n\nA Compassionate Grant won't fund just anything, and there's a reason for that. The money needs to go to a person or a small group genuinely struggling, not a general community fund, and it has to be for something specific rather than a broad ask.\n\nSwipe through for the points to keep in mind.",
+    "tags": [
+      "#RAWCS",
+      "#RACG",
+      "#RotaryClubs"
+    ],
+    "category": "Volunteers and people",
+    "pillar": "Rotarian enablement",
+    "statusType": "notstarted"
   },
   "sep15": {
     "dateISO": "2026-09-16",
@@ -3747,9 +5255,14 @@ const BAKED_EDITS = {
     "format": "video"
   },
   "sep14": {
-    "dateISO": "2026-10-02",
-    "week": 1,
-    "slotLabel": "2"
+    "dateISO": "2026-10-11",
+    "slotLabel": "6",
+    "caption": "Come and meet RAWCS at the Australian NGO Showcase!\n\nOn 12 October, RAWCS will be at the Government House in Canberra for this prestigious community event, showcasing the humanitarian programs making a difference in communities across Australia and around the world.\n\nWith more than 3,000 attendees expected, it’s a fantastic opportunity to learn more about what we do, discover how we are helping communities in times of need.\n\nDetails:\n📍 Government House, Canberra\n📅 12 October\n\nIf you're attending, come and say hello and learn more about how to get involved.\n\n#RAWCS #RotaryAustralia #RotaryInAction #AustralianNGOShowcase #GovernmentHouse #HumanitarianAid #CommunityImpact",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#NGOShowcase"
+    ]
   },
   "t1": {},
   "t2": {},
@@ -3794,16 +5307,545 @@ const BAKED_EDITS = {
     "slotLabel": "7"
   },
   "nepal-vid-4": {
-    "slotLabel": "10"
+    "dateISO": "2026-09-24",
+    "week": 4,
+    "slotLabel": "11"
   },
   "nepal-vid-5": {
-    "slotLabel": "11"
+    "dateISO": "2026-09-28",
+    "week": 5,
+    "slotLabel": "12"
   },
   "nepal-vid-3": {
     "slotLabel": "9"
   },
   "nepal-vid-6": {
-    "slotLabel": "12"
+    "dateISO": "2026-10-06",
+    "slotLabel": "4"
+  },
+  "adhoc-mu6bejit": {
+    "topic": "Sample"
+  },
+  "nepal-rasuwa-carousel": {
+    "slotLabel": "10"
+  },
+  "oct-airbnb-webinar": {
+    "dateISO": "2026-10-02",
+    "frames": [
+      {
+        "kicker": "RAWCS x Airbnb.org Webinar",
+        "headline": "Emergency Accommodation Program",
+        "highlight": "Tuesday 6 October 2026, 2:00pm AEDT (Sydney time)\nEmail info@rawcs.org.au for login details",
+        "ctas": [],
+        "brief": "Single-image template matched to the 18 Aug RAWCS x Airbnb.org post: Rotarians in hi-vis on a relief response under the navy brand wash, co-branded reversed lockup (Australian Rotary Districts | RAWCS | airbnb.org), blue kicker chip, white date/time headline at the same scale as 18 Aug, no pill CTA — closing line in the footer, tricolour stripe.",
+        "readyImage": "",
+        "photo": "oa1",
+        "video": "",
+        "videoName": "",
+        "videoLink": "",
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "photoX": 50,
+        "photoY": 50,
+        "scaleHighlight": 0.278,
+        "sqScaleHighlight": 0.35,
+        "tintHex": "#0F3F8C",
+        "washStrength": 1.2,
+        "tintEnd": 38,
+        "tint2Hex": "#D66218",
+        "tint2Strength": 1.15,
+        "tint2End": 64,
+        "baseStrength": 1.1,
+        "highlightPlain": true,
+        "sqPhotoFit": "fill",
+        "sqPhotoZoom": 1,
+        "sqPhotoX": 50,
+        "sqPhotoY": 50,
+        "sqScaleHeadline": 0.92,
+        "sqTextWidths": {
+          "highlight": 64.9
+        }
+      }
+    ],
+    "slotLabel": "1"
+  },
+  "oct-airbnb-how-it-works": {
+    "dateISO": "2026-10-03",
+    "format": "carousel",
+    "variant": "photo",
+    "frames": [
+      {
+        "kicker": "How It Works",
+        "headline": "If a declared disaster affects your community here’s how to access temporary housing",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — cover. Clean template: warm neutral ground (August series), colour co-branded lockup, blue \"How It Works\" chip, blue headline, webinar line under a short red rule, tricolour footer.",
+        "readyImage": "assets/art2/obc1.jpg",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 1–2",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 1–2 on white cards: red \"Step 01\" label, bold blue lead phrase, Calibri body, tricolour header stripe.",
+        "readyImage": "obc2",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 3–4",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 3–4, same card layout.",
+        "readyImage": "obc3",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "How It Works",
+        "headline": "Steps 5–6",
+        "highlight": "",
+        "ctas": [],
+        "brief": "Final artwork — Steps 5–6, same card layout.",
+        "readyImage": "obc4",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      },
+      {
+        "kicker": "",
+        "headline": "See the full process",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "See the full process",
+            "tone": "red"
+          }
+        ],
+        "brief": "Final artwork — CTA only (as the August end frame): colour lockup, red \"See the full process\" pill, rawcs.org.au/rotarian-centre/, tricolour footer.",
+        "readyImage": "obc5",
+        "photo": "",
+        "video": "",
+        "videoName": "",
+        "videoLink": ""
+      }
+    ],
+    "slotLabel": "2"
+  },
+  "oct-airbnb-eligible": {
+    "dateISO": "2026-10-04",
+    "slotLabel": "3"
+  },
+  "oct-nepal-galchi": {
+    "variant": "photo",
+    "frames": [
+      {
+        "kicker": "Galchi, Dhading District · Nepal",
+        "headline": "Still delivering aid in Nepal",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate now",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Galchi, Dhading: relief delivered” B) “26 families, a private handout, the basics to start again” C) “Still delivering in Dhading”\n\nLead image: the hygiene kit handover under the “Rotary in Action” banner (5f7b8779-14d3-4ad7-b038-6802f59f76ed.jpg). Carousel: bedding and a trunk being carried home by motorbike (831117795_2336907937081092_1748468541606562703_n.jpg), the group with the supplies (831402575_...jpg) and the families lined up with their items (831958459_...jpg).",
+        "readyImage": "",
+        "photo": "assets/photos/oct12-galchi.jpg",
+        "video": "",
+        "videoName": "",
+        "photoX": 69,
+        "photoY": 50,
+        "photoZoom": 1.08,
+        "photoFit": "fill",
+        "sqPhotoZoom": 1.14,
+        "sqPhotoX": 84.5,
+        "sqPhotoY": 45.5,
+        "textX": 4.5,
+        "textY": 54,
+        "washStrength": 1.2,
+        "tintEnd": 87,
+        "baseStrength": 1.4,
+        "washSoft": 1.3,
+        "sqScaleCta": 0.89,
+        "sqScaleHighlight": 0.89,
+        "sqScaleHeadline": 0.89,
+        "sqScaleKicker": 0.89,
+        "sqTextX": 6,
+        "sqTextY": 54,
+        "sqPlaces": {},
+        "places": {
+          "ctas": {
+            "x": 6,
+            "y": 80,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 6,
+            "y": 69.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 6,
+            "y": 61,
+            "ax": "l",
+            "ay": "t"
+          },
+          "kicker": {
+            "x": 6,
+            "y": 54.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        }
+      }
+    ],
+    "gradient": "scrim"
+  },
+  "oct-nepal-dadang": {
+    "variant": "photo",
+    "frames": [
+      {
+        "kicker": "Dhading District, Nepal",
+        "headline": "For the children of",
+        "highlight": "Dhading District.",
+        "ctas": [
+          {
+            "label": "Donate now",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “For the children of Dhading District” B) “Dhading District: Rotary in Action, delivered” C) “A backpack, a teddy, a bit of normal”\n\nLead image: the “Rotary in Action for Nepal's Flash Flood Relief” banner (202609028_The_Delivery__26_.jpg, shows the DIDI Foundation and Toukley Wyong Rotary partnership). Carousel: the girl with a teddy (__33_), school bags being handed out (__10_, __36_), children with toys (__15_, __16_) and the woman carrying her trunk (__5_). Consent is confirmed.",
+        "readyImage": "",
+        "photo": "assets/photos/oct13-dhading-children.jpg",
+        "video": "",
+        "videoName": "",
+        "photoX": 53.5,
+        "photoY": 31.5,
+        "washStrength": 0.65,
+        "baseStrength": 1.3,
+        "tintEnd": 80,
+        "sqScaleHighlight": 0.87,
+        "sqScaleHeadline": 0.87,
+        "sqScaleKicker": 0.87,
+        "sqScaleCta": 0.87,
+        "photoZoom": 1.06,
+        "photoFit": "fill",
+        "sqPhotoFit": "fill",
+        "sqPhotoZoom": 1.04,
+        "sqPhotoX": 65,
+        "sqPhotoY": 46
+      }
+    ],
+    "baseColour": "navy",
+    "gradient": "brand",
+    "tint": "navy",
+    "dateISO": "2026-10-15"
+  },
+  "oct-aram-seminar": {
+    "frames": [
+      {
+        "kicker": "Friday 30 October · Melbourne & online",
+        "headline": "Now We Can:\nThe Path to Malaria Elimination",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Register for free",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Driven to end malaria. Now we can.” B) “From vaccines to Timor-Leste: the path to elimination” C) “Now We Can: 30 October, Melbourne”\n\nThe hub's artwork for this post is already built: a photo card reading “Friday 30 October · Melbourne & online” with a “Register — free” button. The event page shows the venue only, so check “online” on the card. The official flyer (QR code, partner logos) remains the reference for channel-sized crops.",
+        "readyImage": "",
+        "photo": "assets/photos/oct20-aram-seminar.jpg",
+        "video": "",
+        "videoName": "",
+        "textX": 4,
+        "textY": 64.5,
+        "sqTextX": 5.5,
+        "sqTextY": 51.5,
+        "scaleLogo": 0.8,
+        "washStrength": 1.4,
+        "baseStart": 77,
+        "baseStrength": 1.15,
+        "lineHeight": 1.2,
+        "photoFit": "fill",
+        "photoZoom": 1.09,
+        "photoX": 0,
+        "photoY": 46,
+        "sqPhotoFit": "fill",
+        "sqPhotoZoom": 1,
+        "sqPhotoX": 50,
+        "sqPhotoY": 14,
+        "sqPlaces": {
+          "kicker": {
+            "x": 5.5,
+            "y": 51.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 6,
+            "y": 60.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "places": {
+          "kicker": {
+            "x": 6.5,
+            "y": 60,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 7,
+            "y": 68,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "sqScaleKicker": 1,
+        "scaleKicker": 1.14,
+        "sqScaleLogo0": 1,
+        "scaleLogo0": 1.03,
+        "sqScaleCta": 1,
+        "scaleCta": 0.89,
+        "sqScaleHeadline": 1,
+        "scaleHeadline": 1.05
+      }
+    ],
+    "variant": "banner",
+    "dateISO": "2026-10-23"
+  },
+  "oct-butterfly-buddies": {
+    "frames": [
+      {
+        "kicker": "Breast Cancer Awareness Month",
+        "headline": "Give women life-changing support after a mastectomy",
+        "highlight": "",
+        "ctas": [
+          {
+            "label": "Donate",
+            "tone": "red"
+          }
+        ],
+        "brief": "Headline options (pick one): A) “Fitted, trained, ready to help” B) “Get involved with Butterfly Buddies” C) “Training the people who do the fitting”\n\nNo photo asset confirmed in the bank yet; use RAWCS brand colours with a restrained October/pink accent, and swap in a real project photo once RAWCS or the project's Facebook page (facebook.com/p/Butterfly-Buddies-61566811404205) supplies one.",
+        "readyImage": "",
+        "photo": "assets/photos/oct22-butterfly-buddies.jpg",
+        "video": "",
+        "videoName": "",
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "photoX": 45,
+        "photoY": 50,
+        "sqPhotoFit": "fill",
+        "sqPhotoZoom": 1,
+        "sqPhotoX": 50,
+        "sqPhotoY": 50,
+        "baseStrength": 1.15,
+        "washSoft": 1.15,
+        "tintEnd": 84,
+        "sqScaleCta": 0.87,
+        "sqScaleHighlight": 0.87,
+        "sqScaleHeadline": 0.87,
+        "sqScaleKicker": 0.87,
+        "sqTextX": 6,
+        "sqTextY": 54.5,
+        "washStrength": 1.2
+      }
+    ],
+    "variant": "photo",
+    "gradient": "scrim",
+    "caption": "As Breast Cancer Awareness Month draws to a close, let’s keep the conversation going.\n\nA simple chat with a friend or loved one can be the nudge they need to book a screening.\n\nAt this year’s Rotary Pioneer Adventure Day, BreastScreen SA’s mobile clinic screened 47 women on site. 44 received the all-clear, and three are now having follow-up tests. It’s a powerful reminder of why accessible screening and early detection matter.\n\nBeyond Australia, Butterfly Buddies, supported by the Rotary Club of North Lake Macquarie, helps women in Fiji and across the South Pacific after a mastectomy. The project provides repurposed breast forms and mastectomy bras, and trains local nurses and community workers to fit them so women can regain comfort and confidence.\n\nMake a donation today to help Butterfly Buddies reach more women.\n\n👉 Donate: directory.rawcs.com.au/15-2024-25"
+  },
+  "oct-govhouse-openday": {
+    "variant": "photo",
+    "frames": [
+      {
+        "kicker": "Upcoming events",
+        "headline": "Stay connected with RAWCS and the wider humanitarian and Rotary community through these upcoming events.",
+        "highlight": "Swipe for dates and locations.",
+        "ctas": [],
+        "brief": "Final artwork — hook. Itinerary template (different from 4 Oct): Canberra skyline (supplied) under a navy wash, blue \"Upcoming events\" chip, white RAWCS lockup, white headline with gold \"upcoming events.\", three-stop date timeline, swipe cue, tricolour footer.",
+        "readyImage": "assets/art2/oct10-1.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "10 October | Canberra",
+        "headline": "Meet RAWCS at Government House Open Day.",
+        "highlight": "Join more than 3,000 visitors from across Australia and talk with us about our humanitarian programs.",
+        "ctas": [
+          {
+            "label": "Visiting Government House",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Final artwork — top photo band with gold date | city tag, progress timeline (stop 1 of 3), blue headline, support line, gold rule + link line, 02 / 05. Photo: Government House, Canberra, by Sheba_Also (Flickr), via Wikimedia Commons, CC BY-SA 2.0.",
+        "readyImage": "assets/art2/oct10-2.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "12-14 October | Canberra",
+        "headline": "Where Australia's humanitarian sector comes together.",
+        "highlight": "Find RAWCS at the ACFID National Conference, National Convention Centre. We're attending as an ACFID member, alongside sector leaders, NGOs, practitioners and changemakers.",
+        "ctas": [
+          {
+            "label": "Conference 2026 - ACFID",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Final artwork — same layout, stop 2 of 3, 03 / 05. Canberra skyline photo (supplied), tighter crop.",
+        "readyImage": "assets/art2/oct10-3.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "29 October to 1 November | Melbourne",
+        "headline": "Find the RAWCS booth.",
+        "highlight": "Visit us at the Rotary South Pacific Zone Conference, Melbourne Convention and Exhibition Centre. Come and meet the team.",
+        "ctas": [
+          {
+            "label": "2026 Rotary South Pacific Zone Conference",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Final artwork — same layout, stop 3 of 3, 04 / 05. Photo: Melbourne Convention Centre by Shkuru Afshar, via Wikimedia Commons, CC BY-SA 4.0.",
+        "readyImage": "assets/art2/oct10-4.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      },
+      {
+        "kicker": "",
+        "headline": "Let's connect.",
+        "highlight": "Pick the event closest to you and come and say hello. Together, we continue to strengthen Rotary's impact locally, nationally and around the world.",
+        "ctas": [
+          {
+            "label": "See event details",
+            "tone": "red"
+          }
+        ],
+        "brief": "Final artwork — CTA: navy ground, white lockup, \"Let's connect.\" with gold accent, support line, red \"See event details\" pill, rawcs.org.au, tricolour footer.",
+        "readyImage": "assets/art2/oct10-5.png",
+        "photo": "",
+        "video": "",
+        "videoName": ""
+      }
+    ],
+    "format": "carousel",
+    "caption": "Stay connected with RAWCS and the wider humanitarian and Rotary community through these upcoming events.\n\n10 October: We will be at the Government House Open Day in Canberra. RAWCS is there showcasing our humanitarian programs and talking with visitors from across Australia, among more than 3,000 attendees.\nDetails: https://www.gg.gov.au/about-governor-general/governor-generals-official-residences/visiting-government-house\n\n12 to 14 October: RAWCS is attending as an ACFID member at the ACFID National Conference at the National Convention Centre in Canberra, Australia's leading international development and humanitarian conference, bringing together sector leaders, NGOs, practitioners and changemakers from across the country.\nDetails: https://acfid.asn.au/members/conference-2026/\n\n29 October to 1 November: Find us at the RAWCS booth at the Rotary South Pacific Zone Conference at the Melbourne Convention and Exhibition Centre.\nDetails: https://rotarydownunder.org/events/2026-rotary-zone-8-conference/\n\nWe look forward to connecting with many of you at these events over the coming months. Together, we continue to strengthen Rotary's impact locally, nationally and around the world.",
+    "gradient": "none",
+    "tags": [
+      "#RAWCS",
+      "#RotaryAustralia",
+      "#GovernmentHouseOpenDay",
+      "#ACFID",
+      "#RotarySouthPacific"
+    ],
+    "dateISO": "2026-10-09"
+  },
+  "oct-volunteer-call": {
+    "frames": [
+      {
+        "kicker": "Volunteer with RAWCS",
+        "headline": "Give your time",
+        "highlight": "this season.",
+        "ctas": [
+          {
+            "label": "Explore opportunities",
+            "tone": "blue"
+          }
+        ],
+        "brief": "Headline options (pick one):\nA) “Take your service further” (current pubmat)\nB) “Give your time this season”\nC) “Join the next RAWCS project team”\nKeep the current pubmat (hands stacked together in volunteer shirts), which already suits the giving theme.",
+        "readyImage": "nv12",
+        "photo": "assets/photos/oct20-volunteers-v2.jpg",
+        "video": "",
+        "videoName": "",
+        "photoFit": "fill",
+        "photoZoom": 1,
+        "sqPlaces": {
+          "kicker": {
+            "x": 5.5,
+            "y": 55,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 5.5,
+            "y": 61.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 5.5,
+            "y": 68.5,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "places": {
+          "kicker": {
+            "x": 6.5,
+            "y": 57.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "headline": {
+            "x": 6.5,
+            "y": 63.5,
+            "ax": "l",
+            "ay": "t"
+          },
+          "highlight": {
+            "x": 6.5,
+            "y": 70,
+            "ax": "l",
+            "ay": "t"
+          }
+        },
+        "photoX": 50,
+        "photoY": 50,
+        "sqPhotoFit": "fill",
+        "sqPhotoZoom": 1,
+        "sqPhotoX": 45.5,
+        "sqPhotoY": 50,
+        "giftLine": "Join the next RAWCS project team.",
+        "note": "Hands-on humanitarian and development projects across Australia and around the world."
+      }
+    ],
+    "variant": "giving",
+    "dateISO": "2026-11-24",
+    "slotLabel": "12",
+    "category": "Volunteers and people",
+    "pillar": "Rotarian enablement",
+    "caption": "One of the oldest gifts is your time. Rotary members can take their service further with RAWCS, and the current opportunities are at https://rawcs.org.au/volunteer/.\n\nYou can join humanitarian and sustainable development projects across Australia and around the world. It's hands-on work. You bring your skills and experience, and you work alongside fellow Rotarians to help people in need.\n\nInterested in being part of the next project team? Now is a good time to take a look.",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "statusType": "notstarted",
+    "link": "https://rawcs.org.au/volunteer/",
+    "panelColour": "red",
+    "logos": [
+      "lockupWhite"
+    ]
+  },
+  "oct-gg-xi": {
+    "dateISO": "2026-10-13"
   }
 };
 const BLANK = { edits: JSON.parse(JSON.stringify(BAKED_EDITS)), extra: ADDED_POSTS.slice(), deleted: RETIRED_POSTS.slice(), checks: {"adhoc-mtwoko2z:copy":true,"sep1:d-organic":true,"sep2:d-organic":true,"sep3:d-organic":true,"sep4:d-paid":false,"sep4:d-organic":true,"sep7:d-organic":true,"sep7:d-paid":true,"sep15:d-organic":true}, notes: {}, times: {}, logoLib: {}, docs: {} };
@@ -3922,6 +5964,7 @@ class Component extends DCLogic {
           // A saved payload replaces the whole added-posts layer, so posts added
           // to the build after someone last saved would never reach them. Any
           // seeded added-post they have neither got nor deleted is folded in.
+          loaded.extra = (loaded.extra || []).filter(p => SUPERSEDED_POSTS.indexOf(p.id) < 0);
           const held = {};
           (loaded.extra || []).forEach(p => { held[p.id] = true; });
           const gone = loaded.deleted || [];
@@ -3942,10 +5985,11 @@ class Component extends DCLogic {
       }
     } catch (e) {}
     this.paintHeaderLogo();
-    if (!window.RAWCS_LOGOS || !window.RAWCS_ART) {
+    if (!window.RAWCS_LOGOS || !window.RAWCS_ART || !window.RAWCS_ART_NOV) {
       let tries = 0;
       this._wait = setInterval(() => {
-        if ((window.RAWCS_LOGOS && window.RAWCS_ART) || ++tries > 60) {
+        if ((window.RAWCS_LOGOS && window.RAWCS_ART && window.RAWCS_ART_NOV) || ++tries > 120) {
+          if (window.RAWCS_ART && window.RAWCS_ART_NOV) Object.assign(window.RAWCS_ART, window.RAWCS_ART_NOV);
           clearInterval(this._wait);
           this.paintHeaderLogo();
           this.forceUpdate();
@@ -4142,6 +6186,22 @@ class Component extends DCLogic {
       if (day <= 20) return 3;
       return 4;
     }
+    // October onward: Monday-start weeks (Oct 2026 begins on a Thursday).
+    if (iso.slice(0, 7) === '2026-10') {
+      if (day <= 4) return 1;
+      if (day <= 11) return 2;
+      if (day <= 18) return 3;
+      if (day <= 25) return 4;
+      return 5;
+    }
+    // November: Monday-start weeks (Nov 2026 begins on a Sunday).
+    if (iso.slice(0, 7) === '2026-11') {
+      if (day <= 8) return 1;
+      if (day <= 15) return 2;
+      if (day <= 22) return 3;
+      if (day <= 29) return 4;
+      return 5;
+    }
     if (day <= 9) return 1;
     if (day <= 16) return 2;
     if (day <= 23) return 3;
@@ -4176,6 +6236,20 @@ class Component extends DCLogic {
   current() {
     if (!this.state.openId) return null;
     return this.mergedPosts().filter(p => p.id === this.state.openId)[0] || null;
+  }
+
+  // Reordering a carousel: swap the current frame with its neighbour, wrapping at
+  // the ends, then keep the selection on the frame that moved.
+  moveFrame(post, dir) {
+    if (!post || !(post.frames || []).length) return;
+    const frames = post.frames.slice();
+    const i = this.frameIndex(post);
+    const j = (i + dir + frames.length) % frames.length;
+    const held = frames[i];
+    frames[i] = frames[j];
+    frames[j] = held;
+    this.edit(dir < 0 ? 'Moved the frame earlier' : 'Moved the frame later', { frames });
+    this.setState({ frameIdx: Object.assign({}, this.state.frameIdx, { [post.id]: j }) });
   }
 
   frameIndex(post) {
@@ -4225,8 +6299,10 @@ class Component extends DCLogic {
     }
     const multi = boxes.length > 1;
     const g = rr.group;
+    const TEXT_W = ['kicker', 'headline', 'highlight'];
     return {
       on: !!g,
+      canWidth: !multi && TEXT_W.indexOf(boxes[0].key) >= 0,
       boxes: boxes.map(b => ({
         // With several boxes stacked, only the primary is labelled — the tags
         // otherwise collide with the box above and with the artwork.
@@ -4461,10 +6537,108 @@ class Component extends DCLogic {
     const cur = raw[base] === undefined ? 1 : +raw[base];
     const sq = raw[sqKey(base)] === undefined ? cur : +raw[sqKey(base)];
     const cl = v => Math.max(meta.min, Math.min(meta.max, Math.round(v * 100) / 100));
-    const patch = {};
+    const patch = plainLock(raw, elKey);
     patch[base] = cl(cur + dir * 0.08);
     patch[sqKey(base)] = cl(sq + dir * 0.08);
     this.editFrame(dir > 0 ? 'Increased the font size' : 'Reduced the font size', patch);
+  }
+
+  // Word-style size picker: sizes are px on the 1080px-wide export, worked back to
+  // the scale multipliers the artwork uses. Picking a size sets both ratios.
+  fontPx(variant, f) {
+    const b = FONT_BASE[variant] || FONT_BASE.photo;
+    const s = k => (f[k] === undefined ? 1 : +f[k]) || 1;
+    return {
+      kicker: b.kick * s('scaleKicker') * 10.8,
+      headline: b.hl * s('scaleHeadline') * 10.8,
+      highlight: b.hl * s('scaleHeadline') * s('scaleHighlight') * 10.8
+    };
+  }
+
+  fontPxVals(variant, f) {
+    const px = this.fontPx(variant, f);
+    const out = {};
+    const drafts = this.state.pxDraft || {};
+    const ts = f.textStyle || {};
+    const fine = hlPlain(f);
+    const btn = on => 'width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer;padding:0;border:1px solid var(--rawcs-blue);' +
+      (on ? 'background:var(--rawcs-blue);color:#fff' : 'background:#fff;color:var(--rawcs-blue)');
+    for (const k of Object.keys(px)) {
+      const v = Math.round(px[k]);
+      const st = ts[k] || {};
+      const boldDefault = k === 'highlight' ? !fine : true;
+      out[k + 'BStyle'] = btn(st.b === undefined ? boldDefault : !!st.b);
+      out[k + 'IStyle'] = btn(!!st.i);
+      out[k + 'UStyle'] = btn(!!st.u);
+      out[k + 'PxDraft'] = drafts[k] !== undefined ? drafts[k] : String(v);
+      out[k + 'Px'] = String(v);
+      out[k + 'PxOptions'] = FONT_PX_LIST.includes(v) ? FONT_PX_LIST : FONT_PX_LIST.concat([v]).sort((a, b) => a - b);
+    }
+    return out;
+  }
+
+  toggleTextStyle(elKey, flag) {
+    const post = this.current();
+    if (!post) return;
+    const raw = post.frames[this.frameIndex(post)] || {};
+    const el = (this._fields || {})[elKey];
+    if (el && el.selectionStart !== el.selectionEnd) return this.styleSelection(post, raw, elKey, flag, el);
+    const ts = Object.assign({}, raw.textStyle || {});
+    const st = Object.assign({}, ts[elKey] || {});
+    const fine = hlPlain(raw);
+    const cur = flag === 'b' ? (st.b === undefined ? (elKey === 'highlight' ? !fine : true) : !!st.b) : !!st[flag];
+    st[flag] = !cur;
+    ts[elKey] = st;
+    const names = { b: 'bold', i: 'italic', u: 'underline' };
+    this.editFrame((cur ? 'Removed ' : 'Applied ') + names[flag] + ' on the ' + elKey, { textStyle: ts });
+  }
+
+  // Text-editor behaviour: B / I / U wrap the selected words in [b]…[/b], [i]…[/i],
+  // [u]…[/u] (pressing again on the same words removes it). Bold on a line that is
+  // already bold writes [nb] so the selection drops to regular weight instead.
+  styleSelection(post, raw, elKey, flag, el) {
+    const v = String(raw[elKey] || '');
+    const a = el.selectionStart, z = el.selectionEnd;
+    const ts = (raw.textStyle || {})[elKey] || {};
+    const fine = hlPlain(raw);
+    const lineBold = ts.b === undefined ? (elKey === 'highlight' ? !fine : true) : !!ts.b;
+    const tag = flag === 'b' ? (lineBold ? 'nb' : 'b') : flag;
+    const open = '[' + tag + ']', close = '[/' + tag + ']';
+    let before = v.slice(0, a), mid = v.slice(a, z), after = v.slice(z);
+    let s0, s1, next;
+    if (mid.startsWith(open) && mid.endsWith(close) && mid.length >= open.length + close.length) {
+      mid = mid.slice(open.length, mid.length - close.length);
+      next = before + mid + after; s0 = before.length; s1 = s0 + mid.length;
+    } else if (before.endsWith(open) && after.startsWith(close)) {
+      before = before.slice(0, -open.length); after = after.slice(close.length);
+      next = before + mid + after; s0 = before.length; s1 = s0 + mid.length;
+    } else {
+      next = before + open + mid + close + after; s0 = before.length + open.length; s1 = s0 + mid.length;
+    }
+    const names = { b: 'bold', i: 'italic', u: 'underline' };
+    this.editFrame('Styled selected ' + elKey + ' words ' + names[flag], { [elKey]: next });
+    setTimeout(() => { try { el.focus(); el.setSelectionRange(s0, s1); } catch (e) {} }, 30);
+  }
+
+  commitFontPx(elKey) {
+    const d = (this.state.pxDraft || {})[elKey];
+    if (d === undefined) return;
+    const n = parseFloat(String(d).replace(/[^0-9.]/g, ''));
+    this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { [elKey]: undefined }) });
+    if (n >= 6 && n <= 400) this.setFontPx(elKey, n);
+  }
+
+  setFontPx(elKey, px) {
+    const post = this.current();
+    const want = +px;
+    if (!post || !want) return;
+    const raw = post.frames[this.frameIndex(post)] || {};
+    const b = FONT_BASE[post.variant] || FONT_BASE.photo;
+    const hs = (raw.scaleHeadline === undefined ? 1 : +raw.scaleHeadline) || 1;
+    const baseKey = EL_META[elKey].size;
+    const base = elKey === 'kicker' ? b.kick * 10.8 : elKey === 'headline' ? b.hl * 10.8 : b.hl * hs * 10.8;
+    const scale = Math.max(0.15, Math.min(3, Math.round((want / base) * 1000) / 1000));
+    this.editFrame('Set the ' + elKey + ' to ' + want + 'px', Object.assign(plainLock(raw, elKey), { [baseKey]: scale, [sqKey(baseKey)]: scale }));
   }
 
   // Leading and the gap between the text blocks. Both are multipliers on the
@@ -4521,6 +6695,9 @@ class Component extends DCLogic {
       if (set.length > 1 && set.indexOf(key) >= 0) return this.beginGroupDrag(e, ref, square);
     }
     if (key && hit.getAttribute('data-pm-free')) return this.beginElDrag(e, ref, square, key, hit);
+    // A single text line picked inside the message block moves on its own: the
+    // block's lines are pinned where they sit, then only the dragged one travels.
+    if (key && ['kicker', 'headline', 'highlight'].indexOf(key) >= 0 && hit.closest('[data-pm-text]')) return this.beginDetachDrag(e, ref, square, key, hit);
     const block = e.target.closest && e.target.closest('[data-pm-text]');
     if (!block || !wrap.contains(block)) return this.beginPhotoDrag(e, ref, square);
     const frame = wrap.firstElementChild || wrap;
@@ -4575,6 +6752,42 @@ class Component extends DCLogic {
     window.addEventListener('pointerup', up);
   }
 
+  beginDetachDrag(e, ref, square, key, el) {
+    const wrap = ref.current;
+    const post = this.current();
+    if (!wrap || !post || post.locked) return;
+    const frame = wrap.firstElementChild || wrap;
+    const box = frame.getBoundingClientRect();
+    const block = el.closest('[data-pm-text]');
+    const lines = [...block.querySelectorAll('[data-pm-el]')].filter(n => n.closest('[data-pm-text]') === block && ['kicker', 'headline', 'highlight'].indexOf(n.getAttribute('data-pm-el')) >= 0);
+    const pct = (v, d) => Math.round(((v - d) / (d === box.left ? box.width : box.height)) * 1000) / 10;
+    const start = {};
+    lines.forEach(n => { const r = n.getBoundingClientRect(); start[n.getAttribute('data-pm-el')] = { x: pct(r.left, box.left), y: pct(r.top, box.top) }; });
+    const places = this.placesFor(square);
+    e.preventDefault();
+    const ox = e.clientX, oy = e.clientY;
+    const cl = v => Math.max(-4, Math.min(102, Math.round(v * 2) / 2));
+    const label = 'Moved the ' + ((elMetaOf(key) || {}).label || key).toLowerCase();
+    const move = ev => {
+      const dx = ((ev.clientX - ox) / box.width) * 100;
+      const dy = ((ev.clientY - oy) / box.height) * 100;
+      this.setPlacesBulk(square, next => {
+        Object.keys(start).forEach(k => {
+          const q = Object.assign({}, places[k] || {});
+          delete q.mode;
+          const s = start[k];
+          next[k] = Object.assign(q, k === key ? { x: cl(s.x + dx), y: cl(s.y + dy) } : { x: s.x, y: s.y }, { ax: 'l', ay: 't' });
+        });
+      }, label);
+    };
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  }
+
   // Drags every placed element in the selection together, keeping their relative
   // offsets, in one undo step.
   beginGroupDrag(e, ref, square) {
@@ -4600,6 +6813,39 @@ class Component extends DCLogic {
           next[k] = Object.assign({}, places[k], { x: cl(start[k].x + dx), y: cl(start[k].y + dy), ax: 'l', ay: 't' });
         });
       }, 'Moved the selection');
+    };
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  }
+
+  // The side handle sets the selected text box's width (as % of the artwork), so
+  // the words re-wrap inside it like a text box in a layout tool. Portrait and
+  // square keep their own widths; double-click the handle to clear it.
+  beginWidth(e, square) {
+    const key = this.selKeys()[0];
+    const post = this.current();
+    if (!key || !post || post.locked || ['kicker', 'headline', 'highlight'].indexOf(key) < 0) return;
+    const rr = (this.state.selRect || {})[square ? 'sq' : 'pt'];
+    const r = rr && rr.group;
+    const host = e.currentTarget.parentElement && e.currentTarget.parentElement.offsetParent;
+    if (!r || !host) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const artW = host.getBoundingClientRect().width || 1;
+    const field = square ? 'sqTextWidths' : 'textWidths';
+    const raw = this.frameRaw();
+    const startW = r.w;
+    const ox = e.clientX;
+    const labels = { kicker: 'kicker', headline: 'headline', highlight: 'highlight' };
+    const move = ev => {
+      const pct = Math.max(12, Math.min(92, Math.round(((startW + (ev.clientX - ox)) / artW) * 1000) / 10));
+      const cur = Object.assign({}, (square ? (raw.sqTextWidths || raw.textWidths) : raw.textWidths) || {});
+      cur[key] = pct;
+      this.editFrame('Resized the ' + labels[key] + ' text box' + (square ? ' (square)' : ''), { [field]: cur });
     };
     const up = () => {
       window.removeEventListener('pointermove', move);
@@ -4637,7 +6883,7 @@ class Component extends DCLogic {
       : (parts[0].meta.zoom ? 'Zoomed the photo' : 'Resized the ' + parts[0].meta.label.toLowerCase());
     const move = ev => {
       const grow = Math.max(0.1, 1 + (((ev.clientX - ox) / w) + ((ev.clientY - oy) / h)) / 2);
-      const patch = {};
+      const patch = keys.indexOf('highlight') >= 0 ? plainLock(raw, 'highlight') : {};
       parts.forEach(p => {
         const next = Math.max(p.meta.min, Math.min(p.meta.max, Math.round(p.base * grow * 100) / 100));
         if (p.meta.zoom) patch[square ? 'sqPhotoZoom' : 'photoZoom'] = next;
@@ -4854,9 +7100,9 @@ class Component extends DCLogic {
     const frame = post.frames[idx] || {};
     const art = (window.RAWCS_ART || {});
 
-    if (frame.readyImage && art[frame.readyImage] && ratioLabel === '4x5') {
+    if (frame.readyImage && (art[frame.readyImage] || /[\/.]/.test(frame.readyImage)) && ratioLabel === '4x5') {
       const a = document.createElement('a');
-      a.href = art[frame.readyImage];
+      a.href = art[frame.readyImage] || frame.readyImage;
       a.download = 'RAWCS_' + post.dateISO + '_' + post.id + '_4x5.jpg';
       a.click();
       this.setState({ dl: which + '-ok' });
@@ -4978,6 +7224,8 @@ class Component extends DCLogic {
         isVideo: format === 'video',
         hidesPubmat: format === 'document' || format === 'none',
         showsDocCard: format === 'document',
+        // Finished artwork is 4:5 — a 1:1 preview of it is just the portrait with blank sides.
+        showsSquare: !(f.readyImage && (art[f.readyImage] || /[\/.]/.test(f.readyImage))),
         showsTextOnly: format === 'none',
         isDoc: format === 'document',
         isNone: format === 'none',
@@ -4994,7 +7242,7 @@ class Component extends DCLogic {
         approved: !!(data.checks || {})[p.id + ':schedule'],
         timeLabel: (data.times || {})[p.id] || 'Time TBC',
         f: Object.assign({}, f, {
-          readyKey: f.readyImage && art[f.readyImage] ? f.readyImage : '',
+          readyKey: f.readyImage && (art[f.readyImage] || /[\/.]/.test(f.readyImage)) ? f.readyImage : '',
           ctas: f.ctas || (f.cta ? [{ label: f.cta, tone: 'red' }] : []),
           order: f.order || null,
           lineHeight: f.lineHeight === undefined ? 1 : +f.lineHeight,
@@ -5043,6 +7291,9 @@ class Component extends DCLogic {
           tintEnd: f.tintEnd,
           baseStart: f.baseStart,
           tintHex: f.tintHex,
+          tint2Hex: f.tint2Hex,
+          tint2Strength: f.tint2Strength,
+          tint2End: f.tint2End,
           baseHex: f.baseHex,
           washSoft: f.washSoft,
           slotId: 'pm-' + p.id + '-' + idx
@@ -5079,6 +7330,7 @@ class Component extends DCLogic {
       const selLogos = Array.isArray(rawSel.logos) ? rawSel.logos : (rawSel.logo ? [rawSel.logo] : ['lockupWhite']);
 
       sel = Object.assign({}, dd, {
+        isGivingLayout: rawSel.variant === 'giving',
         panelColour: rawSel.panelColour || 'gold',
         baseColour: rawSel.baseColour || 'charcoal',
         washPlace: rawSel.washPlace || (rawSel.align === 'top' ? 'top' : 'bottom'),
@@ -5087,11 +7339,14 @@ class Component extends DCLogic {
           : 'it is set independently.',
         washRows: [
           { key: 'washStrength', label: 'Tint strength', min: 0, max: 1.6, step: 0.05, dflt: 1, unit: 'x' },
-          { key: 'tintEnd', label: 'Tint reaches', min: 8, max: 96, step: 1, dflt: (rawSel.align === 'top' ? 54 : 48), unit: '%' },
+          { key: 'tintEnd', label: (rawSel.washPlace === 'duo' ? 'Top colour reaches' : 'Tint reaches'), min: 8, max: 96, step: 1, dflt: (rawSel.washPlace === 'duo' ? 40 : (rawSel.align === 'top' ? 54 : 48)), unit: '%' },
           { key: 'baseStrength', label: 'Base strength', min: 0, max: 1.6, step: 0.05, dflt: 1, unit: 'x' },
           { key: 'baseStart', label: 'Base depth', min: 4, max: 98, step: 1, dflt: (rawSel.align === 'top' ? 72 : 63), unit: '%' },
           { key: 'washSoft', label: 'Edge softness', min: 0.4, max: 1.8, step: 0.05, dflt: 1, unit: 'x' }
-        ].map(w => {
+        ].concat((rawSel.washPlace === 'duo') ? [
+          { key: 'tint2Strength', label: 'Bottom colour strength', min: 0, max: 1.6, step: 0.05, dflt: 1.1, unit: 'x' },
+          { key: 'tint2End', label: 'Bottom colour reaches', min: 8, max: 96, step: 1, dflt: 62, unit: '%' }
+        ] : []).map(w => {
           const v = dd.f[w.key] === undefined ? w.dflt : +dd.f[w.key];
           const nudge = d => {
             const next = Math.max(w.min, Math.min(w.max, Math.round((v + d) * 100) / 100));
@@ -5144,10 +7399,19 @@ class Component extends DCLogic {
         kickerPct: Math.round((dd.f.scaleKicker === undefined ? 1 : +dd.f.scaleKicker) * 100) + '%',
         headlinePct: Math.round((dd.f.scaleHeadline === undefined ? 1 : +dd.f.scaleHeadline) * 100) + '%',
         highlightPct: Math.round((dd.f.scaleHighlight === undefined ? 1 : +dd.f.scaleHighlight) * 100) + '%',
+        ...this.fontPxVals(rawSel.variant, dd.f),
         tintHexValue: dd.f.tintHex || '#EE2737',
         baseHexValue: dd.f.baseHex || '#14100A',
         tintHexNote: dd.f.tintHex ? 'Custom ' + String(dd.f.tintHex).toUpperCase() : 'Using the preset above',
         baseHexNote: dd.f.baseHex ? 'Custom ' + String(dd.f.baseHex).toUpperCase() : 'Using the preset above',
+        isDuo: rawSel.washPlace === 'duo',
+        tint2HexValue: dd.f.tint2Hex || '#D66218',
+        tint2HexNote: dd.f.tint2Hex ? 'Custom ' + String(dd.f.tint2Hex).toUpperCase() : 'Using the warm orange preset',
+        tint2Swatches: WASH_SWATCHES.map(sw => ({
+          label: sw.label,
+          style: 'width:22px;height:22px;flex:none;border:2px solid ' + ((dd.f.tint2Hex || '').toUpperCase() === sw.hex ? 'var(--rawcs-blue)' : 'rgba(0,0,0,.18)') + ';background:' + sw.hex + ';cursor:pointer;padding:0',
+          pick: () => this.editFrame('Changed the bottom colour', { tint2Hex: sw.hex })
+        })),
         tintSwatches: WASH_SWATCHES.map(sw => ({
           label: sw.label,
           style: 'width:22px;height:22px;flex:none;border:2px solid ' + ((dd.f.tintHex || '').toUpperCase() === sw.hex ? 'var(--rawcs-blue)' : 'rgba(0,0,0,.18)') + ';background:' + sw.hex + ';cursor:pointer;padding:0',
@@ -5262,7 +7526,7 @@ class Component extends DCLogic {
         { key: 'scaleCta', label: 'CTA chips', min: 0.5, max: 1.8 },
         { key: 'scaleBlock', label: 'Block width', min: 0.5, max: 1.15 },
         { key: 'scaleLogo', label: 'Logos', min: 0.4, max: 1.8 },
-        { key: 'scaleHighlight', label: 'Highlight', min: 0.5, max: 1.8 },
+        { key: 'scaleHighlight', label: 'Highlight', min: 0.15, max: 1.8 },
         { key: 'scaleSite', label: 'Address', min: 0.5, max: 2.4 },
         { key: 'scaleBar', label: 'Colour bar', min: 0.3, max: 3 }
       ];
@@ -5280,10 +7544,11 @@ class Component extends DCLogic {
         return {
           label: s.label, min: s.min, max: s.max, value: v,
           pct: Math.round(v * 100) + '%',
-          set: e => this.editFrame('Resized the ' + s.label.toLowerCase() + (sizeSq ? ' (square)' : ''), { [rk]: +e.target.value })
+          set: e => this.editFrame('Resized the ' + s.label.toLowerCase() + (sizeSq ? ' (square)' : ''), Object.assign(s.key === 'scaleHighlight' ? plainLock(raw, 'highlight') : {}, { [rk]: +e.target.value }))
         };
       });
       sel.sizeRatioLabel = sizeSq ? '1:1 square' : '4:5 portrait';
+      sel.sqTextWidths = this.frameRaw().sqTextWidths || this.frameRaw().textWidths;
 
       // Element picker: choose what the handle and the placement controls act on.
       const selKeys = this.selKeys();
@@ -5712,15 +7977,18 @@ class Component extends DCLogic {
       setPanelColour: e => this.edit('Changed the footer panel colour', { panelColour: e.target.value }),
       setBaseColour: e => this.edit('Changed the base shade colour', { baseColour: e.target.value }),
       setWashPlace: e => this.edit('Moved the gradient placement', { washPlace: e.target.value }),
-      resetWash: () => this.editFrame('Reset the gradient', { washStrength: undefined, baseStrength: undefined, tintEnd: undefined, baseStart: undefined, washSoft: undefined, tintHex: undefined, baseHex: undefined }),
+      resetWash: () => this.editFrame('Reset the gradient', { tint2Hex: undefined, tint2Strength: undefined, tint2End: undefined, washStrength: undefined, baseStrength: undefined, tintEnd: undefined, baseStart: undefined, washSoft: undefined, tintHex: undefined, baseHex: undefined }),
       setSiteLabel: e => this.edit('Edited the footer address', { siteLabel: e.target.value }),
       setKicker: e => this.editFrame('Edited the kicker', { kicker: e.target.value }),
       areaInput: 'width:100%;box-sizing:border-box;font-size:13px;line-height:1.5;color:var(--rawcs-black);font-family:inherit;background:#fff;border:1px solid var(--neutral-300);padding:8px 9px;resize:vertical;outline:none',
       fontStepStyle: 'flex:none;background:#fff;border:1px solid var(--rawcs-blue);color:var(--rawcs-blue);font-size:11px;font-weight:700;padding:3px 8px;cursor:pointer',
       markBtnStyle: 'flex:none;background:var(--rawcs-gold);border:1px solid var(--rawcs-gold);color:var(--text-on-gold);font-size:11px;font-weight:700;letter-spacing:0.03em;padding:3px 9px;cursor:pointer',
       swatchClearStyle: 'flex:none;background:#fff;border:1px solid var(--neutral-300);color:var(--neutral-700);font-size:11px;padding:3px 8px;cursor:pointer',
-      headlineFieldRef: el => { this._hlField = el; },
+      headlineFieldRef: el => { this._hlField = el; this._fields = Object.assign(this._fields || {}, { headline: el }); },
+      kickerFieldRef: el => { this._fields = Object.assign(this._fields || {}, { kicker: el }); },
+      highlightFieldRef: el => { this._fields = Object.assign(this._fields || {}, { highlight: el }); },
       keepKeys: e => { e.stopPropagation(); },
+      keepSelection: e => { e.preventDefault(); },
       markHint: this.state.markHint || '',
       markHeadlineSel: () => this.markHeadline(),
       kickerSmaller: () => this.bumpFont('kicker', -1),
@@ -5729,6 +7997,27 @@ class Component extends DCLogic {
       headlineBigger: () => this.bumpFont('headline', 1),
       highlightSmaller: () => this.bumpFont('highlight', -1),
       highlightBigger: () => this.bumpFont('highlight', 1),
+      setKickerPx: e => this.setFontPx('kicker', e.target.value),
+      setHeadlinePx: e => this.setFontPx('headline', e.target.value),
+      setHighlightPx: e => this.setFontPx('highlight', e.target.value),
+      typeKickerPx: e => this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { kicker: e.target.value }) }),
+      keyKickerPx: e => { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); this.commitFontPx('kicker'); e.target.blur(); } if (e.key === 'Escape') { this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { kicker: undefined }) }); e.target.blur(); } },
+      commitKickerPx: () => this.commitFontPx('kicker'),
+      kickerToggleB: () => this.toggleTextStyle('kicker', 'b'),
+      kickerToggleI: () => this.toggleTextStyle('kicker', 'i'),
+      kickerToggleU: () => this.toggleTextStyle('kicker', 'u'),
+      typeHeadlinePx: e => this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { headline: e.target.value }) }),
+      keyHeadlinePx: e => { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); this.commitFontPx('headline'); e.target.blur(); } if (e.key === 'Escape') { this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { headline: undefined }) }); e.target.blur(); } },
+      commitHeadlinePx: () => this.commitFontPx('headline'),
+      headlineToggleB: () => this.toggleTextStyle('headline', 'b'),
+      headlineToggleI: () => this.toggleTextStyle('headline', 'i'),
+      headlineToggleU: () => this.toggleTextStyle('headline', 'u'),
+      typeHighlightPx: e => this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { highlight: e.target.value }) }),
+      keyHighlightPx: e => { e.stopPropagation(); if (e.key === 'Enter') { e.preventDefault(); this.commitFontPx('highlight'); e.target.blur(); } if (e.key === 'Escape') { this.setState({ pxDraft: Object.assign({}, this.state.pxDraft, { highlight: undefined }) }); e.target.blur(); } },
+      commitHighlightPx: () => this.commitFontPx('highlight'),
+      highlightToggleB: () => this.toggleTextStyle('highlight', 'b'),
+      highlightToggleI: () => this.toggleTextStyle('highlight', 'i'),
+      highlightToggleU: () => this.toggleTextStyle('highlight', 'u'),
       textSpacing: ['lineHeight', 'blockGap'].map(k => {
         const spec = TEXT_SPACING[k];
         const v = sel && sel.f && sel.f[k] !== undefined ? +sel.f[k] : 1;
@@ -5744,10 +8033,14 @@ class Component extends DCLogic {
       resetTextSpacing: () => this.editFrame('Reset the line spacing', { lineHeight: undefined, blockGap: undefined }),
       setTintHex: e => this.editFrame('Changed the wash colour', { tintHex: e.target.value }),
       clearTintHex: () => this.editFrame('Reset the wash colour to the preset', { tintHex: undefined }),
+      setTint2Hex: e => this.editFrame('Changed the bottom colour', { tint2Hex: e.target.value }),
+      clearTint2Hex: () => this.editFrame('Reset the bottom colour to the preset', { tint2Hex: undefined }),
       setBaseHex: e => this.editFrame('Changed the base shade', { baseHex: e.target.value }),
       clearBaseHex: () => this.editFrame('Reset the base shade to the preset', { baseHex: undefined }),
       setHeadline: e => this.editFrame('Edited the headline', { headline: e.target.value }),
       setHighlight: e => this.editFrame('Edited the highlight line', { highlight: e.target.value }),
+      setGiftLine: e => this.editFrame('Edited the serif line', { giftLine: e.target.value }),
+      setNote: e => this.editFrame('Edited the small note', { note: e.target.value }),
       setBrief: e => this.editFrame('Edited the visual brief', { brief: e.target.value }),
       addCta: () => {
         const cur = (sel && sel.f.ctas) || [];
@@ -5838,10 +8131,13 @@ class Component extends DCLogic {
       },
       resetPlaces: () => this.editFrame('Returned every element to the layout', { places: undefined, sqPlaces: undefined }),
       resizeSquare: e => this.beginResize(e, true),
+      widthSquare: e => this.beginWidth(e, true),
+      widthPortrait: e => this.beginWidth(e, false),
       resizePortrait: e => this.beginResize(e, false),
       clearLogos: () => this.edit('Removed all logos', { logos: [] }),
       noLogoStyle: this.seg(!!rawSel && (rawSel.logos || ['lockupWhite']).length === 0),
 
+      moveFrame: (post, dir) => this.moveFrame(post, dir),
       addFrame: () => {
         if (!rawSel) return;
         const frames = rawSel.frames.concat([F('', '', [], { brief: 'Frame ' + (rawSel.frames.length + 1) + ' — describe what this frame shows.' })]);
@@ -5855,6 +8151,10 @@ class Component extends DCLogic {
         this.edit('Removed a carousel frame', { frames, format: frames.length > 1 ? 'carousel' : 'single' });
         this.setState({ frameIdx: Object.assign({}, this.state.frameIdx, { [rawSel.id]: Math.max(0, i - 1) }) });
       },
+      // Carousel order: move the frame you are looking at one place earlier or
+      // later and follow it, so the chips stay in the posting order.
+      frameMoveBack: () => this.moveFrame(rawSel, -1),
+      frameMoveOn: () => this.moveFrame(rawSel, 1),
       framePrev: () => {
         if (!rawSel) return;
         const i = this.frameIndex(rawSel);
@@ -5898,8 +8198,14 @@ class Component extends DCLogic {
         e.target.value = '';
         // A 4000px camera file is far more than a 1080px pubmat needs; capping the
         // width on the way in keeps saving fast and the changes file portable.
+        // Land an upload whole inside the frame rather than cropped to fill it —
+        // the team can switch to Fill frame once they have seen it.
         this.readFileAs(file, uri => this.fitUpload(uri).then(small =>
-          this.editFrame('Replaced the image', { photo: small, readyImage: '' })));
+          this.editFrame('Replaced the image', {
+            photo: small, readyImage: '',
+            photoFit: 'fit', photoZoom: 1, photoX: 50, photoY: 50,
+            sqPhotoFit: 'fit', sqPhotoZoom: 1, sqPhotoX: 50, sqPhotoY: 50
+          })));
       },
       deletePhoto: () => this.editFrame('Deleted the image', { photo: '', readyImage: '' }),
       // MP4s are held on the frame like a photo and vaulted in IndexedDB on save,

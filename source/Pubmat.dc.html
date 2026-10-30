@@ -16,7 +16,7 @@
 <script src="./pubmat-art.js"></script>
 <script src="./image-slot.js"></script>
 </helmet>
-<div ref="{{ rootRef }}" style="container-type:inline-size;position:relative;width:100%;aspect-ratio:{{ ratio }};background:#EFEDEA;overflow:hidden;font-family:var(--font-sans);color:#fff;isolation:isolate">
+<div ref="{{ rootRef }}" style="container-type:inline-size;position:relative;width:100%;aspect-ratio:{{ ratio }};background:#EFEDEA;overflow:clip;font-family:var(--font-sans);color:#fff;isolation:isolate">
 
   <sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}">
     <div style="position:absolute;inset:0;background:var(--rawcs-blue-darker)">
@@ -47,7 +47,7 @@
   </sc-if>
 
   <sc-if value="{{ isPhoto }}" hint-placeholder-val="{{ true }}">
-    <div style="position:absolute;inset:0">
+    <div style="position:absolute;inset:0;--edgeJ:{{ edgeJ }};--edgeP:{{ edgeP }};--edgeTA:{{ edgeTA }}">
       <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
         <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
           <div style="{{ photoBackStyle }}"></div>
@@ -65,7 +65,7 @@
       <div style="position:absolute;inset:0;background:{{ wash }};pointer-events:none"></div>
 
       <sc-if value="{{ logoAuto }}" hint-placeholder-val="{{ true }}">
-        <div data-pm-el="logo" style="position:absolute;left:0;right:0;top:0;display:flex;align-items:center;justify-content:center;gap:2.6cqw;padding:5.4cqw 6cqw 0">
+        <div data-pm-el="logo" style="position:absolute;left:0;right:0;top:0;display:flex;align-items:center;justify-content:var(--edgeJ,center);gap:2.6cqw;padding:5.4cqw 6cqw 0 var(--edgeP,6cqw)">
           <sc-for list="{{ markRow }}" as="m" hint-placeholder-count="1">
             <sc-if value="{{ m.divider }}" hint-placeholder-val="{{ false }}">
               <span style="width:max(1px,0.22cqw);height:{{ m.rule }};background:rgba(255,255,255,.5);flex:none"></span>
@@ -98,14 +98,19 @@
             <span data-pm-el="site" style="font-family:var(--font-condensed);font-size:var(--siteFix,2.4cqw);line-height:1;letter-spacing:0.04em;color:#fff;pointer-events:auto;--siteFix:{{ siteSize }}">{{ siteLabel }}</span>
           </div>
         </sc-if>
-        <sc-if value="{{ barBottom }}" hint-placeholder-val="{{ true }}">
-          <div data-pm-el="bar" style="display:grid;grid-template-columns:1fr 1fr 1fr;height:var(--barFix,2.2cqw);pointer-events:auto;--barFix:{{ barSize }}">
-            <span style="background:var(--rawcs-blue)"></span>
-            <span style="background:var(--rawcs-gold)"></span>
-            <span style="background:var(--rawcs-red)"></span>
+        <sc-if value="{{ ctaStripOn }}" hint-placeholder-val="{{ false }}">
+          <div data-pm-el="ctas" style="flex:none;background:#fff;padding:2.5cqw 5cqw;display:flex;justify-content:center;pointer-events:auto;--ctaLine:{{ ctaLineSize }}">
+            <span style="font-family:var(--font-condensed);font-size:var(--ctaLine,2.2cqw);line-height:1.35;letter-spacing:0.06em;text-transform:uppercase;color:var(--rawcs-blue-darker);text-align:center;text-wrap:balance">{{ ctaLead }} <b style="font-weight:700;text-decoration:underline;text-decoration-color:var(--rawcs-red);text-decoration-thickness:0.12em;text-underline-offset:0.3em">{{ ctaTail }}</b></span>
           </div>
         </sc-if>
       </div>
+      <sc-if value="{{ barBottom }}" hint-placeholder-val="{{ true }}">
+        <div data-pm-el="bar" style="position:absolute;left:0;top:0;bottom:0;width:var(--barSide,2.6cqw);display:grid;grid-template-rows:1fr 1fr 1fr;pointer-events:auto;--barSide:{{ barSideSize }}">
+          <span style="background:var(--rawcs-blue)"></span>
+          <span style="background:var(--rawcs-gold)"></span>
+          <span style="background:var(--rawcs-red)"></span>
+        </div>
+      </sc-if>
       <sc-if value="{{ siteFree }}" hint-placeholder-val="{{ false }}">
         <span data-pm-el="site" data-pm-free="1" style="{{ siteFreeStyle }}">{{ siteLabel }}</span>
       </sc-if>
@@ -113,7 +118,7 @@
   </sc-if>
 
   <sc-if value="{{ isSplit }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;background:var(--neutral-800)">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;background:var(--neutral-800);--edgeP:{{ edgeP }}">
       <div style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden">
         <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
           <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
@@ -126,21 +131,22 @@
         </sc-if>
         <div style="position:absolute;inset:0;background:{{ panelScrim }};pointer-events:none"></div>
       </div>
-      <div style="flex:none;background:{{ panelBg }};--ctaFix:{{ ctaFooterSize }};display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2cqw 3cqw;padding:3.4cqw 5cqw">
+      <div style="flex:none;background:{{ panelBg }};--ctaFix:{{ ctaFooterSize }};display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2cqw 1.8cqw;padding:3.4cqw 5cqw">
         <sc-if value="{{ hasMarks }}" hint-placeholder-val="{{ true }}">
-          <div style="display:flex;align-items:center;gap:2.4cqw;flex:1 1 auto;min-width:0">
+          <div style="display:flex;align-items:center;gap:1.2cqw;flex:1 1 0;min-width:0;height:{{ panelLogoRowH }}">
             <sc-for list="{{ markRowPanel }}" as="m" hint-placeholder-count="1">
               <sc-if value="{{ m.divider }}" hint-placeholder-val="{{ false }}">
-                <span style="width:max(1px,0.22cqw);height:{{ m.ruleBanner }};background:{{ panelRule }};flex:none"></span>
+                <span style="width:max(1px,0.22cqw);height:{{ m.panelRule }};background:{{ panelRule }};flex:none"></span>
               </sc-if>
-              <img src="{{ m.src }}" alt="RAWCS" data-pm-el="{{ m.elKey }}" decoding="async" style="width:{{ m.bannerWidth }};max-width:100%;height:auto;display:block">
+              <img src="{{ m.src }}" alt="RAWCS" data-pm-el="{{ m.elKey }}" decoding="async" style="height:{{ m.panelH }};width:auto;flex:0 1 auto;min-width:0;max-width:100%;object-fit:contain;object-position:left center;display:block">
             </sc-for>
           </div>
         </sc-if>
-        <div style="display:flex;flex-wrap:wrap;gap:1.4cqw;justify-content:flex-end;flex:0 1 auto;min-width:0">
-          <sc-for list="{{ ctaList }}" as="c" hint-placeholder-count="1">
-            <span style="background:{{ c.pbg }};color:{{ c.pfg }};font-weight:700;font-size:var(--ctaFix);line-height:1.15;padding:0.72em 1.2em;text-wrap:balance">{{ c.label }}</span>
-          </sc-for>
+        <div data-pm-el="ctas" style="display:flex;flex-direction:column;align-items:flex-start;gap:1.1cqw;flex:0 1 auto;min-width:0;text-align:left">
+          <span style="font-family:var(--font-condensed);font-weight:700;font-size:var(--ctaFix);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:{{ panelCtaText }};text-decoration:underline;text-decoration-color:{{ panelCtaLine }};text-decoration-thickness:0.14em;text-underline-offset:0.32em;text-wrap:balance">{{ ctaLead }}</span>
+          <sc-if value="{{ hasCtaTail }}" hint-placeholder-val="{{ true }}">
+            <span style="font-family:var(--font-condensed);font-weight:400;font-size:calc(var(--ctaFix) * 0.62);line-height:1.2;letter-spacing:0.08em;text-transform:uppercase;color:{{ panelCtaText }}">{{ ctaTail }}</span>
+          </sc-if>
         </div>
       </div>
       <div style="flex:none;display:grid;grid-template-columns:1fr 1fr 1fr;height:2.2cqw">
@@ -152,12 +158,20 @@
   </sc-if>
 
   <sc-if value="{{ isStatement }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;inset:0;background:#EFEDEA">
+    <div style="position:absolute;inset:0;background:{{ stmtBg }}">
       <div style="position:absolute;left:0;top:0;bottom:0;width:3.6cqw;display:grid;grid-template-rows:1fr 1fr 1fr">
         <span style="background:var(--rawcs-blue)"></span>
         <span style="background:var(--rawcs-gold)"></span>
         <span style="background:var(--rawcs-red)"></span>
       </div>
+      <sc-if value="{{ stmtLineOn }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;left:0;right:0;top:9cqw;display:flex;align-items:center;justify-content:center;gap:2.4cqw;pointer-events:none">
+          <span style="width:7cqw;height:max(1px,0.25cqw);background:var(--rawcs-gold-dark)"></span>
+          <span style="font-family:var(--font-condensed);font-weight:700;font-size:2.3cqw;line-height:1;letter-spacing:0.24em;text-transform:uppercase;color:var(--rawcs-red-dark)">The season of giving</span>
+          <span style="width:7cqw;height:max(1px,0.25cqw);background:var(--rawcs-gold-dark)"></span>
+        </div>
+      </sc-if>
+      <sc-if value="{{ stmtFrame }}" hint-placeholder-val="{{ true }}">
       <div style="position:absolute;right:0;top:0;bottom:0;width:3.6cqw;display:grid;grid-template-rows:1fr 1fr 1fr">
         <span style="background:var(--rawcs-red)"></span>
         <span style="background:var(--rawcs-gold)"></span>
@@ -173,7 +187,11 @@
         <span style="background:var(--rawcs-gold)"></span>
         <span style="background:var(--rawcs-blue)"></span>
       </div>
+      </sc-if>
       <div style="position:absolute;left:0;right:0;bottom:3.6cqw;display:flex;flex-direction:column;align-items:center;gap:3cqw;padding:0 7cqw 4cqw;pointer-events:none">
+        <sc-if value="{{ ctaStripOn }}" hint-placeholder-val="{{ false }}">
+          <span data-pm-el="ctas" style="font-family:var(--font-condensed);font-size:var(--ctaLine,2.2cqw);line-height:1.35;letter-spacing:0.06em;text-transform:uppercase;color:var(--rawcs-blue-darker);text-align:center;text-wrap:balance;--ctaLine:{{ ctaLineSize }}">{{ ctaLead }} <b style="font-weight:700;text-decoration:underline;text-decoration-color:var(--rawcs-red);text-decoration-thickness:0.12em;text-underline-offset:0.3em">{{ ctaTail }}</b></span>
+        </sc-if>
         <sc-if value="{{ hasMarks }}" hint-placeholder-val="{{ true }}">
           <div style="display:flex;align-items:center;justify-content:center;gap:2.6cqw">
             <sc-for list="{{ markRowLight }}" as="m" hint-placeholder-count="1">
@@ -190,7 +208,7 @@
   </sc-if>
 
   <sc-if value="{{ isBanner }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;background:var(--neutral-800)">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;background:var(--neutral-800);--edgeP:{{ edgeP }}">
       <div style="position:relative;flex:1 1 auto;min-height:0;overflow:hidden">
         <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
           <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
@@ -208,23 +226,35 @@
           <span style="background:var(--rawcs-red)"></span>
         </div>
       </div>
-      <div style="flex:none;background:{{ panelBg }};--ctaFix:{{ ctaFooterSize }};display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2cqw 3cqw;padding:3.4cqw 5cqw">
+      <div style="flex:none;background:{{ panelBg }};--ctaFix:{{ ctaFooterSize }};display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2cqw 1.8cqw;padding:3.4cqw 5cqw">
         <sc-if value="{{ hasMarks }}" hint-placeholder-val="{{ true }}">
-          <div style="display:flex;align-items:center;gap:2.4cqw;flex:1 1 auto;min-width:0">
+          <div style="display:flex;align-items:center;gap:1.2cqw;flex:1 1 0;min-width:0;height:{{ panelLogoRowH }}">
             <sc-for list="{{ markRowPanel }}" as="m" hint-placeholder-count="1">
               <sc-if value="{{ m.divider }}" hint-placeholder-val="{{ false }}">
-                <span style="width:max(1px,0.22cqw);height:{{ m.ruleBanner }};background:{{ panelRule }};flex:none"></span>
+                <span style="width:max(1px,0.22cqw);height:{{ m.panelRule }};background:{{ panelRule }};flex:none"></span>
               </sc-if>
-              <img src="{{ m.src }}" alt="RAWCS" data-pm-el="{{ m.elKey }}" decoding="async" style="width:{{ m.bannerWidth }};max-width:100%;height:auto;display:block">
+              <img src="{{ m.src }}" alt="RAWCS" data-pm-el="{{ m.elKey }}" decoding="async" style="height:{{ m.panelH }};width:auto;flex:0 1 auto;min-width:0;max-width:100%;object-fit:contain;object-position:left center;display:block">
             </sc-for>
           </div>
         </sc-if>
-        <div style="display:flex;flex-wrap:wrap;gap:1.4cqw;justify-content:flex-end;flex:0 1 auto;min-width:0">
-          <sc-for list="{{ ctaList }}" as="c" hint-placeholder-count="1">
-            <span style="background:{{ c.pbg }};color:{{ c.pfg }};font-weight:700;font-size:var(--ctaFix);line-height:1.15;padding:0.72em 1.2em;text-wrap:balance">{{ c.label }}</span>
-          </sc-for>
+        <div data-pm-el="ctas" style="display:flex;flex-direction:column;align-items:flex-start;gap:1.1cqw;flex:0 1 auto;min-width:0;text-align:left">
+          <span style="font-family:var(--font-condensed);font-weight:700;font-size:var(--ctaFix);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:{{ panelCtaText }};text-decoration:underline;text-decoration-color:{{ panelCtaLine }};text-decoration-thickness:0.14em;text-underline-offset:0.32em;text-wrap:balance">{{ ctaLead }}</span>
+          <sc-if value="{{ hasCtaTail }}" hint-placeholder-val="{{ true }}">
+            <span style="font-family:var(--font-condensed);font-weight:400;font-size:calc(var(--ctaFix) * 0.62);line-height:1.2;letter-spacing:0.08em;text-transform:uppercase;color:{{ panelCtaText }}">{{ ctaTail }}</span>
+          </sc-if>
         </div>
       </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isClip }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:#000">
+      <sc-if value="{{ clipVideo }}" hint-placeholder-val="{{ false }}">
+        <video src="{{ videoSrc }}" data-pm-el="video" controls="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+      </sc-if>
+      <sc-if value="{{ clipEmbed }}" hint-placeholder-val="{{ false }}">
+        <iframe src="{{ embedSrc }}" title="Video" allow="autoplay; fullscreen" allowFullScreen="{{ true }}" frameBorder="0" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000"></iframe>
+      </sc-if>
     </div>
   </sc-if>
 
@@ -234,11 +264,11 @@
         <sc-if value="{{ reelHasKicker }}" hint-placeholder-val="{{ true }}">
           <span data-pm-el="kicker" style="font-size:var(--rkickF,2.5cqw);line-height:1.24;color:#fff;white-space:pre-line;--rkickF:{{ reelKickSize }}">{{ reelKicker }}</span>
         </sc-if>
-        <h2 data-pm-el="headline" style="margin:0;font-size:var(--rhlF,4.5cqw);line-height:1.06;letter-spacing:-0.02em;font-weight:700;color:var(--rawcs-gold);text-wrap:pretty;white-space:pre-line;--rhlF:{{ reelHlSize }}"><sc-for list="{{ headlineRuns }}" as="r" hint-placeholder-count="1"><sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}"><span>{{ r.t }}</span></sc-if><sc-if value="{{ r.mark }}" hint-placeholder-val="{{ false }}"><span style="color:#fff">{{ r.t }}</span></sc-if></sc-for></h2>
+        <h2 data-pm-el="headline" style="margin:0;font-size:var(--rhlF,4.5cqw);line-height:1.06;letter-spacing:-0.02em;font-weight:700;color:var(--rawcs-gold);text-wrap:pretty;white-space:pre-line;--rhlF:{{ reelHlSize }}"><sc-for list="{{ reelHeadlineRuns }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></h2>
         <sc-if value="{{ reelHasCtas }}" hint-placeholder-val="{{ false }}">
           <div data-pm-el="ctas" style="display:flex;flex-wrap:wrap;gap:1.6cqw;margin-top:1.6cqw;--ctaFixR:{{ ctaFooterSize }}">
             <sc-for list="{{ ctaList }}" as="c" hint-placeholder-count="1">
-              <span style="background:{{ c.pbg }};color:{{ c.pfg }};font-weight:700;font-size:var(--ctaFixR,3cqw);line-height:1.15;padding:0.72em 1.2em">{{ c.label }}</span>
+              <span style="font-family:var(--font-condensed);font-weight:700;font-size:var(--ctaFixR,3cqw);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-decoration:underline;text-decoration-color:var(--rawcs-gold);text-decoration-thickness:0.14em;text-underline-offset:0.32em;text-wrap:balance">{{ c.label }}</span>
             </sc-for>
           </div>
         </sc-if>
@@ -287,18 +317,18 @@
     <div data-pm-text="1" style="{{ blockStyle }}">
       <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="2">
         <sc-if value="{{ b.isKicker }}" hint-placeholder-val="{{ false }}">
-          <span data-pm-el="kicker" style="background:var(--kbg);color:var(--kfg);font-family:var(--font-condensed);font-weight:700;font-size:var(--kick);line-height:var(--lhKick,1.18);letter-spacing:0.12em;text-transform:uppercase;padding:1.5cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line">{{ b.text }}</span>
+          <span data-pm-el="kicker" style="background:var(--kbg);color:var(--kfg);font-family:var(--font-condensed);font-weight:var(--kw,700);font-style:var(--kst,normal);max-width:var(--kmw,none);text-decoration:var(--kdec,none);font-size:var(--kick);line-height:var(--lhKick,1.18);letter-spacing:0.12em;text-transform:uppercase;padding:1.5cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line"><sc-for list="{{ b.runs }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></span>
         </sc-if>
         <sc-if value="{{ b.isHeadline }}" hint-placeholder-val="{{ true }}">
-          <h2 data-pm-el="headline" style="margin:0;font-size:var(--hl);line-height:var(--lhHead,1.05);letter-spacing:-0.03em;font-weight:700;color:var(--hcol);text-shadow:var(--hsh);text-wrap:pretty;white-space:pre-line"><sc-for list="{{ headlineRuns }}" as="r" hint-placeholder-count="1"><sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}"><span>{{ r.t }}</span></sc-if><sc-if value="{{ r.mark }}" hint-placeholder-val="{{ false }}"><span style="background:var(--rawcs-gold);color:var(--text-on-gold);padding:0.04em 0.22em;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:none">{{ r.t }}</span></sc-if></sc-for></h2>
+          <h2 data-pm-el="headline" style="margin:0;font-size:var(--hl);line-height:var(--lhHead,1.05);letter-spacing:-0.03em;font-weight:var(--hw,700);font-style:var(--hst,normal);width:var(--hwid,auto);max-width:var(--hmw,100%);box-sizing:border-box;text-decoration:var(--hdec,none);color:var(--hcol);text-shadow:var(--hsh);text-wrap:pretty;white-space:pre-line"><sc-for list="{{ headlineRuns }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></h2>
         </sc-if>
         <sc-if value="{{ b.isHighlight }}" hint-placeholder-val="{{ false }}">
-          <span data-pm-el="highlight" style="background:var(--rawcs-gold);color:var(--hicol);font-size:var(--hi,var(--hl));line-height:var(--lhHi,1.14);letter-spacing:-0.03em;font-weight:700;padding:0.4cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line">{{ b.text }}</span>
+          <span data-pm-el="highlight" style="background:var(--hibg,var(--rawcs-gold));color:var(--hicol);font-size:var(--hi,var(--hl));line-height:var(--lhHi,1.14);letter-spacing:var(--hils,-0.03em);font-weight:var(--hiw,700);font-style:var(--hist,normal);width:var(--hiwid,auto);max-width:var(--himw,100%);box-sizing:border-box;text-decoration:var(--hidec,none);padding:var(--hipad,0.4cqw 2.4cqw);text-shadow:var(--hish,none);box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line"><sc-for list="{{ b.runs }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></span>
         </sc-if>
         <sc-if value="{{ b.isCtas }}" hint-placeholder-val="{{ false }}">
           <div data-pm-el="ctas" style="display:flex;flex-wrap:wrap;gap:1.8cqw;justify-content:var(--just);margin-top:1.2cqw">
             <sc-for list="{{ ctaList }}" as="c" hint-placeholder-count="1">
-              <span style="background:{{ c.bg }};color:{{ c.fg }};font-weight:700;font-size:var(--cta);line-height:1.15;padding:0.78em 1.4em;border-radius:99cqw">{{ c.label }}</span>
+              <span style="font-family:var(--font-condensed);font-weight:700;font-size:var(--cta);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:var(--hcol);text-decoration:underline;text-decoration-color:{{ c.line }};text-decoration-thickness:0.14em;text-underline-offset:0.32em;text-wrap:balance;text-shadow:var(--hsh)">{{ c.label }}</span>
             </sc-for>
           </div>
         </sc-if>
@@ -309,23 +339,90 @@
   <sc-for list="{{ freeParts }}" as="b" hint-placeholder-count="0">
     <div data-pm-el="{{ b.key }}" data-pm-free="1" style="{{ b.style }}">
       <sc-if value="{{ b.isKicker }}" hint-placeholder-val="{{ false }}">
-        <span style="background:var(--kbg);color:var(--kfg);font-family:var(--font-condensed);font-weight:700;font-size:var(--kick);line-height:var(--lhKick,1.18);letter-spacing:0.12em;text-transform:uppercase;padding:1.5cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line">{{ b.text }}</span>
+        <span style="background:var(--kbg);color:var(--kfg);font-family:var(--font-condensed);font-weight:var(--kw,700);font-style:var(--kst,normal);max-width:var(--kmw,none);text-decoration:var(--kdec,none);font-size:var(--kick);line-height:var(--lhKick,1.18);letter-spacing:0.12em;text-transform:uppercase;padding:1.5cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line"><sc-for list="{{ b.runs }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></span>
       </sc-if>
       <sc-if value="{{ b.isHeadline }}" hint-placeholder-val="{{ false }}">
-        <h2 style="margin:0;font-size:var(--hl);line-height:var(--lhHead,1.05);letter-spacing:-0.03em;font-weight:700;color:var(--hcol);text-shadow:var(--hsh);text-wrap:pretty;white-space:pre-line"><sc-for list="{{ headlineRuns }}" as="r" hint-placeholder-count="1"><sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}"><span>{{ r.t }}</span></sc-if><sc-if value="{{ r.mark }}" hint-placeholder-val="{{ false }}"><span style="background:var(--rawcs-gold);color:var(--text-on-gold);padding:0.04em 0.22em;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:none">{{ r.t }}</span></sc-if></sc-for></h2>
+        <h2 style="margin:0;font-size:var(--hl);line-height:var(--lhHead,1.05);letter-spacing:-0.03em;font-weight:var(--hw,700);font-style:var(--hst,normal);width:var(--hwid,auto);max-width:var(--hmw,100%);box-sizing:border-box;text-decoration:var(--hdec,none);color:var(--hcol);text-shadow:var(--hsh);text-wrap:pretty;white-space:pre-line"><sc-for list="{{ headlineRuns }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></h2>
       </sc-if>
       <sc-if value="{{ b.isHighlight }}" hint-placeholder-val="{{ false }}">
-        <span style="background:var(--rawcs-gold);color:var(--hicol);font-size:var(--hi,var(--hl));line-height:var(--lhHi,1.14);letter-spacing:-0.03em;font-weight:700;padding:0.4cqw 2.4cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line">{{ b.text }}</span>
+        <span style="background:var(--hibg,var(--rawcs-gold));color:var(--hicol);font-size:var(--hi,var(--hl));line-height:var(--lhHi,1.14);letter-spacing:var(--hils,-0.03em);font-weight:var(--hiw,700);font-style:var(--hist,normal);width:var(--hiwid,auto);max-width:var(--himw,100%);box-sizing:border-box;text-decoration:var(--hidec,none);padding:var(--hipad,0.4cqw 2.4cqw);text-shadow:var(--hish,none);box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:pre-line"><sc-for list="{{ b.runs }}" as="r" hint-placeholder-count="1"><span style="{{ r.style }}">{{ r.t }}</span></sc-for></span>
       </sc-if>
       <sc-if value="{{ b.isCtas }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-wrap:wrap;gap:1.8cqw;justify-content:var(--just)">
           <sc-for list="{{ ctaList }}" as="c" hint-placeholder-count="1">
-            <span style="background:{{ c.bg }};color:{{ c.fg }};font-weight:700;font-size:var(--cta);line-height:1.15;padding:0.78em 1.4em;border-radius:99cqw">{{ c.label }}</span>
+            <span style="font-family:var(--font-condensed);font-weight:700;font-size:var(--cta);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:var(--hcol);text-decoration:underline;text-decoration-color:{{ c.line }};text-decoration-thickness:0.14em;text-underline-offset:0.32em;text-wrap:balance;text-shadow:var(--hsh)">{{ c.label }}</span>
           </sc-for>
         </div>
       </sc-if>
     </div>
   </sc-for>
+  <sc-if value="{{ isGiving }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;background:var(--rawcs-blue-darker);overflow:hidden">
+      <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;left:0;right:0;top:0;height:{{ givPhotoH }};overflow:hidden">
+          <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ photoBackStyle }}"></div>
+          </sc-if>
+          <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,44,85,0) 42%, rgba(7,44,85,.55) 72%, var(--rawcs-blue-darker) 100%);pointer-events:none"></div>
+        </div>
+      </sc-if>
+      <span style="position:absolute;right:{{ givStar1R }};top:{{ givStar1T }};font-size:4.2cqw;line-height:1;color:var(--rawcs-gold);pointer-events:none">✦</span>
+      <span style="position:absolute;right:{{ givStar2R }};top:{{ givStar2T }};font-size:2.4cqw;line-height:1;color:var(--rawcs-gold);opacity:.75;pointer-events:none">✦</span>
+      <span style="position:absolute;right:{{ givStar3R }};top:{{ givStar3T }};font-size:1.8cqw;line-height:1;color:var(--rawcs-gold);opacity:.55;pointer-events:none">✦</span>
+      <sc-if value="{{ givNoPhoto }}" hint-placeholder-val="{{ false }}">
+        <span style="position:absolute;left:14cqw;top:12cqw;font-size:2.2cqw;line-height:1;color:var(--rawcs-gold);opacity:.5;pointer-events:none">✦</span>
+        <span style="position:absolute;right:22cqw;top:20cqw;font-size:3cqw;line-height:1;color:var(--rawcs-gold);opacity:.8;pointer-events:none">✦</span>
+      </sc-if>
+      <div style="position:absolute;left:0;top:0;bottom:0;width:3.4cqw;display:grid;grid-template-rows:1fr 1fr 1fr;pointer-events:none">
+        <span style="background:var(--rawcs-blue)"></span>
+        <span style="background:var(--rawcs-gold)"></span>
+        <span style="background:var(--rawcs-red)"></span>
+      </div>
+      <div style="position:absolute;left:9cqw;right:8cqw;top:{{ givTextTop }};bottom:{{ givTextBottom }};display:flex;flex-direction:column;justify-content:{{ givJustify }};gap:{{ givGap }};pointer-events:none">
+        <sc-if value="{{ givHasKicker }}" hint-placeholder-val="{{ true }}">
+          <div data-pm-el="kicker" style="display:flex;align-items:center;gap:1.6cqw;margin-bottom:0.4cqw">
+            <span style="font-size:{{ givKickF }};line-height:1;color:var(--rawcs-gold)">✦</span>
+            <span style="font-family:var(--font-condensed);font-weight:700;font-size:{{ givKickF }};line-height:1.2;letter-spacing:0.16em;text-transform:uppercase;color:var(--rawcs-gold)">{{ givKicker }}</span>
+            <span style="flex:0 1 13cqw;min-width:3cqw;height:max(1px,0.2cqw);background:var(--rawcs-gold);opacity:.7"></span>
+          </div>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;gap:0">
+          <h2 data-pm-el="headline" style="margin:0;font-family:var(--font-sans);font-weight:700;font-size:{{ givHeadF }};line-height:1.12;letter-spacing:-0.01em;color:#fff;white-space:pre-line;text-wrap:balance">{{ givHeadline }}</h2>
+          <span data-pm-el="highlight" style="font-family:var(--font-sans);font-weight:700;font-size:{{ givHiF }};line-height:1.02;letter-spacing:-0.025em;color:var(--rawcs-gold);white-space:pre-line;text-wrap:balance">{{ givHighlight }}</span>
+        </div>
+        <sc-if value="{{ givHasLine }}" hint-placeholder-val="{{ true }}">
+          <span style="font-family:'Libre Baskerville', 'Baskerville MT Std', Baskerville, Georgia, serif;font-style:italic;font-size:{{ givLineF }};line-height:1.3;color:#fff;text-wrap:balance">{{ giftLine }}</span>
+        </sc-if>
+        <sc-if value="{{ givHasNote }}" hint-placeholder-val="{{ true }}">
+          <span style="max-width:88%;font-family:var(--font-body, var(--font-sans));font-size:{{ givNoteF }};line-height:1.45;color:rgba(255,255,255,.86);text-wrap:pretty">{{ note }}</span>
+        </sc-if>
+      </div>
+      <div style="position:absolute;left:9cqw;right:6cqw;bottom:{{ givCtaBottom }};display:flex;align-items:flex-end;justify-content:space-between;gap:3cqw;pointer-events:none">
+        <sc-if value="{{ givHasCta }}" hint-placeholder-val="{{ true }}">
+          <div data-pm-el="ctas" style="display:flex;flex-direction:column;align-items:flex-start;gap:1.4cqw;flex:0 1 auto;min-width:0">
+            <div style="display:flex;align-items:center;gap:2cqw">
+              <span style="font-family:var(--font-sans);font-weight:700;font-size:{{ givCtaF }};line-height:1.2;color:#fff;padding-bottom:0.7cqw;border-bottom:0.55cqw solid var(--rawcs-red);text-wrap:balance">{{ ctaLead }}</span>
+              <span style="font-family:var(--font-sans);font-weight:700;font-size:{{ givCtaF }};line-height:1;color:var(--rawcs-gold);padding-bottom:0.7cqw">→</span>
+            </div>
+            <sc-if value="{{ hasCtaTail }}" hint-placeholder-val="{{ true }}">
+              <span style="font-family:var(--font-body, var(--font-sans));font-style:italic;font-size:{{ givTailF }};line-height:1.2;color:rgba(255,255,255,.9)">via the link in the caption</span>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ hasMarks }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;align-items:center;gap:1.8cqw;flex:0 1 auto;min-width:0;justify-content:flex-end">
+            <sc-for list="{{ markRowGiving }}" as="m" hint-placeholder-count="1">
+              <sc-if value="{{ m.divider }}" hint-placeholder-val="{{ false }}">
+                <span style="width:max(1px,0.2cqw);height:{{ m.givRule }};background:rgba(255,255,255,.5);flex:none"></span>
+              </sc-if>
+              <img src="{{ m.src }}" alt="RAWCS" data-pm-el="{{ m.elKey }}" decoding="async" style="height:{{ m.givH }};width:auto;max-width:100%;object-fit:contain;display:block;flex:0 1 auto;min-width:0">
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
 </div>
 
 </x-dc>
@@ -438,7 +535,35 @@ function markRuns(s) {
   if (!out.length) out.push({ t: '', plain: true, mark: false });
   return out;
 }
-function stripMarks(s) { return String(s === undefined || s === null ? '' : s).replace(/==/g, ''); }
+function stripMarks(s) { return String(s === undefined || s === null ? '' : s).replace(/==|\[\/?(?:b|nb|i|u)\]/g, ''); }
+// Rich runs: ==gold==, [b]bold[/b], [nb]regular[/nb], [i]italic[/i], [u]underline[/u].
+// Each run carries its own inline style so a selection can be styled like a text editor.
+const MARK_GOLD = 'background:var(--rawcs-gold);color:var(--text-on-gold);padding:0.04em 0.22em;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:none';
+function richRuns(s, markStyle) {
+  const str = String(s === undefined || s === null ? '' : s);
+  const re = /==|\[(\/?)(b|nb|i|u)\]/g;
+  const st = { mark: false, b: 0, nb: 0, i: 0, u: 0 };
+  const out = [];
+  let last = 0, m;
+  const push = t => {
+    if (!t) return;
+    let css = st.mark ? (markStyle === undefined ? MARK_GOLD : markStyle) + ';' : '';
+    if (st.b) css += 'font-weight:700;';
+    else if (st.nb) css += 'font-weight:400;';
+    if (st.i) css += 'font-style:italic;';
+    if (st.u) css += 'text-decoration:underline;text-decoration-thickness:0.06em;text-underline-offset:0.12em;';
+    out.push({ t, style: css });
+  };
+  while ((m = re.exec(str))) {
+    push(str.slice(last, m.index));
+    if (m[0] === '==') st.mark = !st.mark;
+    else st[m[2]] = Math.max(0, st[m[2]] + (m[1] ? -1 : 1));
+    last = m.index + m[0].length;
+  }
+  push(str.slice(last));
+  if (!out.length) out.push({ t: '', style: '' });
+  return out;
+}
 
 const SCRIM_BOTTOM = 'linear-gradient(180deg,rgba(10,12,16,.42) 0%,rgba(10,12,16,.12) 22%,rgba(10,12,16,0) 40%,rgba(10,12,16,.16) 58%,rgba(10,12,16,.5) 78%,rgba(10,12,16,.74) 100%)';
 const SCRIM_TOP = 'linear-gradient(180deg,rgba(10,12,16,.66) 0%,rgba(10,12,16,.42) 22%,rgba(10,12,16,.1) 40%,rgba(10,12,16,0) 56%,rgba(10,12,16,.18) 78%,rgba(10,12,16,.42) 100%)';
@@ -468,7 +593,7 @@ const DARK_PAIR = { lockupColour: 'lockupWhite', abnbColour: 'abnbWhite', rawcs:
 // Where the draggable text block starts, per layout. Split and banner put the
 // message over the photo; full-bleed sits it low over the wash.
 const PRESET = {
-  photo:     { bottom: { x: 6, y: 54, align: 'left' },  top: { x: 6, y: 15, align: 'center' } },
+  photo:     { bottom: { x: 7, y: 54, align: 'left' },  top: { x: 6, y: 15, align: 'center' } },
   split:     { bottom: { x: 7, y: 8, align: 'left' },   top: { x: 7, y: 8, align: 'left' } },
   statement: { bottom: { x: 10, y: 22, align: 'center' }, top: { x: 10, y: 12, align: 'center' } },
   banner:    { bottom: { x: 8, y: 8, align: 'left' },   top: { x: 8, y: 8, align: 'left' } }
@@ -552,7 +677,7 @@ class Component extends DCLogic {
       let kk = k;
       if (wantLight && LIGHT_PAIR[kk]) kk = LIGHT_PAIR[kk];
       if (!wantLight && DARK_PAIR[kk]) kk = DARK_PAIR[kk];
-      return { src: table[kk] || '', w: LOGO_WIDTH[kk] || 40, s: s, i: i };
+      return { src: table[kk] || '', w: LOGO_WIDTH[kk] || 40, s: s, i: i, kk: kk };
     }).filter(m => m.src);
     const total = resolved.reduce((s, m) => s + m.w, 0) || 1;
     const budget = (resolved.length > 1 ? 84 : (resolved[0] ? resolved[0].w : 52)) * gain;
@@ -564,7 +689,8 @@ class Component extends DCLogic {
       rule: Math.round(3.4 * gain * 10) / 10 + 'cqw',
       ruleBanner: Math.round(4.2 * gain * 10) / 10 + 'cqw',
       width: Math.round(m.w * k * m.s * 10) / 10 + '%',
-      bannerWidth: Math.round(m.w * gain * m.s * (resolved.length > 1 ? 58 / total : 0.88) * 10) / 10 + 'cqw'
+      bannerWidth: Math.round(m.w * gain * m.s * (resolved.length > 1 ? 58 / total : 0.88) * 10) / 10 + 'cqw',
+      sk: m.s, gk: gain, kk: m.kk
     }));
   }
 
@@ -605,9 +731,12 @@ class Component extends DCLogic {
     const isSplit = !ready && !bare && variant === 'split';
     const isStatement = !ready && !bare && variant === 'statement';
     const isBanner = !ready && !bare && variant === 'banner';
+    const isGiving = !ready && !bare && variant === 'giving';
     // Video/reel frame: blue message band at the top, a clear middle the video
     // fills, blue footer with the marks and address. No wash, no floating text.
     const isReel = !ready && !bare && variant === 'reel';
+    // Supplied finished video: the clip fills the frame with nothing laid over it.
+    const isClip = !ready && !bare && variant === 'clip';
 
     // Full-bleed keeps its layout at every gradient setting — "none" simply drops
     // the wash rather than switching to a different template.
@@ -616,7 +745,7 @@ class Component extends DCLogic {
     // Placement is set explicitly rather than inherited from the text anchor, so
     // the tint can sit at the top, the bottom, or both ends of any layout.
     const rawPlace = p.washPlace || (top ? 'top' : 'bottom');
-    const place = WASH_ANGLE[rawPlace] === undefined && rawPlace !== 'both' ? 'bottom' : rawPlace;
+    const place = WASH_ANGLE[rawPlace] === undefined && rawPlace !== 'both' && rawPlace !== 'duo' ? 'bottom' : rawPlace;
     const wantBase = place !== 'both' && p.baseColour !== 'none';
     const tintKey = gradient === 'scrim' ? 'slateTint' : (p.tint || 'ember');
     const tintMul = gradient === 'scrim' ? 0.55 : 1;
@@ -631,7 +760,15 @@ class Component extends DCLogic {
         tint: tintRgb, mid: midRgb, strength: strength * tintMul,
         tintEnd: p.tintEnd, baseStart: p.baseStart, soft: p.washSoft
       };
-      if (place === 'both') {
+      if (place === 'duo') {
+        // Two-tone: the first colour bands the top behind the logos, a second colour
+        // rises from the bottom behind the message, with the base shade under the footer.
+        const t2 = rgbOf(p.tint2Hex, [214, 98, 24]);
+        const s2 = p.tint2Strength === undefined || p.tint2Strength === '' ? 1.1 : +p.tint2Strength;
+        const topBand = buildWash(Object.assign({}, common, { base: null, place: 'top', tintEnd: p.tintEnd === undefined ? 40 : p.tintEnd }));
+        const lowBand = buildWash(Object.assign({}, common, { tint: t2, mid: lift(t2, 0.2), strength: s2, tintEnd: p.tint2End === undefined ? 62 : p.tint2End, base: baseRgb, baseStrength: baseStrength, place: 'bottom' }));
+        wash = lowBand + ',' + topBand;
+      } else if (place === 'both') {
         // A band at each end, the top one lighter so the frame keeps a clear middle.
         const a = buildWash(Object.assign({}, common, { base: baseRgb, baseStrength: baseStrength, place: 'bottom' }));
         const b = buildWash(Object.assign({}, common, { base: baseRgb, baseStrength: baseStrength * 0.6, strength: strength * tintMul * 0.72, place: 'top' }));
@@ -644,7 +781,7 @@ class Component extends DCLogic {
     const panel = PANEL[p.panelColour] || PANEL.gold;
 
     const floatVariant = isPhoto ? 'photo' : (isSplit ? 'split' : (isStatement ? 'statement' : (isBanner ? 'banner' : null)));
-    const preset = (PRESET[floatVariant || 'photo'])[align];
+    const preset = (floatVariant === 'statement' && p.season === 'giving') ? { x: 10, y: 33, align: 'center' } : (PRESET[floatVariant || 'photo'])[align];
     const num = v => (v === undefined || v === null || v === '' ? null : +v);
     const tx = num(p.textX) === null ? preset.x : num(p.textX);
     const ty = num(p.textY) === null ? preset.y : num(p.textY);
@@ -668,7 +805,11 @@ class Component extends DCLogic {
         // Only a preset chip that would vanish against the solid panel falls back
         // to the panel's contrast pair.
         const clash = !custom && bg === panel.bg;
-        return { label, bg, fg, pbg: clash ? panel.ctaBg : bg, pfg: clash ? panel.ctaFg : fg };
+        // CTAs read as underlined caps, not chips: the tone colour becomes the rule
+        // under the words, with white swapped for gold so the line still shows on photos.
+        const line = bg === '#fff' ? 'var(--rawcs-gold)' : bg;
+        const pline = clash ? panel.ctaBg : (bg === '#fff' && panel.light ? 'var(--rawcs-blue)' : line);
+        return { label, bg, fg, pbg: clash ? panel.ctaBg : bg, pfg: clash ? panel.ctaFg : fg, line, pline, ptext: panel.light ? 'var(--rawcs-blue)' : '#fff' };
       });
 
     const text = { kicker: p.kicker || '', headline: p.headline || '', highlight: p.highlight || '' };
@@ -680,7 +821,16 @@ class Component extends DCLogic {
 
     // Split and banner carry their CTA in the solid footer, so it is dropped
     // from the floating block to avoid printing the same button twice.
-    const ctaInFooter = isSplit || isBanner;
+    // Every layout now carries its CTA as one Blue Zoo-style line at the foot of the
+    // artwork ("LABEL VIA THE LINK IN THE CAPTION."), never as a chip in the message.
+    const ctaInFooter = isSplit || isBanner || isPhoto || isStatement;
+    const ctaLabels = ctaList.map(c => c.label.trim().replace(/[.!\s]+$/, ''));
+    const ctaLead = ctaLabels.join(' · ');
+    // The tail only joins labels that start with an action verb, so the line always
+    // reads as a sentence ("Donate today via the link in the caption."); dates,
+    // URLs and event names stand alone.
+    const CTA_VERBS = /^(donate|register|volunteer|learn|nominate|read|watch|help|support|see|explore|partner|book|apply|join|find|get|give|discover|sign|visit|meet)\b/i;
+    const ctaTail = (ctaLabels.length && ctaLabels.every(l => CTA_VERBS.test(l)) && !/link|caption|comment|https?:|\.com|\.au/i.test(ctaLead)) ? 'via the link in the caption.' : '';
     // A part with an explicit place is drawn on its own, so it comes out of the
     // stack; everything else keeps flowing in the block as before.
     const places = (p.places && typeof p.places === 'object') ? p.places : {};
@@ -701,12 +851,19 @@ class Component extends DCLogic {
       isHeadline: kind === 'headline' && !!text.headline,
       isHighlight: kind === 'highlight' && !!text.highlight,
       isCtas: kind === 'ctas' && !ctaInFooter && ctaList.length > 0,
-      text: stripMarks(text[kind])
+      text: stripMarks(text[kind]), runs: richRuns(text[kind])
     })).filter(b => (b.isKicker || b.isHeadline || b.isHighlight || b.isCtas) && !freed[b.kind]);
 
     const v = BLOCK_VARS[floatVariant || 'photo'];
     const mul = (base, s) => Math.round(base * (+s || 1) * 100) / 100 + 'cqw';
-    const blockW = Math.min(100, Math.round(v.width * (+p.scaleBlock || 1)));
+    const blockW0 = Math.min(100, Math.round(v.width * (+p.scaleBlock || 1)));
+    // A text box dragged wider than the block widens the block with it; the other
+    // text keeps the block's own width so only the resized box changes.
+    let twIn = p.textWidths;
+    if (typeof twIn === 'string') { try { twIn = JSON.parse(twIn); } catch (e) { twIn = null; } }
+    twIn = twIn || {};
+    const twVals = ['kicker', 'headline', 'highlight'].map(k => +twIn[k]).filter(n => n > 0);
+    const blockW = Math.min(100, Math.max(blockW0, ...twVals));
     const hiScale = (+p.scaleHeadline || 1) * (p.scaleHighlight === undefined ? 1 : (+p.scaleHighlight || 1));
     // Leading and block spacing are multipliers on the layout's own defaults, so
     // every variant keeps its proportions and 1 always means "as designed".
@@ -718,19 +875,42 @@ class Component extends DCLogic {
       ';--hi:' + mul(v.hl, hiScale) +
       ';--lhHead:' + r2(1.05 * lhM) + ';--lhKick:' + r2(1.18 * lhM) + ';--lhHi:' + r2(1.14 * lhM) +
       ';--cta:' + mul(3, p.scaleCta) + ';--kbg:' + v.kbg + ';--kfg:' + v.kfg +
-      ';--hcol:' + v.hcol + ';--hicol:' + v.hicol + ';--hsh:' + v.hsh + ';--just:' + items;
+      ';--hcol:' + v.hcol + ';--hicol:' + v.hicol + ';--hsh:' + v.hsh + ';--just:' + items +
+      ((p.highlightPlain === true || p.highlightPlain === 'true' || (p.highlightPlain == null && hiScale / (+p.scaleHeadline || 1) <= 0.5)) && p.highlightPlain !== false && p.highlightPlain !== 'false' ? ';--hibg:transparent;--hiw:500;--hipad:0;--hils:0;--hish:' + v.hsh + ';--lhHi:1.35' : '') +
+      (() => {
+        let ts = p.textStyle;
+        if (typeof ts === 'string') { try { ts = JSON.parse(ts); } catch (e) { ts = null; } }
+        ts = ts || {};
+        const vv = (st, w, s, d) => {
+          st = st || {};
+          return (st.b === undefined ? '' : ';' + w + ':' + (st.b ? 700 : 400)) +
+            (st.i ? ';' + s + ':italic' : '') + (st.u ? ';' + d + ':underline' : '');
+        };
+        let tw = p.textWidths;
+        if (typeof tw === 'string') { try { tw = JSON.parse(tw); } catch (e) { tw = null; } }
+        tw = tw || {};
+        const anyTw = twVals.length > 0;
+        // A set width makes the box exactly that wide (the words wrap inside it and the
+        // selection frame follows the handle); the kicker chip only caps, so it never
+        // stretches its blue background. Unset boxes keep the block's own width.
+        const mw = (k, name, wid) => (+tw[k] > 0
+          ? (wid ? ';' + wid + ':' + (+tw[k]) + 'cqw;' + name + ':none' : ';' + name + ':' + (+tw[k]) + 'cqw')
+          : (anyTw ? ';' + name + ':' + blockW0 + 'cqw' : ''));
+        return vv(ts.kicker, '--kw', '--kst', '--kdec') + vv(ts.headline, '--hw', '--hst', '--hdec') + vv(ts.highlight, '--hiw', '--hist', '--hidec') +
+          mw('kicker', '--kmw') + mw('headline', '--hmw', '--hwid') + mw('highlight', '--himw', '--hiwid');
+      })();
     const blockStyle = 'position:absolute;left:' + tx + '%;top:' + ty + '%;width:' + blockW + '%' +
       ';display:flex;flex-direction:column;align-items:' + items + ';text-align:' + ta +
       ';gap:' + gapVal + ';cursor:grab;touch-action:none' + vars;
 
-    const freeParts = ['kicker', 'headline', 'highlight', 'ctas'].filter(k => freed[k]).map(k => {
+    const freeParts = ['kicker', 'headline', 'highlight', 'ctas'].filter(k => freed[k] && variant !== 'giving').map(k => {
       const pt = freed[k];
       const present = k === 'ctas' ? (!ctaInFooter && ctaList.length > 0) : !!text[k];
       return {
         key: k, present,
         isKicker: k === 'kicker', isHeadline: k === 'headline',
         isHighlight: k === 'highlight', isCtas: k === 'ctas',
-        text: stripMarks(text[k]),
+        text: stripMarks(text[k]), runs: richRuns(text[k]),
         style: 'position:absolute;left:' + pt.x + '%;top:' + pt.y + '%;transform:' + pt.tf + ';max-width:' + Math.min(96, blockW + 6) + '%' +
           ';display:flex;flex-direction:column;align-items:' + items + ';text-align:' + ta +
           ';cursor:grab;touch-action:none' + vars
@@ -742,6 +922,8 @@ class Component extends DCLogic {
     const barPlace = (places.bar && places.bar.place) || 'bottom';
     const siteSizeStr = mul(2.4, p.scaleSite);
 
+    const ctaC = 3 * (+p.scaleCta || 1);
+    const panelLogoH = Math.round((ctaTail ? ctaC * 2.044 + 1.1 : ctaC * 2.4) * 1.3 * (+p.scaleLogo || 1) * 10) / 10;
     const dark = this.marks(false);
     const light = this.marks(true);
 
@@ -751,7 +933,51 @@ class Component extends DCLogic {
       readySrc: ready,
       readyFit: p.readyFit || 'cover',
       isBare: !ready && bare,
-      isPhoto, isSplit, isStatement, isBanner, isReel,
+      isPhoto, isSplit, isStatement, isBanner, isReel, isClip,
+      // "Season of giving" statement: warm gold-soft ground, the tricolour on the
+      // left edge only, and a small seasonal line above the message.
+      stmtGiving: p.season === 'giving',
+      stmtLineOn: p.season === 'giving',
+      // Season of giving layout: photo fading into navy, gold kicker with a spark,
+      // white lead line, oversized gold line, serif italic line, small note, CTA
+      // with a red rule and arrow, white logos bottom-right, tricolour on the left.
+      isGiving,
+      ...(() => {
+        const sq = String(p.ratio || '').replace(/\s/g, '') === '1/1';
+        const k = sq ? 0.84 : 1;
+        const strip = t => String(t || '').replace(/==|\*\*|__/g, '');
+        const hi = strip(p.highlight);
+        const longest = Math.max(1, ...hi.split('\n').map(l => l.length));
+        const hiBase = Math.min(13, 80 / (longest * 0.56));
+        const f = (v, s) => Math.round(v * k * (+s || 1) * 100) / 100 + 'cqw';
+        const photoOn = !!photo;
+        const ctaOn = ctaList.length > 0;
+        return {
+          givPhotoH: sq ? '58%' : '62%',
+          givNoPhoto: !photoOn,
+          givTextTop: photoOn ? 'auto' : (sq ? '10cqw' : '14cqw'),
+          givTextBottom: sq ? '19cqw' : '24cqw',
+          givJustify: photoOn ? 'flex-end' : 'center',
+          givGap: f(2.2),
+          givHasKicker: !!p.kicker, givKicker: strip(p.kicker), givKickF: f(2.3, p.scaleKicker),
+          givHeadline: strip(p.headline), givHeadF: f(5.3, p.scaleHeadline),
+          givHighlight: hi, givHiF: f(hiBase, p.scaleHighlight),
+          givHasLine: !!p.giftLine, giftLine: p.giftLine || '', givLineF: f(3.9),
+          givHasNote: !!p.note, note: p.note || '', givNoteF: f(2.35),
+          givHasCta: ctaOn, givCtaF: f(3.9, p.scaleCta), givTailF: f(2.2, p.scaleCta),
+          givCtaBottom: sq ? '5.5cqw' : '7cqw',
+          givStar1R: '8cqw', givStar1T: photoOn ? (sq ? '62%' : '64%') : '30%',
+          givStar2R: '5cqw', givStar2T: photoOn ? (sq ? '71%' : '72%') : '38%',
+          givStar3R: '13cqw', givStar3T: photoOn ? (sq ? '76%' : '77%') : '44%',
+          markRowGiving: dark.map(m => Object.assign({}, m, {
+            givH: Math.round(6.4 * k * (m.sk || 1) * (+p.scaleLogo || 1) * 10) / 10 + 'cqw',
+            givRule: Math.round(5.2 * k * 10) / 10 + 'cqw'
+          }))
+        };
+      })(),
+      stmtFrame: p.season !== 'giving',
+      stmtBg: p.season === 'giving' ? 'var(--rawcs-gold-soft)' : '#EFEDEA',
+      clipVideo: isClip && !!video, clipEmbed: isClip && !video && !!embed,
       reelHasKicker: !!text.kicker,
       reelKicker: stripMarks(text.kicker),
       reelHasCtas: ctaList.length > 0,
@@ -771,6 +997,13 @@ class Component extends DCLogic {
       hasFloatText: !!floatVariant && blocks.length > 0,
       blocks,
       blockStyle,
+      // Full-bleed photo: when the message is left-aligned, the logo row, site
+      // label and CTA strip all start on the message's left edge.
+      // Logos sit on the layout's own text margin, so dragging the message or any
+      // line never moves them.
+      edgeJ: preset.align === 'left' ? 'flex-start' : 'center',
+      edgeP: preset.align === 'left' ? preset.x + 'cqw' : (floatVariant === 'photo' ? '6cqw' : '5cqw'),
+      edgeTA: preset.align === 'left' ? 'left' : 'center',
       freeParts,
       logoAuto: dark.length > 0 && !logoSpot,
       logoFree: dark.length > 0 && !!logoSpot,
@@ -787,6 +1020,7 @@ class Component extends DCLogic {
       barBottom: barPlace === 'bottom',
       siteSize: siteSizeStr,
       barSize: mul(2.2, p.scaleBar),
+      barSideSize: mul(2.6, p.scaleBar),
       rootRef: this._root,
       hasPhoto: !!photo,
       noPhoto: !photo,
@@ -821,6 +1055,14 @@ class Component extends DCLogic {
       // The footer chips sit outside the floating text block, so they need the
       // CTA size handed to them on the panel itself rather than inherited.
       ctaFooterSize: mul(3, p.scaleCta),
+      // Full-bleed photo (and statement) get the white Blue Zoo strip; split and
+      // banner keep the CTA inside their solid footer as underlined caps.
+      ctaStripOn: (isPhoto || isStatement) && ctaList.length > 0,
+      ctaLead, ctaTail,
+      hasCtaTail: !!ctaTail,
+      panelCtaText: panel.light ? 'var(--rawcs-blue)' : '#fff',
+      panelCtaLine: ctaList.length ? ctaList[0].pline : 'var(--rawcs-red)',
+      ctaLineSize: mul(2.2, p.scaleCta),
       panelBg: panel.bg,
       panelRule: panel.rule,
       panelCtaBg: panel.ctaBg,
@@ -859,9 +1101,16 @@ class Component extends DCLogic {
       hasMarks: dark.length > 0,
       markRow: dark,
       markRowLight: light,
-      markRowPanel: panel.light ? light : dark,
+      // Footer logos stand as tall as the CTA beside them (label + "via the link"
+      // line); each logo's own size handle scales from there.
+      panelLogoRowH: panelLogoH + 'cqw',
+      markRowPanel: (panel.light ? light : dark).map(m => Object.assign({}, m, {
+        panelH: Math.round(panelLogoH * m.sk * 10) / 10 + 'cqw',
+        panelRule: Math.round(panelLogoH * 0.8 * 10) / 10 + 'cqw'
+      })),
       ctaList,
-      headlineRuns: markRuns(text.headline),
+      headlineRuns: richRuns(text.headline),
+      reelHeadlineRuns: richRuns(text.headline, 'color:#fff'),
       siteLabel: p.siteLabel || 'rawcs.org.au',
       slotId: p.slotId || 'pubmat-slot'
     };
