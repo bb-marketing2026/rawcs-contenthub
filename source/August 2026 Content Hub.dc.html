@@ -23,6 +23,15 @@
   a:hover { color:var(--rawcs-blue-darker); text-decoration:underline; }
   input, textarea, button, select { font-family:inherit; }
   ::selection { background:var(--rawcs-gold); color:var(--text-on-gold); }
+  /* Phone widths. Layout stays inline-styled; these only tighten it on small screens. */
+  @media (max-width: 720px) {
+    [data-hub-pad] { padding-left:16px !important; padding-right:16px !important; }
+    [data-hub-intro] { display:none !important; }
+    [data-hub-tabs] { flex-wrap:nowrap !important; overflow-x:auto; scrollbar-width:none; }
+    [data-hub-tabs] > button { flex:none; padding-left:14px !important; padding-right:14px !important; }
+    [data-hub-hide-sm] { display:none !important; }
+    [data-hub-auto-sm] { width:auto !important; }
+  }
 </style>
 <template id="__bundler_thumbnail">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
@@ -49,13 +58,13 @@
 </helmet>
 <div style="min-height:100vh;background:var(--neutral-50)">
 
-  <header style="background:var(--rawcs-blue-darker);color:#fff;padding:32px 44px 0">
+  <header data-hub-pad style="background:var(--rawcs-blue-darker);color:#fff;padding:32px 44px 0">
     <div style="max-width:1660px;margin:0 auto;display:flex;flex-direction:column;gap:22px">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
         <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
           <img ref="{{ logoRef }}" alt="Australian Rotary Districts and RAWCS" style="width:262px;height:auto;display:block">
           <h1 style="margin:6px 0 0;font-size:40px;line-height:1.06;letter-spacing:-0.028em;font-weight:700">RAWCS Content Hub</h1>
-          <p style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.76);max-width:720px;text-wrap:pretty">{{ monthScope }} 2026. Every post, its caption and its ready-to-post artwork in one place. Open a card to edit the copy, swap the image, change the treatment, or leave a note for review. Supplied final artwork is locked.</p>
+          <p data-hub-intro style="margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.76);max-width:720px;text-wrap:pretty">{{ monthScope }} 2026. Every post, its caption and its ready-to-post artwork in one place. Open a card to edit the copy, swap the image, change the treatment, or leave a note for review. Supplied final artwork is locked.</p>
         </div>
         <div style="display:flex;gap:30px;padding-bottom:6px">
           <div style="display:flex;flex-direction:column;gap:4px">
@@ -72,7 +81,7 @@
           </div>
         </div>
       </div>
-      <div style="display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.18)">
+      <div data-hub-tabs style="display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.18)">
         <sc-for list="{{ monthTabs }}" as="m" hint-placeholder-count="2">
           <button onClick="{{ m.pick }}" style="{{ m.style }}">
             <span style="font-family:var(--font-condensed);font-size:21px;font-weight:700;line-height:1;letter-spacing:0.004em">{{ m.name }}</span>
@@ -113,19 +122,29 @@
             </div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-bottom:2px">
-          <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
-            <span style="display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:0.04em;color:rgba(255,255,255,.72)"><span style="width:9px;height:9px;border-radius:50%;background:{{ l.accent }}"></span>{{ l.label }}</span>
-          </sc-for>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,.5)">Filter by status</span>
+          <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-left:-9px">
+            <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+              <button onClick="{{ l.pick }}" title="{{ l.title }}" style="{{ l.style }}"><span style="width:9px;height:9px;border-radius:50%;background:{{ l.accent }}"></span>{{ l.label }}</button>
+            </sc-for>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main style="max-width:1660px;margin:0 auto;padding:34px 44px 96px">
+  <main data-hub-pad style="max-width:1660px;margin:0 auto;padding:34px 44px 96px">
 
     <sc-if value="{{ storageWarning }}" hint-placeholder-val="{{ false }}">
       <p style="margin:0 0 20px;font-size:13px;line-height:1.55;color:var(--rawcs-blue-darker);background:var(--rawcs-gold-soft);border-left:3px solid var(--rawcs-gold);padding:12px 14px">{{ storageWarning }}</p>
+    </sc-if>
+
+    <sc-if value="{{ filterOn }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 26px;padding:12px 14px;background:var(--rawcs-blue-soft);border-left:3px solid var(--rawcs-blue)">
+        <span style="font-size:13px;line-height:1.5;color:var(--rawcs-blue-darker)">{{ filterNote }}</span>
+        <button onClick="{{ clearFilter }}" style="margin-left:auto;font-size:12px;font-weight:700;letter-spacing:0.04em;padding:7px 12px;cursor:pointer;border:1px solid var(--rawcs-blue);background:#fff;color:var(--rawcs-blue)">Show every post</button>
+      </div>
     </sc-if>
 
     <sc-if value="{{ isGallery }}" hint-placeholder-val="{{ true }}">
@@ -137,9 +156,9 @@
               <span style="font-size:13px;color:var(--text-muted)">{{ wk.range }}</span>
               <span style="margin-left:auto;font-family:var(--font-condensed);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">{{ wk.count }}</span>
             </div>
-            <div style="display:flex;flex-wrap:wrap;gap:22px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:22px">
               <sc-for list="{{ wk.posts }}" as="p" hint-placeholder-count="4">
-                <div onClick="{{ p.open }}" style="width:252px;background:#fff;border:1px solid var(--neutral-200);border-top:3px solid {{ p.accent }};cursor:pointer;display:flex;flex-direction:column;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 14px 30px rgba(7,44,85,.18);transform:translateY(-3px)">
+                <div onClick="{{ p.open }}" style="min-width:0;background:#fff;border:1px solid var(--neutral-200);border-top:3px solid {{ p.accent }};cursor:pointer;display:flex;flex-direction:column;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 14px 30px rgba(7,44,85,.18);transform:translateY(-3px)">
                   <div style="position:relative;background:var(--neutral-100)">
                     <sc-if value="{{ p.showsPubmat }}" hint-placeholder-val="{{ true }}">
                       <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" season="{{ p.season }}" gift-line="{{ p.f.giftLine }}" note="{{ p.f.note }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" tint2-hex="{{ p.f.tint2Hex }}" tint2-strength="{{ p.f.tint2Strength }}" tint2-end="{{ p.f.tint2End }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" text-widths="{{ p.f.textWidths }}" highlight-plain="{{ p.f.highlightPlain }}" text-style="{{ p.f.textStyle }}" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="100%,315px"></dc-import>
@@ -215,7 +234,7 @@
             <sc-for list="{{ wk.posts }}" as="p" hint-placeholder-count="4">
               <div onClick="{{ p.open }}" style="display:flex;align-items:stretch;gap:20px;background:#fff;border:1px solid var(--neutral-200);border-top:none;padding:14px 18px 14px 0;cursor:pointer" style-hover="background:var(--rawcs-blue-soft)">
                 <div style="width:5px;background:{{ p.accent }};flex:none"></div>
-                <div style="width:88px;flex:none;align-self:center">
+                <div data-hub-hide-sm style="width:88px;flex:none;align-self:center">
                   <sc-if value="{{ p.showsPubmat }}" hint-placeholder-val="{{ true }}">
                     <dc-import name="Pubmat" variant="{{ p.variant }}" gradient="{{ p.gradient }}" tint="{{ p.tint }}" align="{{ p.align }}" panel-colour="{{ p.panelColour }}" season="{{ p.season }}" gift-line="{{ p.f.giftLine }}" note="{{ p.f.note }}" base-colour="{{ p.baseColour }}" wash-place="{{ p.washPlace }}" wash-strength="{{ p.f.washStrength }}" base-strength="{{ p.f.baseStrength }}" tint-end="{{ p.f.tintEnd }}" base-start="{{ p.f.baseStart }}" tint-hex="{{ p.f.tintHex }}" tint2-hex="{{ p.f.tint2Hex }}" tint2-strength="{{ p.f.tint2Strength }}" tint2-end="{{ p.f.tint2End }}" base-hex="{{ p.f.baseHex }}" wash-soft="{{ p.f.washSoft }}" logos="{{ p.logos }}" custom-logos="{{ logoLib }}" site-label="{{ p.siteLabel }}" ratio="4 / 5" text-widths="{{ p.f.textWidths }}" highlight-plain="{{ p.f.highlightPlain }}" text-style="{{ p.f.textStyle }}" kicker="{{ p.f.kicker }}" headline="{{ p.f.headline }}" highlight="{{ p.f.highlight }}" ctas="{{ p.f.ctas }}" order="{{ p.f.order }}" scale-headline="{{ p.f.scaleHeadline }}" scale-kicker="{{ p.f.scaleKicker }}" scale-cta="{{ p.f.scaleCta }}" scale-block="{{ p.f.scaleBlock }}" scale-logo="{{ p.f.scaleLogo }}" scale-highlight="{{ p.f.scaleHighlight }}" scale-site="{{ p.f.scaleSite }}" scale-bar="{{ p.f.scaleBar }}" logo-scales="{{ p.f.logoScales }}" places="{{ p.f.places }}" text-x="{{ p.f.textX }}" text-y="{{ p.f.textY }}" text-align="{{ p.f.textAlign }}" ready-image="{{ p.f.readyKey }}" photo="{{ p.f.photo }}" video="{{ p.f.video }}" video-link="{{ p.f.videoLink }}" line-height="{{ p.f.lineHeight }}" block-gap="{{ p.f.blockGap }}" photo-fit="{{ p.f.photoFit }}" photo-zoom="{{ p.f.photoZoom }}" photo-x="{{ p.f.photoX }}" photo-y="{{ p.f.photoY }}" slot-id="{{ p.f.slotId }}" hint-size="88px,110px"></dc-import>
                   </sc-if>
@@ -225,7 +244,7 @@
                     </div>
                   </sc-if>
                 </div>
-                <div style="width:104px;flex:none;display:flex;flex-direction:column;gap:3px;align-self:center">
+                <div data-hub-auto-sm style="width:104px;flex:none;display:flex;flex-direction:column;gap:3px;align-self:center">
                   <span style="font-family:var(--font-condensed);font-size:19px;font-weight:700;line-height:1;color:var(--rawcs-blue)">{{ p.dateShort }}</span>
                   <span style="font-family:var(--font-condensed);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted)">{{ p.weekday }}</span>
                   <span style="font-size:11px;color:var(--text-muted)">{{ p.timeLabel }}</span>
@@ -234,11 +253,11 @@
                   <h3 style="margin:0;font-size:16px;line-height:1.28;letter-spacing:-0.012em;font-weight:700;overflow-wrap:anywhere;text-wrap:pretty">{{ p.topic }}</h3>
                   <span style="font-size:12px;color:var(--text-muted)">{{ p.category }} · {{ p.pillar }}</span>
                 </div>
-                <div style="flex:0 1 180px;min-width:0;display:flex;flex-direction:column;gap:5px;align-self:center">
+                <div data-hub-hide-sm style="flex:0 1 180px;min-width:0;display:flex;flex-direction:column;gap:5px;align-self:center">
                   <span style="font-family:var(--font-condensed);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">Ask</span>
                   <span style="font-size:13px;line-height:1.35">{{ p.ask }}</span>
                 </div>
-                <div style="width:168px;flex:none;display:flex;align-items:center;justify-content:flex-end;gap:8px">
+                <div data-hub-auto-sm style="width:168px;flex:none;display:flex;align-items:center;justify-content:flex-end;gap:8px">
                   <sc-if value="{{ p.locked }}" hint-placeholder-val="{{ false }}">
                     <span style="font-family:var(--font-condensed);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 7px;color:var(--status-success);border:1px solid var(--status-success)">Locked</span>
                   </sc-if>
@@ -1478,7 +1497,7 @@ Support humanitarian projects in Australia and around the world by donating toda
   },
   {
     id: "s6", dateISO: "2026-08-26", week: 4, slotLabel: "6",
-    category: "Cause spotlight", pillar: "Faces and field stories", ask: "Explore projects by cause and location",
+    category: "Cause spotlight", pillar: "Faces and field stories", ask: "Donate",
     source: "ID 59, Upskilling Disadvantaged Communities, Philippines. Cause: Supporting Education", projectId: "68-2021-22",
     link: "https://directory.rawcs.com.au/ProjectDisplayBB.aspx?68-2021-22",
     topic: "Upskilling communities, Philippines",
@@ -1631,7 +1650,7 @@ const SEPT_POSTS = [
   },
   {
     id: "sep5", dateISO: "2026-09-08", week: 2, slotLabel: "Bonus",
-    category: "Impact and project stories", pillar: "Faces and field stories", ask: "Read the project story",
+    category: "Impact and project stories", pillar: "Faces and field stories", ask: "Donate",
     source: "ID 56, Borderless Friendship, Western Australia", projectId: "26-2014-15",
     link: "https://directory.rawcs.com.au/26-2014-15",
     topic: "Safe, schooled, and still connected to home",
@@ -2136,7 +2155,7 @@ const BASELINE = {
         "highlight": "",
         "ctas": [
           {
-            "label": "Learn more",
+            "label": "Give a path forward",
             "tone": "red"
           }
         ],
@@ -2619,12 +2638,35 @@ const ANCHORS = [
   { key: 'lb', label: '↙', x: 6,  y: 94, ax: 'l', ay: 'b' }, { key: 'cb', label: '↓', x: 50, y: 94, ax: 'c', ay: 'b' }, { key: 'rb', label: '↘', x: 94, y: 94, ax: 'r', ay: 'b' }
 ];
 
+// Month URLs: /november-2026 on the deployed site (vercel.json rewrites it to
+// index.html); #november-2026 anywhere else, so local previews never 404.
+const monthSlug = m => m.name.toLowerCase().replace(/\s+/g, '-');
+const slugPaths = () => /\.vercel\.app$/.test(location.hostname) || !!window.RAWCS_PATH_SLUGS;
+const monthFromUrl = () => {
+  const seg = (decodeURIComponent(location.hash.slice(1)) || location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
+  const m = MONTHS.filter(x => monthSlug(x) === seg)[0];
+  return m ? m.key : null;
+};
+const writeMonthUrl = (key, replace) => {
+  const m = MONTHS.filter(x => x.key === key)[0]; if (!m) return;
+  const url = slugPaths() ? '/' + monthSlug(m) + location.search : location.pathname + location.search + '#' + monthSlug(m);
+  try { history[replace ? 'replaceState' : 'pushState']({ month: key }, '', url); } catch (e) {}
+  document.title = 'RAWCS Content Hub · ' + m.name;
+};
 const MONTHS = [
   { key: '2026-08', name: 'August 2026', short: 'August' },
   { key: '2026-09', name: 'September 2026', short: 'September' },
   { key: '2026-10', name: 'October 2026', short: 'October' },
   { key: '2026-11', name: 'November 2026', short: 'November' }
 ];
+// With no month in the URL and none remembered, open on the month we are in,
+// or the nearest month the hub covers.
+const currentMonthKey = () => {
+  const now = new Date();
+  const key = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
+  if (MONTHS.some(m => m.key === key)) return key;
+  return key > MONTHS[MONTHS.length - 1].key ? MONTHS[MONTHS.length - 1].key : MONTHS[0].key;
+};
 const MONTH_STORE = 'rawcs-hub-month';
 // Bump SEED whenever the calendar data changes. Stored payloads carrying an older
 // seed have their edit layer and log dropped on every load, so a stale mounted
@@ -4142,9 +4184,9 @@ const ADDED_POSTS = [
       "lockupWhite"
     ],
     "siteLabel": "rawcs.org.au",
-    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Kept in the hub as requested. Facts come from the supplied flyer (winter kits, Caritas Ukraine, the $2 tax-deductible line) and the RAWCS donation page, which opens as project 83-2014-15, Ukraine Crisis Appeal. The AI idea guideline RAWCS mentioned was not attached, so the copy follows the flyer. No funding figures or beneficiary counts are used. Written in new wording, not copied from the 23 August post. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Kept in the hub as requested. Facts come from the supplied flyer (winter kits, Caritas Ukraine, the $2 tax-deductible line) and the RAWCS donation page, which opens as project 83-2014-15, Ukraine Crisis Appeal. The AI idea guideline RAWCS mentioned was not attached, so the copy follows the flyer. No funding figures or beneficiary counts are used. Written in new wording, not copied from the 23 August post. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. Updated 04/11/2026: caption replaced with the supplied copy, and the Ukraine Crisis Appeal and Australian Federation of Ukrainian Organisations logos added to the artwork under an “In partnership with” label (now nv01b).",
     "statusType": "notstarted",
-    "caption": "Imagine a winter night with the power cut and the heating off. For families in Ukraine, that is a daily reality.\n\nA gift to the Ukraine Crisis Appeal at https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4 helps put a winter kit in someone's hands. Each kit holds a power bank, a USB heated blanket, a sleeping bag, a thermos, a headlamp, reflective items and a drawstring backpack, there to keep people warm, charged and safe at home. They are bought and handed out through Caritas Ukraine, and donations of $2 or more are tax deductible.\n\nThis season of giving, you can help someone stay warm.",
+    "caption": "Imagine a winter night with the power cut and the heating off. For families in Ukraine, that is a daily reality.\n\nA gift to the Ukraine Crisis Appeal helps put a winter kit in someone's hands.\n\nEach kit holds a power bank, a USB heated blanket, a sleeping bag, a thermos, a headlamp, reflective items and a drawstring backpack, there to keep people warm, charged and safe at home. They are bought and handed out through Caritas Ukraine, and donations of $2 or more are tax deductible.\n\nThis season of giving, you can help someone stay warm.\n\nDonate now by visiting https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4",
     "tags": [
       "#RAWCS",
       "#UkraineCrisisAppeal",
@@ -4163,7 +4205,7 @@ const ADDED_POSTS = [
           }
         ],
         "brief": "Headline options (pick one): A) “Send warmth to Ukraine this winter” B) “A winter kit, a gift that keeps someone warm” C) “Power cuts and freezing homes. Here's what helps.”\nUse the supplied Send Warmth flyer artwork, cropped in tight on the blanket, thermos and sleeping bag so it reads like a gift pile. Keep the hub's link strip and crop out the flyer's QR code and web address.",
-        "readyImage": "nv01",
+        "readyImage": "nv01b",
         "photo": "ph-adhoc-mt2c2l96",
         "video": "",
         "videoName": "",
@@ -4328,7 +4370,7 @@ const ADDED_POSTS = [
     "slotLabel": "13",
     "category": "Cause spotlight",
     "pillar": "Proof of impact",
-    "ask": "Learn more",
+    "ask": "Donate",
     "source": "RAWCS directory, project 34 of 2026-27, Clean4Shore Waterways Protection (RATE); RAWCS cause page, Protecting the Environment and Wildlife",
     "projectId": "34-2026-27",
     "link": "https://directory.rawcs.com.au/34-2026-27",
@@ -4342,7 +4384,7 @@ const ADDED_POSTS = [
       "lockupWhite"
     ],
     "siteLabel": "rawcs.org.au",
-    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (34 of 2026-27, sponsored by the Rotary Club of Kincumber, District 9685). The manager contact details on that page are not used. Different from the hub's 14 October RATE launch post, which is about RATE opening to clubs; this one features a single running project. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook.",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (34 of 2026-27, sponsored by the Rotary Club of Kincumber, District 9685). The manager contact details on that page are not used. Different from the hub's 14 October RATE launch post, which is about RATE opening to clubs; this one features a single running project. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. Artwork CTA changed from “See how it works” to “Give back to our waterways” on 04/11/2026 (now nv13b).",
     "statusType": "notstarted",
     "caption": "What can you give a waterway in the season of giving? A clean shoreline, and a group of high school students to help get there. See how it works at https://directory.rawcs.com.au/34-2026-27.\n\nWaste that ends up on the foreshores of Central Coast waterways, especially in the mangroves, doesn't clear itself. Clean4Shore Waterways Protection sends school groups out on day trips to remove it, backed by Central Coast Rotary clubs and the Clean4Shore association. Donations, including from local businesses, pay for the students' protective gear, lunch on site, waste disposal and barge fuel.\n\nIt sits under RATE, RAWCS's Trust for the Environment, which offers tax deductibility to donors. If your business is looking for a local cause for the season of giving, this is one.",
     "tags": [
@@ -4358,12 +4400,12 @@ const ADDED_POSTS = [
         "highlight": "our waterways.",
         "ctas": [
           {
-            "label": "See how it works",
+            "label": "Give back to our waterways",
             "tone": "blue"
           }
         ],
         "brief": "Headline options (pick one): A) “A gift for our waterways” B) “Students on the water, waste off the shore” C) “Clean4Shore on the Central Coast”\nCheck the images on the directory project page and use a shoreline or school group shot if one is there. If not, use a simple RATE graphic with a gold accent. Tag chip: 'RATE · Environment'.",
-        "readyImage": "nv13",
+        "readyImage": "nv13b",
         "photo": "",
         "video": "",
         "videoName": "",
@@ -4443,7 +4485,7 @@ const BAKED_EDITS = {
         ],
         "brief": "Headline options (pick one):\nA) “A gift that keeps going further”\nB) “One family's generosity, multiplied by a whole network of Clubs”\nC) “When one gift inspires a hundred more”\n\nThis is a program-level RACG stat from the presentation, not tied to a single project directory page, so there is no photo source to pull from. Use RACG branding or a simple stat card rather than stock imagery.",
         "readyImage": "",
-        "photo": "assets/photos/oct7-racg.jpg",
+        "photo": "assets/photos/oct7-racg-web.jpg",
         "sqTextX": 9.5,
         "sqTextY": 15,
         "photoFit": "fill",
@@ -4629,12 +4671,12 @@ const BAKED_EDITS = {
         "highlight": "close to home.",
         "ctas": [
           {
-            "label": "Donate today",
+            "label": "Give comfort close to home",
             "tone": "red"
           }
         ],
         "brief": "Headline options (pick one):\nA) “A doctor, a shelter bag, a meal” (hub title)\nB) “A small gift, close to home”\nC) “Big enough to matter, small enough to move fast” (current pubmat)\nThe current pubmat artwork can stay. These are program names rather than a single project, so no project photos are needed. If it is reworked, keep to RACG branding with a gold accent.",
-        "readyImage": "nv07",
+        "readyImage": "nv07b",
         "photo": "ph-sep10",
         "photoX": 39,
         "photoY": 50,
@@ -4703,7 +4745,7 @@ const BAKED_EDITS = {
       "#RACG",
       "#HelpingAussies"
     ],
-    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. The hub's link text read 'rawcs.org/donation', which looks like a typo, so it is written here as https://rawcs.org.au/donation/. The pillar was changed from the superseded 'Where your money goes' to 'Proof of impact'.",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. The hub's link text read 'rawcs.org/donation', which looks like a typo, so it is written here as https://rawcs.org.au/donation/. The pillar was changed from the superseded 'Where your money goes' to 'Proof of impact'. Artwork CTA changed from “Donate today” to “Give comfort close to home” on 04/11/2026 (now nv07b).",
     "statusType": "notstarted",
     "category": "Appeals and fundraising",
     "pillar": "Proof of impact",
@@ -4986,14 +5028,18 @@ const BAKED_EDITS = {
   "sep5": {
     "dateISO": "2026-11-03",
     "slotLabel": "2",
-    "caption": "Most gifts for kids come in wrapping paper. For the children in this project, one of the most important gifts is an ID card.\n\nTheir story is at https://directory.rawcs.com.au/26-2014-15, and it starts with a long walk. Many of them travelled for days into Thailand, alone or with their siblings, to escape the war in Myanmar. Without Thai identification they can't go to school, see a doctor properly or travel freely, so getting that sorted is often the first real step toward a normal life.\n\nBorderless Friendship, run through the Rotary Club of Melville, helps with that, along with hostel accommodation and schooling. $3,000 covers a weekend workshop for 50 teenagers on health and relationships education.\n\nThere's a short video on the project page if you'd like to meet the community. This season of giving, you can help a child feel safe, schooled and at home.",
+    "caption": "While many children are dreaming of presents wrapped in bright paper this festive season, the children supported by our Borderless Friendship project in Thailand are hoping for something much more fundamental: the opportunity to receive an education and build a future where they can belong 🎁\n\nMany of these children have fled conflict in Myanmar, some walking for days alone or alongside their siblings in search of safety. Without official identification, their opportunities are severely limited. They can face barriers to travelling freely, accessing healthcare and eventually obtaining work permits as adults.\n\nSponsored by the Rotary Club of Melville and delivered in partnership with Borderless Friendship WA, this RAWCS project provides safe hostel accommodation, schooling, nutritious meals and access to medical care.\n\nBut it offers something even more life-changing: education as a pathway towards obtaining a Thai ID card, helping children move from statelessness towards having an official identity and a greater sense of security and belonging.\n\nJust $3,000 can fund a weekend health and relationships workshop for 50 teenagers, helping equip them with important knowledge and life skills.\n\nEvery donation, no matter the amount, can help give a child the opportunity to feel safe, receive an education and build a brighter future.\n\nDonate today: https://donations.rawcs.com.au/Default.aspx?ProjectNo=26&YearRegistered=2014-15\n\nAll donations over $2 are tax-deductible.",
     "tags": [
       "#RAWCS",
       "#RotaryAustralia",
+      "#BorderlessFriendship",
+      "#RotaryInAction",
+      "#EducationForAll",
+      "#ChildrensRights",
       "#Thailand",
-      "#EducationForAll"
+      "#Myanmar"
     ],
-    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Moved from 19 November to 3 November on 29/10/2026 so it sits at the start of the month. The hub date needs the same change. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook; the facts are unchanged. Overseas post that helps children, in line with the season of giving, domestic and children rule for November onwards.",
+    "status": "Ready.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Moved from 19 November to 3 November on 29/10/2026 so it sits at the start of the month. The hub date needs the same change. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook; the facts are unchanged. Overseas post that helps children, in line with the season of giving, domestic and children rule for November onwards. Caption replaced on 04/11/2026 with the supplied copy, including the donations.rawcs.com.au link and updated hashtags. Artwork CTA changed from “Read their story” to “Give the gift of belonging” on 04/11/2026 (now nv02b); donation link matches the caption.",
     "statusType": "notstarted",
     "category": "Impact and project stories",
     "pillar": "Faces and field stories",
@@ -5004,12 +5050,12 @@ const BAKED_EDITS = {
         "highlight": "belonging.",
         "ctas": [
           {
-            "label": "Read the project story",
+            "label": "Give the gift of belonging",
             "tone": "red"
           }
         ],
         "brief": "Headline options (pick one):\nA) “Safe, schooled, and still connected to home” (current)\nB) “The gift of belonging”\nC) “An ID card, a classroom, a place to call home”\nReview the 7 directory images and choose the warmest hostel, classroom or community shot, not a border crossing. The project video (youtube.com/embed/L43s2Rl4b2Q) may suit better than a still.",
-        "readyImage": "nv02",
+        "readyImage": "nv02b",
         "photo": "ph-sep5",
         "sqPhotoX": 10,
         "sqPhotoY": 50,
@@ -5019,7 +5065,7 @@ const BAKED_EDITS = {
         "note": "Hostel accommodation, schooling and Thai identification for children who fled the war in Myanmar."
       }
     ],
-    "link": "https://directory.rawcs.com.au/26-2014-15",
+    "link": "https://donations.rawcs.com.au/Default.aspx?ProjectNo=26&YearRegistered=2014-15",
     "panelColour": "red",
     "variant": "giving",
     "logos": [
@@ -5920,7 +5966,7 @@ const RETIRED_SEPT_HEADLINES = {
 
 class Component extends DCLogic {
   state = {
-    openId: null, month: MONTHS[0].key, selEl: null, selSet: [], selRect: { sq: null, pt: null }, layout: null, showTemplates: false, showHistory: false, flagOpen: false,
+    openId: null, month: currentMonthKey(), statusFilter: '', selEl: null, selSet: [], selRect: { sq: null, pt: null }, layout: null, showTemplates: false, showHistory: false, flagOpen: false,
     data: BLANK, past: [], future: [], log: [], editTab: 'layout',
     frameIdx: {}, docIdx: {}, copied: '', dl: '', storageWarning: '',
     dirty: false, saveFlash: '', savedCount: 0, markHint: ''
@@ -5954,8 +6000,13 @@ class Component extends DCLogic {
   componentDidMount() {
     try {
       RETIRED_STORES.forEach(k => localStorage.removeItem(k));
-      const savedMonth = localStorage.getItem(MONTH_STORE);
-      if (savedMonth && MONTHS.filter(m => m.key === savedMonth).length) this.setState({ month: savedMonth });
+      const savedMonth = monthFromUrl() || localStorage.getItem(MONTH_STORE);
+      const startMonth = savedMonth && MONTHS.filter(m => m.key === savedMonth).length ? savedMonth : this.state.month;
+      if (startMonth !== this.state.month) this.setState({ month: startMonth });
+      writeMonthUrl(startMonth, true);
+      this._pop = () => { const k = monthFromUrl(); if (k && k !== this.state.month) this.setState({ month: k, openId: null, showTemplates: false, showHistory: false }); };
+      window.addEventListener('popstate', this._pop);
+      window.addEventListener('hashchange', this._pop);
       const raw = localStorage.getItem(STORE);
       if (raw) {
         const d = JSON.parse(raw);
@@ -5985,6 +6036,9 @@ class Component extends DCLogic {
       }
     } catch (e) {}
     this.paintHeaderLogo();
+    // November art overrides the earlier map. Merge now if both maps are already
+    // here (artwork loads as small URL maps, so they usually are).
+    if (window.RAWCS_ART && window.RAWCS_ART_NOV) { Object.assign(window.RAWCS_ART, window.RAWCS_ART_NOV); this.forceUpdate(); }
     if (!window.RAWCS_LOGOS || !window.RAWCS_ART || !window.RAWCS_ART_NOV) {
       let tries = 0;
       this._wait = setInterval(() => {
@@ -7103,7 +7157,10 @@ class Component extends DCLogic {
     if (frame.readyImage && (art[frame.readyImage] || /[\/.]/.test(frame.readyImage)) && ratioLabel === '4x5') {
       const a = document.createElement('a');
       a.href = art[frame.readyImage] || frame.readyImage;
-      a.download = 'RAWCS_' + post.dateISO + '_' + post.id + '_4x5.jpg';
+      // Keep the artwork's own file type (some finals are PNG or WebP, not JPEG).
+      const typ = (String(a.href).match(/^data:image\/(\w+)/) || String(a.href).match(/\.(\w+)(?:[?#].*)?$/) || [])[1] || 'jpg';
+      const ext = ({ jpeg: 'jpg', JPG: 'jpg' })[typ] || typ.toLowerCase();
+      a.download = 'RAWCS_' + post.dateISO + '_' + post.id + '_4x5.' + ext;
       a.click();
       this.setState({ dl: which + '-ok' });
       clearTimeout(this._dt);
@@ -7302,11 +7359,16 @@ class Component extends DCLogic {
       });
     };
 
+    // The status legend doubles as a filter: pick a status to see only those posts,
+    // in every layout. The filter stays on when switching months.
+    const statusOf = p => (STATUS[p.statusType] ? p.statusType : 'notstarted');
+    const statusFilter = STATUS[this.state.statusFilter] ? this.state.statusFilter : '';
+    const shown = statusFilter ? list.filter(p => statusOf(p) === statusFilter) : list;
     const weekNos = [];
-    list.forEach(p => { if (weekNos.indexOf(p.week) < 0) weekNos.push(p.week); });
+    shown.forEach(p => { if (weekNos.indexOf(p.week) < 0) weekNos.push(p.week); });
     weekNos.sort((a, b) => a - b);
     const weeks = weekNos.map(w => {
-      const posts = list.filter(p => p.week === w).map(decorate);
+      const posts = shown.filter(p => p.week === w).map(decorate);
       const first = posts[0], last = posts[posts.length - 1];
       return {
         label: 'Week ' + w,
@@ -7793,6 +7855,7 @@ class Component extends DCLogic {
               ';box-shadow:inset 0 -3px 0 ' + (on ? 'var(--rawcs-gold)' : 'transparent') + ';transition:background .15s ease,color .15s ease',
             pick: () => {
               try { localStorage.setItem(MONTH_STORE, m.key); } catch (e) {}
+              if (m.key !== this.state.month) writeMonthUrl(m.key, false);
               this.setState({ month: m.key, openId: null, showTemplates: false, showHistory: false });
             }
           };
@@ -7801,10 +7864,26 @@ class Component extends DCLogic {
       countAll: String(list.length),
       countLocked: String(lockedCount),
       countOpen: String(list.length - signedOff),
-      legend: STATUS_ORDER.map(k => ({
-        accent: STATUS[k].accent,
-        label: STATUS[k].label + ' · ' + list.filter(p => p.statusType === k).length
-      })),
+      legend: STATUS_ORDER.map(k => {
+        const on = statusFilter === k;
+        const n = list.filter(p => statusOf(p) === k).length;
+        return {
+          accent: STATUS[k].accent,
+          label: STATUS[k].label + ' · ' + n,
+          title: on ? 'Show every post' : 'Show only posts marked ' + STATUS[k].label.toLowerCase(),
+          pick: () => this.setState({ statusFilter: on ? '' : k }),
+          style: 'display:flex;align-items:center;gap:7px;font-family:inherit;font-size:11px;letter-spacing:0.04em;padding:5px 9px;cursor:pointer;border:1px solid ' +
+            (on ? 'rgba(255,255,255,.7)' : 'transparent') + ';background:' + (on ? 'rgba(255,255,255,.14)' : 'transparent') +
+            ';color:' + (on ? '#fff' : (statusFilter ? 'rgba(255,255,255,.42)' : 'rgba(255,255,255,.72)'))
+        };
+      }),
+      filterOn: !!statusFilter,
+      filterNote: statusFilter
+        ? (shown.length
+          ? 'Showing ' + shown.length + ' of ' + list.length + ' posts marked ' + STATUS[statusFilter].label.toLowerCase() + '.'
+          : 'No ' + ((MONTHS.filter(m => m.key === this.monthKey())[0] || MONTHS[0]).short) + ' posts are marked ' + STATUS[statusFilter].label.toLowerCase() + '.')
+        : '',
+      clearFilter: () => this.setState({ statusFilter: '' }),
       storageWarning: this.state.storageWarning,
       isGallery: layout === 'gallery',
       isTimeline: layout === 'timeline',

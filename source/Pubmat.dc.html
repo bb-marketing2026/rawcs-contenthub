@@ -20,7 +20,7 @@
 
   <sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}">
     <div style="position:absolute;inset:0;background:var(--rawcs-blue-darker)">
-      <img src="{{ readySrc }}" alt="" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:{{ readyFit }};display:block">
+      <img src="{{ readySrc }}" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:{{ readyFit }};display:block">
     </div>
   </sc-if>
 
@@ -34,7 +34,7 @@
         <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
           <div style="{{ photoBackStyle }}"></div>
         </sc-if>
-        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
       </sc-if>
       <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
         <image-slot id="{{ slotId }}" shape="rect" fit="cover" placeholder=" "></image-slot>
@@ -52,7 +52,7 @@
         <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
           <div style="{{ photoBackStyle }}"></div>
         </sc-if>
-        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
       </sc-if>
       <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
         <div style="position:absolute;inset:0;background:var(--neutral-800)">
@@ -124,7 +124,7 @@
           <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
           <div style="{{ photoBackStyle }}"></div>
         </sc-if>
-        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
         </sc-if>
         <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
           <image-slot id="{{ slotId }}" shape="rect" fit="cover" placeholder=" "></image-slot>
@@ -214,7 +214,7 @@
           <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
           <div style="{{ photoBackStyle }}"></div>
         </sc-if>
-        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+        <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
         </sc-if>
         <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
           <image-slot id="{{ slotId }}" shape="rect" fit="cover" placeholder=" "></image-slot>
@@ -282,7 +282,7 @@
           <video src="{{ videoSrc }}" data-pm-el="video" controls="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#000"></video>
         </sc-if>
         <sc-if value="{{ reelStill }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+          <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
         </sc-if>
         <sc-if value="{{ reelEmpty }}" hint-placeholder-val="{{ true }}">
           <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:8cqw;background:#fff">
@@ -363,7 +363,7 @@
           <sc-if value="{{ photoFitOn }}" hint-placeholder-val="{{ false }}">
             <div style="{{ photoBackStyle }}"></div>
           </sc-if>
-          <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" decoding="async" style="{{ photoImgStyle }}">
+          <img src="{{ photo }}" alt="" data-pm-photo="1" data-pm-el="photo" loading="lazy" decoding="async" style="{{ photoImgStyle }}">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,44,85,0) 42%, rgba(7,44,85,.55) 72%, var(--rawcs-blue-darker) 100%);pointer-events:none"></div>
         </div>
       </sc-if>
