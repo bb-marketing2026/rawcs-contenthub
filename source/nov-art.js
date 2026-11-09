@@ -3,6 +3,7 @@
 window.RAWCS_ART_NOV = {
   "nv01": "assets/final/nv01.jpg",
   "nv01b": "assets/final/nv01b.jpg",
+  "nv01c": "assets/final/nv01c.jpg",
   "nv02": "assets/final/nv02.jpg",
   "nv02b": "assets/final/nv02b.jpg",
   "nv03": "assets/final/nv03.jpg",
