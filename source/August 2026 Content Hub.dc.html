@@ -2662,7 +2662,8 @@ const MONTHS = [
   { key: '2026-08', name: 'August 2026', short: 'August' },
   { key: '2026-09', name: 'September 2026', short: 'September' },
   { key: '2026-10', name: 'October 2026', short: 'October' },
-  { key: '2026-11', name: 'November 2026', short: 'November' }
+  { key: '2026-11', name: 'November 2026', short: 'November' },
+  { key: '2026-12', name: 'December 2026', short: 'December' }
 ];
 // With no month in the URL and none remembered, open on the month we are in,
 // or the nearest month the hub covers.
@@ -5900,7 +5901,699 @@ const BAKED_EDITS = {
     "dateISO": "2026-10-13"
   }
 };
+// 11 November 2026: the November copy doc (dates, captions, tags, landing pages, artwork
+// text) and the larger Rotary/RAWCS logo artwork. Folded into the baked edits for anyone
+// opening the hub fresh, and applied once over a browser's saved edits (applyPatches) so the
+// update also shows where someone has edited in the hub before.
+const PATCH_ID = '2026-11-11-november-copy';
+const NOV11_CHECKS = {"sep17:d-boosted": true};
+const NOV11_PATCH = {
+ "sep5": {
+  "slotLabel": "1"
+ },
+ "nov-perth-concert": {
+  "dateISO": "2026-11-11",
+  "slotLabel": "2",
+  "link": "https://donations.rawcs.com.au/Default.aspx?ProjectID=414",
+  "siteLabel": "donations.rawcs.com.au",
+  "caption": "Looking for a night out in Perth that also gives back this season of giving?\n\nOn Tuesday 17 November, St George's Cathedral in Perth will host Because I Love You So for our Ukraine Crisis Appeal. This special benefit concert will be paying tribute to the strength, culture and enduring spirit of Ukraine 💙💛\n\n🎶 Date: Tuesday 17 November 2026\n⏰ Time: 7:00pm\n📍 Venue: St George's Cathedral, Perth\n🎟️ Tickets: https://www.trybooking.com/DQFUW\n\nAudiences can look forward to performances by the Fremantle Chamber Orchestra, led by conductor John Keene, alongside an outstanding line-up of Western Australian musicians, opera singers and performers.\n\nA special highlight will be the world premiere of Black Earth (because I love you so), a newly commissioned work by Perth-born composer Lydia Gardiner, inspired by Ukrainian songs, traditions and the deep connection between the Ukrainian people and their homeland.\n\nImportantly, all proceeds and donations will support clinical music therapy programs through the Ukraine Crisis Appeal, a RAWCS initiative helping children, civilians and veterans navigate trauma, rebuild essential skills and reconnect with their communities.\n\nCan't attend? You can still make a tax-deductible donation at https://www.ukrainecrisisappeal.org/. Please include 17Nov26 PERTH in the donation reference to help identify contributions from the concert.\n\nOne evening of music can help make a lasting difference. We hope you'll join us.",
+  "tags": [
+   "#RAWCS",
+   "#RotaryAustralia",
+   "#UkraineCrisisAppeal",
+   "#AFUO",
+   "#StandWithUkraine",
+   "#PerthConcert",
+   "#PerthEvents",
+   "#ClassicalMusicPerth",
+   "#MusicTherapy",
+   "#RotaryInAction"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 9 to 11 November, new caption, tags and landing page, and the artwork box now reads \"Benefit Concert for Ukraine\" in place of the Rotary Club of Perth. The landing page is the ARAM donation page (ProjectID=414) as written in the doc; the caption itself points to TryBooking and ukrainecrisisappeal.org.",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "Benefit concert for Ukraine",
+    "headline": "A night of music,",
+    "highlight": "a gift for Ukraine.",
+    "ctas": [
+     {
+      "label": "Book your seat",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “A night of music, a gift for Ukraine” B) “Perth, 17 November” C) “Because I Love You So”\nNo concert photo was supplied. Use a type-led card in the Ukraine appeal blue and gold with the title, date and venue, or an image from the Rotary Perth story page if it suits. Keep it warm and welcoming, with no seasonal icons. Do not show a ticket price or start time.",
+    "readyImage": "nv05c",
+    "photo": "",
+    "video": "",
+    "videoName": "",
+    "giftLine": "Because I Love You So",
+    "note": "The Fremantle Chamber Orchestra with tenor Paul O’Neill and mezzo-soprano Ruth Burke, supporting music therapy through the Ukraine Crisis Appeal."
+   }
+  ]
+ },
+ "nov-ukraine-kits": {
+  "dateISO": "2026-11-12",
+  "slotLabel": "3",
+  "link": "https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4",
+  "siteLabel": "donations.rawcs.com.au",
+  "caption": "Imagine a winter night with the power cut and the heating off. For families in Ukraine, that is a daily reality.\n\nA gift to the Ukraine Crisis Appeal helps put a winter kit in someone's hands.\n\nDonate now by visiting https://donations.rawcs.com.au/Default.aspx?ProjectID=873&ReturnTo=4\n\nEach kit holds a power bank, a USB heated blanket, a sleeping bag, a thermos, a headlamp, reflective items and a drawstring backpack, there to keep people warm, charged and safe at home. They are bought and handed out through Caritas Ukraine, and donations of $2 or more are tax deductible.\n\nThis season of giving, you can help someone stay warm.",
+  "tags": [
+   "#RAWCS",
+   "#UkraineCrisisAppeal",
+   "#SeasonOfGiving"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 2 to 12 November and the caption set to the doc copy (this replaces the \"Send warmth\" caption from 9 November). The artwork QR code and web address still point to ukrainecrisisappeal.org.",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "Urgent winter appeal · Ukraine Crisis Appeal",
+    "headline": "Send warmth.",
+    "highlight": "Don’t let winter kill.",
+    "ctas": [
+     {
+      "label": "Give a winter kit",
+      "tone": "gold"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “Send warmth to Ukraine this winter” B) “A winter kit, a gift that keeps someone warm” C) “Power cuts and freezing homes. Here's what helps.”\nUse the supplied Send Warmth flyer artwork, cropped in tight on the blanket, thermos and sleeping bag so it reads like a gift pile. Keep the hub's link strip and crop out the flyer's QR code and web address.",
+    "readyImage": "nv01d",
+    "photo": "ph-adhoc-mt2c2l96",
+    "video": "",
+    "videoName": "",
+    "giftLine": "A winter kit is a gift that keeps someone warm.",
+    "note": "Power banks, heated blankets and sleeping bags, handed out through Caritas Ukraine. Gifts of $2 or more are tax deductible."
+   }
+  ]
+ },
+ "nov-farmer-health": {
+  "dateISO": "2026-11-13",
+  "slotLabel": "4",
+  "link": "https://donations.rawcs.com.au/Default.aspx?ProjectNo=42&YearRegistered=2024-25",
+  "siteLabel": "donations.rawcs.com.au",
+  "ask": "Make a donation today",
+  "caption": "Save the date! Rotary Pioneer Adventure Day returns on Sunday 2 May 2027 🚜\n\nHelp us bring vital health services and support to Australia's rural farming communities. Support the 2027 event by donating through the following link today (please include Pioneer Day in the donation notes):\nhttps://donations.rawcs.com.au/Default.aspx?ProjectNo=42&YearRegistered=2024-25\n\nFarmers don't often stop for a check-up, so at the last Rotary Pioneer Adventure Day in Tailem Bend, South Australia, the check-up came to them.\n\nA dedicated health hub provided free skin checks, blood pressure and blood sugar tests and heart health checks, while a BreastScreen SA mobile clinic offered mammograms to rural women.\n\nThe impact was significant:\n💙 63 adults accessed the health hub.\n💗 32 women received mammograms.\n❤️ Six farmers were identified with serious health concerns, while others received early warnings and advice to seek follow-up care.\n\nThese results highlight the importance of bringing accessible health services directly to rural communities, particularly the farmers and families who help keep Australia fed.\n\nWe're looking forward to bringing the community together again!\n\n📅 Sunday 2 May 2027\n📍 Old Tailem Town Pioneer Village, Tailem Bend, South Australia\n\n🙌 Want to be part of the day? Volunteer registrations are available here:\nhttps://reg.planetreg.au/attendee_register_input_B.asp?hdnpar=0^^1\n\nFind out more: https://rotarypioneeradventureday.au/",
+  "tags": [
+   "#RAWCS",
+   "#RotaryAustralia",
+   "#RotaryPioneerAdventureDay",
+   "#RuralHealth",
+   "#FarmersHealth",
+   "#TailemBend",
+   "#SouthAustralia",
+   "#RotaryInAction"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 6 to 13 November, taken off hold now the client has supplied the copy, new landing page, caption and tags. Artwork headline, support line and button updated to the doc wording.",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "Rural health · Tailem Bend, SA",
+    "headline": "Bringing Health Checks",
+    "highlight": "to Rural Communities.",
+    "ctas": [
+     {
+      "label": "Make a donation today",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “The health check came to the farm gate” B) “A gift for the people who feed us” C) “Rural health, where people already are”\nUse photos from the Farmer Health Check Hub gallery page (the health hub truck, the skin cancer clinic team, the BreastScreen SA van). Review the gallery images directly and favour a warm, people-first shot over a vehicle shot. Tag chip: 'Rural health'.",
+    "readyImage": "nv04c",
+    "photo": "",
+    "video": "",
+    "videoName": "",
+    "giftLine": "A gift for the people who feed us.",
+    "note": "Free health screenings for farmers and rural women at Rotary Pioneer Adventure Day, including skin, heart and breast health checks."
+   }
+  ]
+ },
+ "sep9": {
+  "dateISO": "2026-11-15",
+  "topic": "Bednets, training and a few minutes",
+  "slotLabel": "5",
+  "link": "https://donations.rawcs.com.au/Default.aspx?ProjectID=414",
+  "siteLabel": "donations.rawcs.com.au",
+  "ask": "Donate",
+  "caption": "Malaria still remains a serious threat some our neighbouring countries and can especially affect pregnant women and young children who are the most vulnerable to its effects. For mothers, the risk of malaria can extend beyond their own health, affecting their pregnancies and the wellbeing of their babies. Access to prevention, early diagnosis and treatment can make a life-changing difference.\n\nThis giving season, make a donation to support our malaria prevention and elimination efforts.\n\n💜 Donate today: https://donations.rawcs.com.au/Default.aspx?ProjectID=414\n\nThrough Australian Rotarians Against Malaria (ARAM), RAWCS supports bednet distribution, training and malaria elimination programs across partner regions in the Pacific and South-East Asia.\n\nOur work has contributed to achieving zero malaria cases in Timor-Leste, demonstrating what sustained community action can achieve.\n\nFind out more about ARAM: https://aram.rawcs.com.au/",
+  "tags": [
+   "#RAWCS",
+   "#ARAM",
+   "#MalariaElimination",
+   "#WomensHealth",
+   "#MaternalHealth",
+   "#ChildHealth",
+   "#TimorLeste",
+   "#Vanuatu",
+   "#Indonesia",
+   "#SolomonIslands"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 5 to 15 November, new landing page, caption and tags, and the artwork text replaced with the doc wording. The caption is reproduced as supplied, including \"a serious threat some our neighbouring countries\", which looks like it is missing \"to\" or \"in\".",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "ARAM · Malaria elimination",
+    "headline": "A Malaria-Free Future",
+    "highlight": "Starts With Her.",
+    "ctas": [
+     {
+      "label": "Give to ARAM",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “Bednets, training, and a few minutes of your time” (current)\nB) “A gift that protects a child”\nC) “Malaria still kills a child every 68 seconds. Give a gift that helps.”\nKeep the current pubmat photo and red ARAM footer. Add the WHO stat overlay if option C is chosen.",
+    "readyImage": "nv03c",
+    "photo": "ph-sep9",
+    "sqPlaces": {
+     "headline": {
+      "x": 6.5,
+      "y": 56,
+      "ax": "l",
+      "ay": "t"
+     },
+     "kicker": {
+      "x": 6.5,
+      "y": 47.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "places": {
+     "headline": {
+      "x": 6.5,
+      "y": 71.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "kicker": {
+      "x": 6.5,
+      "y": 65,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "sqScaleLogo1": 1,
+    "sqScaleCta": 1,
+    "sqScaleLogo0": 1,
+    "scaleCta": 0.9,
+    "scaleLogo0": 0.9,
+    "scaleLogo1": 0.85,
+    "photoX": 52,
+    "photoY": 50,
+    "giftLine": "Bednets and training enabled through your donation",
+    "note": "ARAM funds malaria prevention and elimination work across the Pacific and South-East Asia."
+   }
+  ]
+ },
+ "sep17": {
+  "dateISO": "2026-11-16",
+  "slotLabel": "6",
+  "link": "https://donations.rawcs.com.au/64-2023-24",
+  "siteLabel": "donations.rawcs.com.au",
+  "ask": "Donate",
+  "caption": "As the year draws to a close and festive celebrations bring family, friends and communities together, it’s a wonderful time to reflect on the difference we can make for others.\n\nThere’s more to RAWCS than you might realise. From supporting Australians doing it tough to delivering essential medical and educational resources overseas, our work reaches communities both here at home and across our region.\n\nHelp us make a difference. Your donation supports this work:\nhttps://donations.rawcs.com.au/64-2023-24\n\nThrough initiatives like Compassionate Grants, RARE, Medishare and Australian Rotarians Against Malaria (ARAM), RAWCS helps turn generosity into practical support for people and communities in need.\n\nBehind every project are people who give their time, skills and resources to help others. As we look towards a new year, your contribution can help us continue this important work and bring hope to more communities.",
+  "tags": [
+   "#RAWCS",
+   "#RotaryAustralia",
+   "#RotaryInAction",
+   "#MakeADifference",
+   "#GiveBack"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 10 to 16 November, boost this post (ticked under Boosted), new landing page, caption and tags, and the artwork button changed from \"Explore RAWCS\" to \"Donate Today\".",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "Inside RAWCS",
+    "headline": "Where your gift goes,",
+    "highlight": "near and far.",
+    "ctas": [
+     {
+      "label": "Donate Today",
+      "tone": "red"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “The parts of RAWCS you don't always see” (current pubmat)\nB) “Where your gift goes, near and far”\nC) “More than projects: what keeps RAWCS running”\nKeep the current pubmat photo (the warehouse sorting team). If the card is reworked, put Compassionate Grants first in the list of areas so the domestic side leads.",
+    "readyImage": "nv06c",
+    "photo": "ph-sep17",
+    "sqPlaces": {
+     "kicker": {
+      "x": 5,
+      "y": 43.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "headline": {
+      "x": 5,
+      "y": 50.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "highlight": {
+      "x": 5,
+      "y": 64.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "places": {
+     "kicker": {
+      "x": 5,
+      "y": 52.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "headline": {
+      "x": 5,
+      "y": 59,
+      "ax": "l",
+      "ay": "t"
+     },
+     "highlight": {
+      "x": 5,
+      "y": 70.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "giftLine": "Compassionate Grants, RARE, Medishare and ARAM.",
+    "note": "From Australians doing it tough to malaria elimination in our own region."
+   }
+  ]
+ },
+ "sep11": {
+  "dateISO": "2026-11-18",
+  "slotLabel": "7",
+  "topic": "Volunteer Today!",
+  "link": "https://rawcs.org.au/volunteer/",
+  "siteLabel": "rawcs.org.au/volunteer",
+  "caption": "Looking for a meaningful way to make a difference? Give a little of your time and help support communities in need across Australia and around the world.\n\nInterested in getting involved? Find out more about volunteering with RAWCS:\nhttps://rawcs.org.au/volunteer/\n\nRAWCS volunteers play an important role across our many projects and initiatives. Whether you're helping prepare essential equipment, supporting community programs, lending your professional skills or getting involved in hands-on project work, there are many ways to contribute.\n\nEvery helping hand makes a difference, and you don't need to make a huge commitment to have an impact.",
+  "tags": [
+   "#RAWCS",
+   "#RotaryAustralia",
+   "#RotaryInAction",
+   "#VolunteerWithUs",
+   "#MakeADifference"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 13 to 18 November, retitled \"Volunteer Today!\", new caption and tags, and the artwork text replaced with the doc wording. The artwork kicker, button and logo still name RARE; the doc did not ask for those to change.",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "RAWCS × RARE",
+    "headline": "Make a difference",
+    "highlight": "with your time.",
+    "ctas": [
+     {
+      "label": "Volunteer with us",
+      "tone": "gold"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “A warehouse near you, a shipment far away” (current pubmat)\nB) “Give a Saturday”\nC) “From five sheds to sixty-five countries”\nKeep the current pubmat photo of the RARE volunteers. A map graphic of the 5 Australian distribution facilities would work as a second frame if the post becomes a carousel.",
+    "readyImage": "nv08c",
+    "photo": "ph-sep11",
+    "photoX": 33.5,
+    "photoY": 46,
+    "sqPhotoX": 38,
+    "sqPhotoY": 46,
+    "sqPlaces": {},
+    "places": {
+     "headline": {
+      "x": 6,
+      "y": 66,
+      "ax": "l",
+      "ay": "t"
+     },
+     "ctas": {
+      "x": 5.5,
+      "y": 81,
+      "ax": "l",
+      "ay": "t"
+     },
+     "kicker": {
+      "x": 6,
+      "y": 59,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "sqScaleCta": 0.9,
+    "scaleCta": 0.95,
+    "sqScaleLogo0": 0.7,
+    "scaleLogo0": 0.75,
+    "sqScaleLogo1": 0.7,
+    "scaleLogo1": 0.75,
+    "sqScaleBlock": 1,
+    "giftLine": "Every helping hand counts.",
+    "note": "From supporting local communities to contributing to projects overseas, RAWCS volunteers help turn compassion into meaningful action."
+   }
+  ]
+ },
+ "nov-medishare": {
+  "dateISO": "2026-11-20",
+  "slotLabel": "8",
+  "link": "https://donations.rawcs.com.au/6-2020-21",
+  "siteLabel": "donations.rawcs.com.au/6-2020-21",
+  "caption": "Some of the most valuable gifts are ones that already exist. Usable medical equipment and surplus medical supplies can be given a second life, helping improve access to healthcare in disadvantaged communities around the world.\n\nDonate to MediShare today and make this possible.:\nhttps://donations.rawcs.com.au/6-2020-21\n\nMediShare, a subsidiary of RAWCS, works with government and not-for-profit partners to recover suitable surplus medical equipment and consumables and get them to communities where they are needed most. By giving medical resources a second life, we can help strengthen healthcare systems while reducing unnecessary waste.\n\nDonate items: If you have suitable medical equipment or supplies that could be put to good use, donate items to MediShare using the following link.\nhttps://medishare.org.au/donate-items/\n\nRequest aid: If you’re part of a medical organisations or community who requires assistance, you can apply for medical equipment and supplies to support your healthcare needs using the following link.\nhttps://medishare.org.au/request-aid/",
+  "tags": [
+   "#RAWCS",
+   "#MediShare",
+   "#RotaryAustralia",
+   "#GlobalHealth",
+   "#HealthcareForAll",
+   "#MedicalAid"
+  ],
+  "status": "Ready.\n\nUpdated 11 November 2026 from the November copy doc: date moved from 16 to 20 November, taken off hold now the client has supplied the copy, new caption and tags.",
+  "statusType": "notstarted",
+  "frames": [
+   {
+    "kicker": "MediShare",
+    "headline": "Medical equipment,",
+    "highlight": "given a second life.",
+    "ctas": [
+     {
+      "label": "Give to MediShare",
+      "tone": "red"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “Medical equipment, given a second life” B) “A gift that reaches a clinic far from here” C) “Equipment and training for health care that lasts”\nUse the images and videos supplied by the partner organisation (not yet received). If there are several photos, make a carousel with the headline card first. If there is a video, post it as a reel with the same headline on the cover. Tag chip: 'MediShare'. Keep the 'VIA THE LINK IN THE CAPTION' strip.",
+    "readyImage": "nv09c",
+    "photo": "",
+    "video": "",
+    "videoName": "",
+    "giftLine": "",
+    "note": ""
+   }
+  ]
+ },
+ "sep12": {
+  "dateISO": "2026-11-22",
+  "slotLabel": "9",
+  "frames": [
+   {
+    "kicker": "For Rotary Clubs",
+    "headline": "What does a RACG project look like?",
+    "highlight": "",
+    "ctas": [],
+    "brief": "Final artwork, title card: “What does a RACG project look like?” (5 frames, numbered-criteria template: photo top, navy panel, vertical tricolour edge on every frame). The artwork is final in the hub. If the title card is reworked for the season, use “Got a local idea to back this year?” as the headline and keep the 5-frame template.",
+    "readyImage": "rcg1c",
+    "photo": "",
+    "video": "",
+    "videoName": ""
+   },
+   {
+    "kicker": "RACG projects",
+    "headline": "1. Applications come through Rotary · 2. Help goes to people",
+    "highlight": "",
+    "ctas": [],
+    "brief": "Final artwork — points 1–2, bold point title + body, white outlined numerals on blue.",
+    "readyImage": "rcg2c",
+    "photo": "",
+    "video": "",
+    "videoName": ""
+   },
+   {
+    "kicker": "RACG projects",
+    "headline": "3. It meets a specific need · 4. It supports those who need it most",
+    "highlight": "",
+    "ctas": [],
+    "brief": "Final artwork — points 3–4.",
+    "readyImage": "rcg3c",
+    "photo": "",
+    "video": "",
+    "videoName": ""
+   },
+   {
+    "kicker": "RACG projects",
+    "headline": "5. It moves people · 6. It names who and what",
+    "highlight": "",
+    "ctas": [],
+    "brief": "Final artwork — points 5–6.",
+    "readyImage": "rcg4c",
+    "photo": "",
+    "video": "",
+    "videoName": ""
+   },
+   {
+    "kicker": "",
+    "headline": "Ready to register a project?",
+    "highlight": "",
+    "ctas": [
+     {
+      "label": "directory.rawcs.com.au/RegistrationRACG.aspx",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Final artwork — CTA: navy, white lockup, headline, line, and the registration URL in a white box.",
+    "readyImage": "rcg5c",
+    "photo": "",
+    "video": "",
+    "videoName": ""
+   }
+  ]
+ },
+ "sep13": {
+  "dateISO": "2026-11-24",
+  "slotLabel": "10",
+  "frames": [
+   {
+    "kicker": "RAWCS × NEMA",
+    "headline": "Some gifts take",
+    "highlight": "a whole community.",
+    "ctas": [
+     {
+      "label": "Partner with us",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “Government and community, working together” (current pubmat)\nB) “Some gifts take a whole community”\nC) “$6.5 million, no red tape”\nKeep the current pubmat (the road train in drought country). RAWCS and NEMA branding only if permitted.",
+    "readyImage": "nv11c",
+    "photo": "ph-sep13",
+    "photoX": 50.5,
+    "photoY": 62,
+    "sqPhotoX": 52.5,
+    "sqPhotoY": 58,
+    "sqPlaces": {},
+    "places": {
+     "headline": {
+      "x": 6,
+      "y": 69,
+      "ax": "l",
+      "ay": "t"
+     },
+     "kicker": {
+      "x": 6,
+      "y": 62.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "ctas": {
+      "x": 6,
+      "y": 84,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "lineHeight": 1.15,
+    "giftLine": "$6.5 million, no red tape.",
+    "note": "Support vouchers delivered to farming communities with 108 Rotary Clubs during the last drought."
+   }
+  ]
+ },
+ "sep10": {
+  "dateISO": "2026-11-28",
+  "slotLabel": "11",
+  "frames": [
+   {
+    "kicker": "Compassionate Grants",
+    "headline": "A small gift,",
+    "highlight": "close to home.",
+    "ctas": [
+     {
+      "label": "Give comfort close to home",
+      "tone": "red"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “A doctor, a shelter bag, a meal” (hub title)\nB) “A small gift, close to home”\nC) “Big enough to matter, small enough to move fast” (current pubmat)\nThe current pubmat artwork can stay. These are program names rather than a single project, so no project photos are needed. If it is reworked, keep to RACG branding with a gold accent.",
+    "readyImage": "nv07c",
+    "photo": "ph-sep10",
+    "photoX": 39,
+    "photoY": 50,
+    "washStrength": 1.45,
+    "tintEnd": 60,
+    "baseStrength": 0.95,
+    "sqPlaces": {
+     "kicker": {
+      "x": 5.5,
+      "y": 55,
+      "ax": "l",
+      "ay": "t"
+     },
+     "headline": {
+      "x": 5.5,
+      "y": 63,
+      "ax": "l",
+      "ay": "t"
+     },
+     "ctas": {
+      "x": 5,
+      "y": 80.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "sqScaleCta": 0.9,
+    "places": {
+     "headline": {
+      "x": 5,
+      "y": 70,
+      "ax": "l",
+      "ay": "t"
+     },
+     "kicker": {
+      "x": 5,
+      "y": 63.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "ctas": {
+      "x": 5,
+      "y": 84.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "tintHex": "#1a2129",
+    "baseHex": "#060C16",
+    "lineHeight": 1.05,
+    "blockGap": 0.8,
+    "washSoft": 1.2,
+    "baseStart": 75,
+    "giftLine": "Big enough to matter, small enough to move fast.",
+    "note": "Past grants: a Street Doctor Service, shelter bags for people sleeping rough, and Feed the Need. Every donation is tax deductible."
+   }
+  ]
+ },
+ "nov-clean4shore": {
+  "dateISO": "2026-11-28",
+  "slotLabel": "12",
+  "frames": [
+   {
+    "kicker": "RATE · Environment",
+    "headline": "A gift for",
+    "highlight": "our waterways.",
+    "ctas": [
+     {
+      "label": "Give back to our waterways",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “A gift for our waterways” B) “Students on the water, waste off the shore” C) “Clean4Shore on the Central Coast”\nCheck the images on the directory project page and use a shoreline or school group shot if one is there. If not, use a simple RATE graphic with a gold accent. Tag chip: 'RATE · Environment'.",
+    "readyImage": "nv13c",
+    "photo": "",
+    "video": "",
+    "videoName": "",
+    "giftLine": "Students on the water, waste off the shore.",
+    "note": "School groups clearing Central Coast foreshores and mangroves. Tax deductible through RATE."
+   }
+  ]
+ },
+ "nov-joondalup-lunch": {
+  "slotLabel": "13",
+  "frames": [
+   {
+    "kicker": "Compassionate Grants · Joondalup, WA",
+    "headline": "A seat at",
+    "highlight": "the table.",
+    "ctas": [
+     {
+      "label": "Give a seat at the table",
+      "tone": "red"
+     }
+    ],
+    "brief": "Headline options (pick one): A) “A seat at the table” B) “No one should spend the holidays alone” C) “A hot roast and good company on Christmas Day”\nCheck the images on the directory project page and use a lunch or community shot if one is there. If not, use a simple Compassionate Grants graphic in RAWCS brand blue and gold with a warm table or plate illustration. Tag chip: 'Compassionate Grants'.",
+    "readyImage": "nv14c",
+    "photo": "",
+    "video": "",
+    "videoName": "",
+    "giftLine": "A hot roast and good company on Christmas Day.",
+    "note": "Backed by the Rotary Club of Osborne Park for people who would otherwise spend the day alone."
+   }
+  ]
+ },
+ "oct-volunteer-call": {
+  "dateISO": "2026-12-01",
+  "slotLabel": "1",
+  "frames": [
+   {
+    "kicker": "Volunteer with RAWCS",
+    "headline": "Give your time",
+    "highlight": "this season.",
+    "ctas": [
+     {
+      "label": "Explore opportunities",
+      "tone": "blue"
+     }
+    ],
+    "brief": "Headline options (pick one):\nA) “Take your service further” (current pubmat)\nB) “Give your time this season”\nC) “Join the next RAWCS project team”\nKeep the current pubmat (hands stacked together in volunteer shirts), which already suits the giving theme.",
+    "readyImage": "nv12c",
+    "photo": "assets/photos/oct20-volunteers-v2.jpg",
+    "video": "",
+    "videoName": "",
+    "photoFit": "fill",
+    "photoZoom": 1,
+    "sqPlaces": {
+     "kicker": {
+      "x": 5.5,
+      "y": 55,
+      "ax": "l",
+      "ay": "t"
+     },
+     "headline": {
+      "x": 5.5,
+      "y": 61.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "highlight": {
+      "x": 5.5,
+      "y": 68.5,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "places": {
+     "kicker": {
+      "x": 6.5,
+      "y": 57.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "headline": {
+      "x": 6.5,
+      "y": 63.5,
+      "ax": "l",
+      "ay": "t"
+     },
+     "highlight": {
+      "x": 6.5,
+      "y": 70,
+      "ax": "l",
+      "ay": "t"
+     }
+    },
+    "photoX": 50,
+    "photoY": 50,
+    "sqPhotoFit": "fill",
+    "sqPhotoZoom": 1,
+    "sqPhotoX": 45.5,
+    "sqPhotoY": 50,
+    "giftLine": "Join the next RAWCS project team.",
+    "note": "Hands-on humanitarian and development projects across Australia and around the world."
+   }
+  ],
+  "status": "Date to be confirmed.\n\nMoved 11 November 2026 from 24 November to December, per the November copy doc (\"we already have a volunteer post this month\"). Placed on 1 December until a date is confirmed.\n\nReady.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook."
+ }
+};
+Object.keys(NOV11_PATCH).forEach(id => { BAKED_EDITS[id] = Object.assign({}, BAKED_EDITS[id] || {}, NOV11_PATCH[id]); });
 const BLANK = { edits: JSON.parse(JSON.stringify(BAKED_EDITS)), extra: ADDED_POSTS.slice(), deleted: RETIRED_POSTS.slice(), checks: {"adhoc-mtwoko2z:copy":true,"sep1:d-organic":true,"sep2:d-organic":true,"sep3:d-organic":true,"sep4:d-paid":false,"sep4:d-organic":true,"sep7:d-organic":true,"sep7:d-paid":true,"sep15:d-organic":true}, notes: {}, times: {}, logoLib: {}, docs: {} };
+Object.assign(BLANK.checks, NOV11_CHECKS);
 // Uploaded images are far larger than a browser's local-storage budget, which is
 // what used to make a save fail once a few photos were in. On save they move to
 // IndexedDB under a token; the stored payload keeps only the token, so the text,
@@ -6025,7 +6718,7 @@ class Component extends DCLogic {
           const gone = loaded.deleted || [];
           const missing = ADDED_POSTS.filter(p => !held[p.id] && gone.indexOf(p.id) < 0);
           if (missing.length) loaded.extra = (loaded.extra || []).concat(JSON.parse(JSON.stringify(missing)));
-          const fresh = this.reseedSeptCopy(loaded);
+          const fresh = this.applyPatches(this.reseedSeptCopy(loaded), (d.data && d.data.patches) || []);
           this.setState({ data: fresh, log: d.log || [] });
           if (fresh !== loaded) this.save(fresh, d.log || []);
           // Photos come back out of the vault a moment later.
@@ -6178,6 +6871,14 @@ class Component extends DCLogic {
   d(key) { return this.state.data[key] || (Array.isArray(BLANK[key]) ? [] : {}); }
 
   // Copy-only migration for September frames left behind by the DRAFT 5 rebuild.
+  // One-off content updates shipped with a deploy, applied over a saved edit layer once.
+  applyPatches(data, done) {
+    if (done.indexOf(PATCH_ID) >= 0) return data;
+    const edits = Object.assign({}, data.edits || {});
+    Object.keys(NOV11_PATCH).forEach(id => { edits[id] = Object.assign({}, edits[id] || {}, JSON.parse(JSON.stringify(NOV11_PATCH[id]))); });
+    return Object.assign({}, data, { edits: edits, checks: Object.assign({}, data.checks || {}, NOV11_CHECKS), patches: done.concat([PATCH_ID]) });
+  }
+
   reseedSeptCopy(data) {
     let changed = false;
     const edits = Object.assign({}, data.edits || {});
