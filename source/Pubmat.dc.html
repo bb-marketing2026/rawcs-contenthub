@@ -578,6 +578,9 @@ const PANEL = {
   white: { bg: '#FFFFFF', light: true, rule: 'rgba(15,83,158,.3)', ctaBg: 'var(--rawcs-red)', ctaFg: '#fff' }
 };
 
+// Every logo mark renders at 1.5x its base size (11 November 2026: logos made bigger
+// across all pubmats). Per-frame logo sizes still multiply on top of this.
+const LOGO_BOOST = 1.5;
 const LOGO_WIDTH = {
   lockupWhite: 52, lockupColour: 52,
   abnbWhite: 80, abnbColour: 80,
@@ -666,7 +669,7 @@ class Component extends DCLogic {
     let keys = this.props.logos;
     if (typeof keys === 'string') keys = keys.split(',').map(s => s.trim()).filter(Boolean);
     if (!Array.isArray(keys)) keys = this.props.logo ? [this.props.logo] : ['lockupWhite'];
-    const gain = +this.props.scaleLogo || 1;
+    const gain = (+this.props.scaleLogo || 1) * LOGO_BOOST;
     let own = this.props.logoScales;
     if (typeof own === 'string') own = own.split(',').map(s => +s || 1);
     if (!Array.isArray(own)) own = [];
@@ -680,7 +683,8 @@ class Component extends DCLogic {
       return { src: table[kk] || '', w: LOGO_WIDTH[kk] || 40, s: s, i: i, kk: kk };
     }).filter(m => m.src);
     const total = resolved.reduce((s, m) => s + m.w, 0) || 1;
-    const budget = (resolved.length > 1 ? 84 : (resolved[0] ? resolved[0].w : 52)) * gain;
+    // Capped so a boosted row still fits inside the side margins.
+    const budget = Math.min(resolved.length > 1 ? 80 : 88, (resolved.length > 1 ? 84 : (resolved[0] ? resolved[0].w : 52)) * gain);
     const k = budget / total;
     return resolved.map((m, i) => ({
       src: m.src,
@@ -923,7 +927,7 @@ class Component extends DCLogic {
     const siteSizeStr = mul(2.4, p.scaleSite);
 
     const ctaC = 3 * (+p.scaleCta || 1);
-    const panelLogoH = Math.round((ctaTail ? ctaC * 2.044 + 1.1 : ctaC * 2.4) * 1.3 * (+p.scaleLogo || 1) * 10) / 10;
+    const panelLogoH = Math.round((ctaTail ? ctaC * 2.044 + 1.1 : ctaC * 2.4) * 1.3 * (+p.scaleLogo || 1) * LOGO_BOOST * 10) / 10;
     const dark = this.marks(false);
     const light = this.marks(true);
 
@@ -970,7 +974,7 @@ class Component extends DCLogic {
           givStar2R: '5cqw', givStar2T: photoOn ? (sq ? '71%' : '72%') : '38%',
           givStar3R: '13cqw', givStar3T: photoOn ? (sq ? '76%' : '77%') : '44%',
           markRowGiving: dark.map(m => Object.assign({}, m, {
-            givH: Math.round(6.4 * k * (m.sk || 1) * (+p.scaleLogo || 1) * 10) / 10 + 'cqw',
+            givH: Math.round(6.4 * k * (m.sk || 1) * (+p.scaleLogo || 1) * LOGO_BOOST * 10) / 10 + 'cqw',
             givRule: Math.round(5.2 * k * 10) / 10 + 'cqw'
           }))
         };
