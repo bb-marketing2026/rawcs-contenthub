@@ -6592,6 +6592,55 @@ const NOV11_PATCH = {
  }
 };
 Object.keys(NOV11_PATCH).forEach(id => { BAKED_EDITS[id] = Object.assign({}, BAKED_EDITS[id] || {}, NOV11_PATCH[id]); });
+// 24 November 2026: new captions and hashtags for the 26, 28 and 30 November posts
+// (Clean4Shore moved back to 26 November). Same treatment as the 11 November update.
+const NOV24_PATCH = {
+ "sep10": {
+  "slotLabel": "12",
+  "link": "https://donations.rawcs.com.au/64-2023-24",
+  "siteLabel": "donations.rawcs.com.au",
+  "caption": "This season of giving, back the whole of RAWCS.\n\nYour gift supports RAWCS's work as a whole, in Australia and overseas, and not one project. Give today:\nhttps://donations.rawcs.com.au/64-2023-24\n\nRAWCS supports initiatives including Compassionate Grants, RARE, MediShare and Australian Rotarians Against Malaria (ARAM). Together they bring practical help to Australians doing it tough and medical and educational resources to communities overseas.\n\nOne donation keeps all of it moving.",
+  "tags": [
+   "#RAWCS",
+   "#RotaryAustralia",
+   "#RotaryInAction",
+   "#SeasonOfGiving",
+   "#MakeADifference"
+  ],
+  "status": "Ready.\n\nUpdated 24 November 2026: new caption, hashtags and landing page (general RAWCS donation page, 64-2023-24). The artwork is still the Compassionate Grants pubmat (\"A small gift, close to home\", with the doctor, shelter bag and meal list and the dollar-for-dollar line), while the caption now asks for a gift to RAWCS as a whole.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Hub date held. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. The hub's link text read 'rawcs.org/donation', which looks like a typo, so it is written here as https://rawcs.org.au/donation/. The pillar was changed from the superseded 'Where your money goes' to 'Proof of impact'. Artwork CTA changed from “Donate today” to “Give comfort close to home” on 04/11/2026 (now nv07b)."
+ },
+ "nov-clean4shore": {
+  "dateISO": "2026-11-26",
+  "slotLabel": "11",
+  "link": "https://directory.rawcs.com.au/34-2026-27",
+  "caption": "A school day on the water, and a cleaner shoreline by the end of it. Here is how Central Coast students are protecting their local waterways, and how you can back them:\nhttps://directory.rawcs.com.au/34-2026-27\n\nWaste ends up on the foreshores of the Central Coast, especially in the mangroves, and it does not clear itself. Through Clean4Shore Waterways Protection, high school groups head out on day trips to remove it, with Central Coast Rotary clubs and the Clean4Shore association behind them.\n\nA donation covers what the day needs: protective gear, lunch on site, waste disposal and barge fuel. Local businesses are welcome to chip in. If yours wants a local cause for the season of giving, this is a practical one.\n\nThe project sits under RATE, RAWCS's Trust for the Environment, which offers tax deductibility to donors.",
+  "tags": [
+   "#RAWCS",
+   "#RATE",
+   "#Clean4Shore",
+   "#CentralCoast",
+   "#SeasonOfGiving"
+  ],
+  "status": "Ready.\n\nUpdated 24 November 2026: date moved from 28 to 26 November, new caption and hashtags.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (34 of 2026-27, sponsored by the Rotary Club of Kincumber, District 9685). The manager contact details on that page are not used. Different from the hub's 14 October RATE launch post, which is about RATE opening to clubs; this one features a single running project. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook. Artwork CTA changed from “See how it works” to “Give back to our waterways” on 04/11/2026 (now nv13b)."
+ },
+ "nov-joondalup-lunch": {
+  "slotLabel": "13",
+  "link": "https://directory.rawcs.com.au/25-2026-27",
+  "caption": "Picture Christmas Day with no one at your table. For some people in Joondalup, that is the reality, and a hot roast lunch can change it. You can support the Joondalup Christmas Lunch here:\nhttps://directory.rawcs.com.au/25-2026-27\n\nThe lunch brings isolated community members together for a hot roast meal, fellowship and emotional support. The Rotary Club of Osborne Park is behind it as a Compassionate Grants project with RAWCS.\n\nYour gift helps put someone at that table. In the season of giving, good company can be the best present going.",
+  "tags": [
+   "#RAWCS",
+   "#CompassionateGrants",
+   "#Joondalup",
+   "#SeasonOfGiving"
+  ],
+  "status": "Ready.\n\nUpdated 24 November 2026: new caption and hashtags.\n\nArtwork: draft 2 pubmat supplied 30/10/2026.\n\nReady. Sourced from the project's directory page (25 of 2026-27, RACG, sponsored by the Rotary Club of Osborne Park, District 9423). The manager contact details on that page are not used. Replaces the overseas volunteer steps post that sat on 26 November in the first draft; that post is held for December. Caption refined on 29/10/2026 for a warmer hook, the season of giving and the link placed after the hook."
+ }
+};
+Object.keys(NOV24_PATCH).forEach(id => { BAKED_EDITS[id] = Object.assign({}, BAKED_EDITS[id] || {}, NOV24_PATCH[id]); });
+const PATCHES = [
+  { id: PATCH_ID, edits: NOV11_PATCH, checks: NOV11_CHECKS },
+  { id: '2026-11-24-november-captions', edits: NOV24_PATCH, checks: {} }
+];
 const BLANK = { edits: JSON.parse(JSON.stringify(BAKED_EDITS)), extra: ADDED_POSTS.slice(), deleted: RETIRED_POSTS.slice(), checks: {"adhoc-mtwoko2z:copy":true,"sep1:d-organic":true,"sep2:d-organic":true,"sep3:d-organic":true,"sep4:d-paid":false,"sep4:d-organic":true,"sep7:d-organic":true,"sep7:d-paid":true,"sep15:d-organic":true}, notes: {}, times: {}, logoLib: {}, docs: {} };
 Object.assign(BLANK.checks, NOV11_CHECKS);
 // Uploaded images are far larger than a browser's local-storage budget, which is
@@ -6873,10 +6922,15 @@ class Component extends DCLogic {
   // Copy-only migration for September frames left behind by the DRAFT 5 rebuild.
   // One-off content updates shipped with a deploy, applied over a saved edit layer once.
   applyPatches(data, done) {
-    if (done.indexOf(PATCH_ID) >= 0) return data;
+    const todo = PATCHES.filter(pt => done.indexOf(pt.id) < 0);
+    if (!todo.length) return data;
     const edits = Object.assign({}, data.edits || {});
-    Object.keys(NOV11_PATCH).forEach(id => { edits[id] = Object.assign({}, edits[id] || {}, JSON.parse(JSON.stringify(NOV11_PATCH[id]))); });
-    return Object.assign({}, data, { edits: edits, checks: Object.assign({}, data.checks || {}, NOV11_CHECKS), patches: done.concat([PATCH_ID]) });
+    let checks = Object.assign({}, data.checks || {});
+    todo.forEach(pt => {
+      Object.keys(pt.edits).forEach(id => { edits[id] = Object.assign({}, edits[id] || {}, JSON.parse(JSON.stringify(pt.edits[id]))); });
+      checks = Object.assign(checks, pt.checks);
+    });
+    return Object.assign({}, data, { edits: edits, checks: checks, patches: done.concat(todo.map(pt => pt.id)) });
   }
 
   reseedSeptCopy(data) {
